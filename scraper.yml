@@ -1,0 +1,137 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# SD County Motivated Seller Lead Scraper — GitHub Actions Workflow
+#
+# Schedule: Runs automatically every day at 6 AM UTC (10 PM PST / 11 PM PDT)
+# Manual:   Can also be triggered from the Actions tab via "Run workflow"
+#
+# Artifacts:
+#   - data/output.json        (lead data)
+#   - dashboard/index.html    (visual dashboard)
+#
+# Both outputs are uploaded as GitHub Artifacts and optionally committed
+# back to the repository if COMMIT_RESULTS secret is set to "true".
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Scrape SD County Leads
+
+on:
+  schedule:
+    # Every day at 06:00 UTC  (cron format: minute hour dom month dow)
+    - cron: "0 6 * * *"
+
+  # Allow manual trigger from the GitHub Actions UI
+  workflow_dispatch:
+    inputs:
+      debug_mode:
+        description: "Enable verbose logging"
+        required: false
+        default: "false"
+        type: boolean
+
+jobs:
+  scrape:
+    name: Run Scraper
+    runs-on: ubuntu-latest
+    timeout-minutes: 60        # Kill hung runs after 1 hour
+
+    permissions:
+      contents: write          # Needed if committing results back to repo
+
+    steps:
+      # ── 1. Checkout code ───────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Set up Python ───────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # ── 3. Install dependencies ────────────────────────────────────────────
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml
+
+      # ── 4. Create output directories ───────────────────────────────────────
+      - name: Create output directories
+        run: |
+          mkdir -p data dashboard
+
+      # ── 5. Run the scraper ─────────────────────────────────────────────────
+      - name: Run scraper
+        env:
+          # Optional: pass secrets as env vars for authenticated requests
+          # COUNTY_SESSION_TOKEN: ${{ secrets.COUNTY_SESSION_TOKEN }}
+          PYTHONPATH: ${{ github.workspace }}/src
+          DEBUG: ${{ github.event.inputs.debug_mode || 'false' }}
+        run: |
+          python src/scraper.py
+
+      # ── 6. Validate output ─────────────────────────────────────────────────
+      - name: Validate JSON output
+        run: |
+          python -c "
+          import json, sys
+          with open('data/output.json') as f:
+              data = json.load(f)
+          leads = data.get('leads', [])
+          print(f'✅ output.json is valid — {len(leads)} leads found')
+          if leads:
+              top = leads[0]
+              print(f'   Top lead: {top[\"grantor\"]} (score={top[\"seller_score\"]})')
+          "
+
+      # ── 7. Upload artifacts ────────────────────────────────────────────────
+      - name: Upload JSON output
+        uses: actions/upload-artifact@v4
+        with:
+          name: leads-json-${{ github.run_number }}
+          path: data/output.json
+          retention-days: 90
+
+      - name: Upload dashboard
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard-${{ github.run_number }}
+          path: dashboard/index.html
+          retention-days: 90
+
+      # ── 8. Commit results back to repo (optional) ─────────────────────────
+      # To enable: add a repository secret COMMIT_RESULTS = true
+      - name: Commit results to repository
+        if: ${{ secrets.COMMIT_RESULTS == 'true' }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/output.json dashboard/index.html
+          git diff --cached --quiet || \
+            git commit -m "chore: update leads data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git push
+
+      # ── 9. Summary ────────────────────────────────────────────────────────
+      - name: Print run summary
+        if: always()
+        run: |
+          echo "## SD County Leads Scraper Results" >> $GITHUB_STEP_SUMMARY
+          python -c "
+          import json
+          try:
+              with open('data/output.json') as f:
+                  data = json.load(f)
+              leads = data.get('leads', [])
+              high  = [l for l in leads if l['seller_score'] >= 70]
+              med   = [l for l in leads if 40 <= l['seller_score'] < 70]
+              low   = [l for l in leads if l['seller_score'] < 40]
+              print(f'| Metric | Value |')
+              print(f'|--------|-------|')
+              print(f'| Total leads | {len(leads)} |')
+              print(f'| High score (≥70) | {len(high)} |')
+              print(f'| Medium score (40-69) | {len(med)} |')
+              print(f'| Low score (<40) | {len(low)} |')
+              print(f'| Generated at | {data.get(\"generated_at\",\"unknown\")} |')
+          except Exception as e:
+              print(f'| Error | {e} |')
+          " >> $GITHUB_STEP_SUMMARY
