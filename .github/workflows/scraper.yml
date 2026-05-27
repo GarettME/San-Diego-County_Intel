@@ -102,7 +102,7 @@ jobs:
       # ── 8. Commit results back to repo (optional) ─────────────────────────
       # To enable: add a repository secret COMMIT_RESULTS = true
       - name: Commit results to repository
-        if: ${{ secrets.COMMIT_RESULTS == 'true' }}
+        if: ${{ vars.COMMIT_RESULTS == 'true' }}
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
