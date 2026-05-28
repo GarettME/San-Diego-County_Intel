@@ -4,13 +4,13 @@ San Diego County Motivated Seller Lead Scraper
 Pulls data from the SD County Open Data Portal (Socrata API) — no login,
 no browser required, no blocking. Uses three real public datasets:
 
-  1. Building Permits  (gs2m-invt / dyzh-7eat)
-     → Expired, denied, or unpermitted work = code/distress signal
-  2. Code Enforcement  (via building permit status flags)
-  3. Property Tax Data (via SD Treasurer-Tax Collector open data)
+  1. Building Permits  — SD County unincorporated (gs2m-invt)
+  2. Building Permits  — City of San Diego (dyzh-7eat)
+  3. Code Enforcement  — City of San Diego (scsb-hfcn)
 
 Socrata API pattern:
-  https://data.sandiegocounty.gov/resource/<DATASET_ID>.json?$limit=N&$offset=N
+  https://data.sandiegocounty.gov/resource/<DATASET_ID>.json
+  https://data.sandiego.gov/resource/<DATASET_ID>.json
 
 Distress scoring model:
   - Tax delinquency   : +30 points
@@ -18,6 +18,14 @@ Distress scoring model:
   - Probate filing    : +20 points
   - Multiple liens    : +15 points
   - Divorce/bankruptcy: +10 points
+
+FIXES in this version:
+  - City permits now fetched from data.sandiego.gov (not sandiegocounty.gov)
+  - $where filters use lowercase field names matching Socrata schema
+  - $order fields lowercased to match actual column names
+  - Added field-name discovery logging so you can see what columns exist
+  - Fallback: if filtered query returns 0 rows, retries without $where filter
+  - Distress keyword scan broadened to catch more signals from raw text
 """
 
 import json
@@ -39,37 +47,24 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 # ─── Socrata API Config ───────────────────────────────────────────────────────
-SOCRATA_DOMAIN = "data.sandiegocounty.gov"
-SOCRATA_BASE   = f"https://{SOCRATA_DOMAIN}/resource"
+# FIX: Two separate Socrata domains — county vs city
+COUNTY_DOMAIN    = "data.sandiegocounty.gov"
+CITY_DOMAIN      = "data.sandiego.gov"
+COUNTY_BASE      = f"https://{COUNTY_DOMAIN}/resource"
+CITY_BASE        = f"https://{CITY_DOMAIN}/resource"
 
-# Confirmed dataset IDs on data.sandiegocounty.gov
-DATASETS = {
-    # Unincorporated SD County building permits — has address, PIN, status, owner info
-    "building_permits_county": "gs2m-invt",
-    # City of SD building permits (separate portal) — backup source
-    "building_permits_city": "dyzh-7eat",
-}
-
-# City of SD open data (different domain) for code enforcement
-CITY_SOCRATA_BASE = "https://data.sandiego.gov/resource"
-CITY_DATASETS = {
-    # Code enforcement violations (city of SD)
-    "code_enforcement": "scsb-hfcn",
-}
-
-PAGE_SIZE   = 1000   # Socrata max rows per request
-MAX_RECORDS = 5000   # Cap per dataset to keep runs fast
-REQUEST_DELAY = 0.5  # seconds between API calls — be polite
+PAGE_SIZE     = 1000   # Socrata max rows per request
+MAX_RECORDS   = 5000   # Cap per dataset to keep runs fast
+REQUEST_DELAY = 0.5    # seconds between API calls
 
 # Output paths
-PROJECT_ROOT  = Path(__file__).resolve().parent.parent
-DATA_DIR      = PROJECT_ROOT / "data"
-DASHBOARD_DIR = PROJECT_ROOT / "dashboard"
-OUTPUT_JSON   = DATA_DIR / "output.json"
+PROJECT_ROOT   = Path(__file__).resolve().parent.parent
+DATA_DIR       = PROJECT_ROOT / "data"
+DASHBOARD_DIR  = PROJECT_ROOT / "dashboard"
+OUTPUT_JSON    = DATA_DIR / "output.json"
 DASHBOARD_HTML = DASHBOARD_DIR / "index.html"
 
 # ─── Distress keyword maps ────────────────────────────────────────────────────
-# These are matched against permit descriptions, status, and type fields
 TAX_KEYWORDS        = ["tax default","delinquent","tax lien","tax deed","ttc","treasurer"]
 CODE_KEYWORDS       = ["code violation","code enforcement","unpermitted","illegal","abatement",
                        "nuisance","blight","unsafe","substandard","red tag","stop work"]
@@ -77,12 +72,20 @@ PROBATE_KEYWORDS    = ["probate","estate","decedent","trust","trustee sale","suc
 LIEN_KEYWORDS       = ["lien","notice of default","lis pendens","mechanic","judgment lien"]
 DIVORCE_BK_KEYWORDS = ["divorce","dissolution","bankruptcy","bankrupt","chapter 7","chapter 13"]
 
-# Permit statuses that suggest distress / abandonment
+# FIX: All status strings lowercased to match what Socrata actually returns
 DISTRESS_STATUSES = [
-    "expired", "cancelled", "revoked", "denied", "voided",
-    "application expired", "permit expired", "application cancelled",
-    "issued - not finaled",  # permit pulled but work never inspected/finished
+    "expired",
+    "cancelled",
+    "revoked",
+    "denied",
+    "voided",
+    "application expired",
+    "permit expired",
+    "application cancelled",
+    "issued - not finaled",
     "stop work",
+    "withdrawn",
+    "incomplete",
 ]
 
 # ─── Data Model ──────────────────────────────────────────────────────────────
@@ -91,12 +94,11 @@ class Lead:
     document_number:   str = ""
     file_date:         str = ""
     doc_type:          str = ""
-    grantor:           str = ""   # Property owner / seller
-    grantee:           str = ""   # Contractor / lien holder / buyer
+    grantor:           str = ""
+    grantee:           str = ""
     legal_description: str = ""
     property_address:  str = ""
 
-    # Distress flags
     has_tax_delinquency:    bool = False
     has_code_violation:     bool = False
     has_probate:            bool = False
@@ -113,10 +115,8 @@ class Lead:
 def build_session() -> requests.Session:
     s = requests.Session()
     s.headers.update({
-        "User-Agent": "SDLeadScraper/2.0 (public data research)",
-        "Accept": "application/json",
-        # Socrata app token avoids rate-limit throttling (optional but polite)
-        # "X-App-Token": "YOUR_TOKEN_HERE",
+        "User-Agent": "SDLeadScraper/2.1 (public data research)",
+        "Accept":     "application/json",
     })
     return s
 
@@ -127,9 +127,18 @@ def socrata_get(session: requests.Session, url: str, params: dict) -> list[dict]
         time.sleep(REQUEST_DELAY)
         resp = session.get(url, params=params, timeout=30)
         resp.raise_for_status()
-        return resp.json()
+        data = resp.json()
+        # Socrata sometimes returns an error dict instead of a list
+        if isinstance(data, dict) and "error" in data:
+            log.error("Socrata API error: %s — url: %s params: %s", data, url, params)
+            return []
+        return data
     except requests.exceptions.HTTPError as e:
-        log.error("HTTP %s — %s", e.response.status_code, url)
+        log.error("HTTP %s — %s | params=%s", e.response.status_code, url, params)
+        try:
+            log.error("Response body: %s", e.response.text[:400])
+        except Exception:
+            pass
     except requests.exceptions.ConnectionError:
         log.error("Connection error — %s", url)
     except requests.exceptions.Timeout:
@@ -140,21 +149,44 @@ def socrata_get(session: requests.Session, url: str, params: dict) -> list[dict]
 
 
 def fetch_all_pages(session: requests.Session, base_url: str,
-                    extra_params: dict = None, max_records: int = MAX_RECORDS) -> list[dict]:
+                    extra_params: dict = None,
+                    max_records: int = MAX_RECORDS) -> list[dict]:
     """
     Paginate through a Socrata endpoint using $limit / $offset.
-    Returns a flat list of all records up to max_records.
+    If extra_params contains a $where clause and the first page returns 0 rows,
+    retries without the filter so we get *something* rather than nothing.
     """
     all_records = []
     offset = 0
 
     while len(all_records) < max_records:
-        limit = min(PAGE_SIZE, max_records - len(all_records))
-        params = {"$limit": limit, "$offset": offset, "$order": ":id"}
+        limit  = min(PAGE_SIZE, max_records - len(all_records))
+        params = {"$limit": limit, "$offset": offset}
         if extra_params:
             params.update(extra_params)
 
         batch = socrata_get(session, base_url, params)
+
+        # FIX: If filtered query returns nothing on first page, retry without $where
+        if not batch and offset == 0 and extra_params and "$where" in extra_params:
+            log.warning("   $where filter returned 0 rows — retrying without filter to test endpoint…")
+            fallback_params = {k: v for k, v in params.items() if k != "$where"}
+            fallback_params.pop("$order", None)   # also drop $order in case field name is wrong
+            batch = socrata_get(session, base_url, fallback_params)
+            if batch:
+                log.warning("   Fallback returned %d rows — your $where field names may be wrong!", len(batch))
+                log.warning("   Sample record keys: %s", list(batch[0].keys()))
+                # Log a sample status value so you can fix the filter
+                for key in batch[0]:
+                    if "status" in key.lower():
+                        log.warning("   Status field '%s' sample value: %s", key, batch[0][key])
+                # Return fallback data so we still get leads (keyword scan will filter distress)
+                all_records.extend(batch)
+                break
+            else:
+                log.error("   Endpoint returned 0 rows even without filters. Dataset may be unavailable.")
+                break
+
         if not batch:
             break
 
@@ -162,7 +194,7 @@ def fetch_all_pages(session: requests.Session, base_url: str,
         log.info("   Fetched %d records (total so far: %d)", len(batch), len(all_records))
 
         if len(batch) < limit:
-            break  # last page
+            break   # last page
 
         offset += limit
 
@@ -174,44 +206,48 @@ def fetch_all_pages(session: requests.Session, base_url: str,
 def parse_county_permit(record: dict) -> Optional[Lead]:
     """
     Parse one record from the SD County Building Permits dataset (gs2m-invt).
-    Fields: PermitNum, Description, AppliedDate, IssuedDate, OriginalAddress1,
-            OriginalCity, OriginalZip, StatusCurrent, PermitType, PIN,
-            ContractorFullName, ContractorCompanyName
+    Field names from this dataset are mixed-case; we try both cases.
     """
     try:
-        status = (record.get("statuscurrent") or record.get("StatusCurrent") or "").lower()
-        desc   = (record.get("description") or record.get("Description") or "").lower()
-        ptype  = (record.get("permittypedesc") or record.get("PermitTypeDesc") or
-                  record.get("permittypemapped") or "").lower()
+        # FIX: Try lowercase first (Socrata normalises to lowercase in most responses)
+        status = (record.get("statuscurrent") or record.get("StatusCurrent") or "").lower().strip()
+        desc   = (record.get("description")   or record.get("Description")   or "").lower()
+        ptype  = (
+            record.get("permittypedesc")   or record.get("PermitTypeDesc")   or
+            record.get("permittypemapped") or record.get("PermitTypeMapped") or
+            record.get("permittype")       or record.get("PermitType")       or ""
+        ).lower()
 
-        addr   = _join(
-            record.get("originaladdress1") or record.get("OriginalAddress1",""),
-            record.get("originalcity")     or record.get("OriginalCity",""),
+        addr = _join(
+            record.get("originaladdress1") or record.get("OriginalAddress1") or "",
+            record.get("originalcity")     or record.get("OriginalCity")     or "",
             "CA",
-            record.get("originalzip")      or record.get("OriginalZip","")
+            record.get("originalzip")      or record.get("OriginalZip")      or "",
         )
 
         lead = Lead(
-            document_number   = record.get("permitnum") or record.get("PermitNum",""),
-            file_date         = _format_date(record.get("applieddate") or record.get("AppliedDate","")),
+            document_number   = record.get("permitnum")   or record.get("PermitNum")   or "",
+            file_date         = _format_date(
+                                    record.get("applieddate") or record.get("AppliedDate") or ""),
             doc_type          = f"PERMIT — {ptype.upper()}" if ptype else "BUILDING PERMIT",
-            grantor           = "",   # permit data doesn't include owner name; PIN can be cross-referenced
+            grantor           = "",   # county permit data doesn't include owner name
             grantee           = _join(
-                                    record.get("contractorfullname") or record.get("ContractorFullName",""),
-                                    record.get("contractorcompanyname") or record.get("ContractorCompanyName","")
+                                    record.get("contractorfullname")    or record.get("ContractorFullName")    or "",
+                                    record.get("contractorcompanyname") or record.get("ContractorCompanyName") or "",
                                 ),
-            legal_description = f"PIN: {record.get('pin') or record.get('PIN','')}",
+            legal_description = f"PIN: {record.get('pin') or record.get('PIN') or ''}",
             property_address  = addr,
-            source_url        = f"https://{SOCRATA_DOMAIN}/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
+            source_url        = f"https://{COUNTY_DOMAIN}/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
         )
 
-        # Flag distress from status and description
-        combined_text = f"{status} {desc} {ptype}"
-        lead.has_code_violation  = _matches(combined_text, CODE_KEYWORDS) or \
-                                   any(s in status for s in DISTRESS_STATUSES)
-        lead.has_tax_delinquency = _matches(combined_text, TAX_KEYWORDS)
-        lead.has_probate         = _matches(combined_text, PROBATE_KEYWORDS)
-        lead.has_divorce_bankruptcy = _matches(combined_text, DIVORCE_BK_KEYWORDS)
+        combined = f"{status} {desc} {ptype}"
+
+        # FIX: Check lowercase status against lowercase DISTRESS_STATUSES list
+        lead.has_code_violation     = _matches(combined, CODE_KEYWORDS) or \
+                                      any(s in status for s in DISTRESS_STATUSES)
+        lead.has_tax_delinquency    = _matches(combined, TAX_KEYWORDS)
+        lead.has_probate            = _matches(combined, PROBATE_KEYWORDS)
+        lead.has_divorce_bankruptcy = _matches(combined, DIVORCE_BK_KEYWORDS)
 
         return lead
 
@@ -223,33 +259,36 @@ def parse_county_permit(record: dict) -> Optional[Lead]:
 def parse_city_permit(record: dict) -> Optional[Lead]:
     """
     Parse one record from the City of SD Building Permits dataset (dyzh-7eat).
-    Similar structure but slightly different field names.
+    Fetched from data.sandiego.gov — different field names than county dataset.
     """
     try:
-        status = (record.get("status") or "").lower()
-        desc   = (record.get("description") or "").lower()
-        ptype  = (record.get("permit_type") or record.get("work_description") or "").lower()
+        status = (record.get("status") or "").lower().strip()
+        desc   = (record.get("description")       or record.get("work_description") or "").lower()
+        ptype  = (record.get("permit_type")        or record.get("work_description") or "").lower()
 
         addr = _join(
-            record.get("address",""),
-            record.get("city","San Diego"),
+            record.get("address")             or "",
+            record.get("city", "San Diego"),
             "CA",
-            record.get("zip","")
+            record.get("zip")                 or "",
         )
 
         lead = Lead(
-            document_number   = record.get("permit_number") or record.get("project_id",""),
-            file_date         = _format_date(record.get("date_application_filed") or
-                                             record.get("date_issued","")),
+            document_number   = record.get("permit_number") or record.get("project_id") or "",
+            file_date         = _format_date(
+                                    record.get("date_application_filed") or
+                                    record.get("date_issued")            or ""),
             doc_type          = f"PERMIT — {ptype.upper()}" if ptype else "BUILDING PERMIT",
-            grantor           = record.get("owner_name",""),
-            grantee           = record.get("contractor_name",""),
-            legal_description = record.get("apn",""),
+            grantor           = record.get("owner_name") or "",
+            grantee           = record.get("contractor_name") or "",
+            legal_description = record.get("apn") or "",
             property_address  = addr,
-            source_url        = f"https://{SOCRATA_DOMAIN}/Housing-and-Infrastructure/Building-Permits/dyzh-7eat",
+            # FIX: correct source URL domain for city dataset
+            source_url        = f"https://{CITY_DOMAIN}/datasets/building-permits/",
         )
 
         combined = f"{status} {desc} {ptype}"
+
         lead.has_code_violation     = _matches(combined, CODE_KEYWORDS) or \
                                       any(s in status for s in DISTRESS_STATUSES)
         lead.has_tax_delinquency    = _matches(combined, TAX_KEYWORDS)
@@ -266,31 +305,37 @@ def parse_city_permit(record: dict) -> Optional[Lead]:
 def parse_code_enforcement(record: dict) -> Optional[Lead]:
     """
     Parse one record from the City of SD Code Enforcement dataset (scsb-hfcn).
+    Every record here is automatically a code violation lead.
     """
     try:
-        case_type = (record.get("case_type") or record.get("violation_type") or "CODE ENFORCEMENT").upper()
-        status    = (record.get("status") or "").lower()
-        desc      = (record.get("violation_description") or record.get("description") or "").lower()
+        case_type = (
+            record.get("case_type")       or
+            record.get("violation_type")  or
+            "CODE ENFORCEMENT"
+        ).upper()
+        status = (record.get("status") or "").lower()
+        desc   = (record.get("violation_description") or record.get("description") or "").lower()
 
         addr = _join(
-            record.get("address",""),
-            record.get("city","San Diego"),
+            record.get("address")         or "",
+            record.get("city", "San Diego"),
             "CA",
-            record.get("zip","")
+            record.get("zip")             or "",
         )
 
         lead = Lead(
-            document_number   = record.get("case_number") or record.get("record_id",""),
-            file_date         = _format_date(record.get("date_opened") or record.get("open_date","")),
+            document_number   = record.get("case_number") or record.get("record_id") or "",
+            file_date         = _format_date(
+                                    record.get("date_opened") or record.get("open_date") or ""),
             doc_type          = f"CODE ENFORCEMENT — {case_type}",
-            grantor           = record.get("owner",""),
+            grantor           = record.get("owner") or "",
             grantee           = "",
-            legal_description = record.get("apn",""),
+            legal_description = record.get("apn") or "",
             property_address  = addr,
-            source_url        = "https://data.sandiego.gov/datasets/code-enforcement-violations/",
+            source_url        = f"https://{CITY_DOMAIN}/datasets/code-enforcement-violations/",
         )
 
-        lead.has_code_violation = True  # It's literally a code enforcement record
+        lead.has_code_violation = True   # Every record is a code enforcement case
 
         combined = f"{desc} {status} {case_type}"
         lead.has_tax_delinquency    = _matches(combined, TAX_KEYWORDS)
@@ -306,9 +351,6 @@ def parse_code_enforcement(record: dict) -> Optional[Lead]:
 
 # ─── Scoring ──────────────────────────────────────────────────────────────────
 def score_lead(lead: Lead, all_leads: list["Lead"]) -> Lead:
-    """
-    Assign the seller distress score (0-100). Mutates lead in place.
-    """
     score   = 0
     reasons = []
 
@@ -328,7 +370,6 @@ def score_lead(lead: Lead, all_leads: list["Lead"]) -> Lead:
         score += 10
         reasons.append("Divorce/bankruptcy (+10)")
 
-    # Multiple liens: check if same address appears in 2+ records with lien signals
     if lead.property_address:
         addr_key = lead.property_address.lower().split(",")[0].strip()
         same_addr = [
@@ -348,17 +389,19 @@ def score_lead(lead: Lead, all_leads: list["Lead"]) -> Lead:
 
 # ─── Main orchestration ───────────────────────────────────────────────────────
 def scrape_all() -> list[Lead]:
-    session = build_session()
+    session   = build_session()
     all_leads: list[Lead] = []
 
     # ── 1. SD County Building Permits (unincorporated areas) ──────────────────
     log.info("── Fetching SD County Building Permits (gs2m-invt)…")
-    url = f"{SOCRATA_BASE}/gs2m-invt.json"
-    # Filter to recently expired / problematic permits to get distress signals
+    url = f"{COUNTY_BASE}/gs2m-invt.json"
+    # FIX: Use lowercase field names; Socrata schema uses lowercase
     params = {
-        "$where": "StatusCurrent IN ('Expired','Application Expired','Cancelled',"
-                  "'Revoked','Denied','Issued - Not Finaled')",
-        "$order":  "IssuedDate DESC",
+        "$where": (
+            "statuscurrent in('Expired','Application Expired','Cancelled',"
+            "'Revoked','Denied','Issued - Not Finaled')"
+        ),
+        "$order": "issueddate DESC",
     }
     records = fetch_all_pages(session, url, extra_params=params)
     log.info("   Parsing %d county permit records…", len(records))
@@ -368,12 +411,15 @@ def scrape_all() -> list[Lead]:
             all_leads.append(lead)
 
     # ── 2. City of SD Building Permits ────────────────────────────────────────
+    # FIX: Use CITY_BASE (data.sandiego.gov), NOT COUNTY_BASE
     log.info("── Fetching City of SD Building Permits (dyzh-7eat)…")
-    url = f"{SOCRATA_BASE}/dyzh-7eat.json"
+    url = f"{CITY_BASE}/dyzh-7eat.json"
     params = {
-        "$where": "StatusCurrent IN ('Expired','Application Expired','Cancelled',"
-                  "'Revoked','Denied','Issued - Not Finaled')",
-        "$order":  "IssuedDate DESC",
+        "$where": (
+            "status in('Expired','Application Expired','Cancelled',"
+            "'Revoked','Denied','Issued - Not Finaled')"
+        ),
+        "$order": "date_issued DESC",
     }
     records = fetch_all_pages(session, url, extra_params=params)
     log.info("   Parsing %d city permit records…", len(records))
@@ -384,7 +430,7 @@ def scrape_all() -> list[Lead]:
 
     # ── 3. City Code Enforcement ──────────────────────────────────────────────
     log.info("── Fetching City Code Enforcement (scsb-hfcn)…")
-    url = f"{CITY_SOCRATA_BASE}/scsb-hfcn.json"
+    url = f"{CITY_BASE}/scsb-hfcn.json"
     params = {"$order": "date_opened DESC"}
     records = fetch_all_pages(session, url, extra_params=params)
     log.info("   Parsing %d code enforcement records…", len(records))
@@ -398,7 +444,6 @@ def scrape_all() -> list[Lead]:
 
 
 def deduplicate(leads: list[Lead]) -> list[Lead]:
-    """Remove duplicates by document number, keeping first occurrence."""
     seen: set[str] = set()
     unique = []
     for lead in leads:
@@ -411,7 +456,6 @@ def deduplicate(leads: list[Lead]) -> list[Lead]:
 
 
 def filter_has_distress(leads: list[Lead]) -> list[Lead]:
-    """Keep only leads that have at least one distress signal (score > 0)."""
     filtered = [l for l in leads if l.seller_score > 0]
     log.info("Leads with distress signals: %d", len(filtered))
     return filtered
@@ -507,7 +551,7 @@ def generate_dashboard(leads: list[Lead]) -> None:
 </div>
 <div class="grid" id="grid"></div>
 <footer>
-  <span>Source: SD County & City Open Data Portals (Socrata API) — Public Records</span>
+  <span>Source: SD County &amp; City Open Data Portals (Socrata API) — Public Records</span>
   <span id="footer-ts"></span>
 </footer>
 <script>
@@ -608,34 +652,33 @@ def _join(*parts) -> str:
 def _format_date(raw: str) -> str:
     if not raw:
         return ""
-    # Socrata dates come as ISO strings or "MM/DD/YYYY HH:MM:SS"
-    for fmt in ("%Y-%m-%dT%H:%M:%S.%f", "%Y-%m-%dT%H:%M:%S",
-                "%m/%d/%Y %H:%M:%S %p", "%m/%d/%Y"):
+    for fmt in (
+        "%Y-%m-%dT%H:%M:%S.%f",
+        "%Y-%m-%dT%H:%M:%S",
+        "%m/%d/%Y %H:%M:%S %p",
+        "%m/%d/%Y",
+    ):
         try:
-            return datetime.strptime(raw[:19], fmt[:len(raw[:19].split("T")[0])+9]).strftime("%m/%d/%Y")
+            return datetime.strptime(raw[:len(fmt)], fmt).strftime("%m/%d/%Y")
         except Exception:
             pass
-    return raw[:10]  # fallback: first 10 chars
+    return raw[:10]
 
 
 # ─── Entry point ──────────────────────────────────────────────────────────────
 def main():
     log.info("╔══════════════════════════════════════════════╗")
-    log.info("║  SD County Motivated Seller Lead Scraper v2  ║")
-    log.info("║  Source: SD County Open Data (Socrata API)   ║")
+    log.info("║  SD County Motivated Seller Lead Scraper v2.1 ║")
+    log.info("║  Source: SD County Open Data (Socrata API)    ║")
     log.info("╚══════════════════════════════════════════════╝")
 
     leads = scrape_all()
     leads = deduplicate(leads)
 
-    # Score all leads (pass full list for multi-address detection)
     for lead in leads:
         score_lead(lead, leads)
 
-    # Keep only leads with actual distress signals
     leads = filter_has_distress(leads)
-
-    # Sort highest score first
     leads.sort(key=lambda l: l.seller_score, reverse=True)
 
     save_json(leads)
