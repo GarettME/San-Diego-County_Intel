@@ -11,7 +11,8 @@
 # Both outputs are uploaded as GitHub Artifacts and optionally committed
 # back to the repository if COMMIT_RESULTS secret is set to "true".
 # ─────────────────────────────────────────────────────────────────────────────
-
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 name: Scrape SD County Leads
 
 on:
