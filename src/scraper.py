@@ -508,6 +508,8 @@ def generate_dashboard(leads: list[Lead]) -> None:
   .filter-btn{{background:var(--surface);border:1px solid var(--border);color:var(--text-dim);padding:.6rem 1.1rem;border-radius:4px;font-family:var(--mono);font-size:.72rem;cursor:pointer;text-transform:uppercase;letter-spacing:.05em;transition:all .15s}}
   .filter-btn:hover,.filter-btn.active{{border-color:var(--accent);color:var(--accent);background:rgba(232,255,71,.06)}}
   #count-display{{font-family:var(--mono);font-size:.72rem;color:var(--text-dim);margin-left:auto}}
+  .export-btn{{background:var(--accent);border:none;color:#0a0d14;padding:.6rem 1.2rem;border-radius:4px;font-family:var(--mono);font-size:.72rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.05em;transition:opacity .15s}}
+  .export-btn:hover{{opacity:.85}}
   .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1px;background:var(--border)}}
   .card{{background:var(--surface);padding:1.4rem 1.6rem;cursor:pointer;transition:background .15s;position:relative;overflow:hidden}}
   .card:hover{{background:#161b28}}
@@ -548,6 +550,7 @@ def generate_dashboard(leads: list[Lead]) -> None:
   <button class="filter-btn" data-filter="lien">Multi-Lien</button>
   <button class="filter-btn" data-filter="div">Divorce/BK</button>
   <span id="count-display"></span>
+  <button class="export-btn" id="export-csv">Export CSV</button>
 </div>
 <div class="grid" id="grid"></div>
 <footer>
@@ -630,6 +633,42 @@ document.querySelectorAll('.filter-btn').forEach(btn=>{{
   }});
 }});
 document.getElementById('search').addEventListener('input',e=>{{currentSearch=e.target.value.trim();applyFilters();}});
+
+// ── CSV Export ────────────────────────────────────────────────────────────
+document.getElementById('export-csv').addEventListener('click',()=>{{
+  const cols = [
+    'document_number','file_date','doc_type','grantor','grantee',
+    'property_address','legal_description','seller_score',
+    'has_tax_delinquency','has_code_violation','has_probate',
+    'has_multiple_liens','has_divorce_bankruptcy','score_reasons','source_url'
+  ];
+  const escape = v => {{
+    const s = (v===null||v===undefined)?'':Array.isArray(v)?v.join('; '):String(v);
+    return '"'+s.replace(/"/g,'""')+'"';
+  }};
+  const rows = [cols.join(',')];
+  // Export whatever is currently visible (respects active filter + search)
+  let visible = [...RAW];
+  if(currentFilter==='tax')     visible=visible.filter(l=>l.has_tax_delinquency);
+  if(currentFilter==='code')    visible=visible.filter(l=>l.has_code_violation);
+  if(currentFilter==='probate') visible=visible.filter(l=>l.has_probate);
+  if(currentFilter==='lien')    visible=visible.filter(l=>l.has_multiple_liens);
+  if(currentFilter==='div')     visible=visible.filter(l=>l.has_divorce_bankruptcy);
+  if(currentSearch){{
+    const q=currentSearch.toLowerCase();
+    visible=visible.filter(l=>(l.property_address||'').toLowerCase().includes(q)||
+      (l.document_number||'').toLowerCase().includes(q)||
+      (l.grantor||'').toLowerCase().includes(q)||(l.grantee||'').toLowerCase().includes(q));
+  }}
+  visible.forEach(l=>rows.push(cols.map(c=>escape(l[c])).join(',')));
+  const blob = new Blob([rows.join('\n')],{{type:'text/csv'}});
+  const a    = document.createElement('a');
+  a.href     = URL.createObjectURL(blob);
+  a.download = 'sd_leads_'+new Date().toISOString().slice(0,10)+'.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}});
+
 initStats(RAW);
 document.querySelector('[data-filter="all"]').classList.add('active');
 applyFilters();
