@@ -6,10 +6,10 @@
 #
 # Artifacts:
 #   - data/output.json        (lead data)
-#   - dashboard/index.html    (visual dashboard)
+#   - docs/index.html         (visual dashboard — served by GitHub Pages)
 #
-# Both outputs are uploaded as GitHub Artifacts and optionally committed
-# back to the repository if COMMIT_RESULTS secret is set to "true".
+# Both outputs are uploaded as GitHub Artifacts and committed back to the
+# repository so GitHub Pages always serves the latest dashboard.
 # ─────────────────────────────────────────────────────────────────────────────
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -36,7 +36,7 @@ jobs:
     timeout-minutes: 60        # Kill hung runs after 1 hour
 
     permissions:
-      contents: write          # Needed if committing results back to repo
+      contents: write          # Needed to commit results back to repo
 
     steps:
       # ── 1. Checkout code ───────────────────────────────────────────────────
@@ -57,15 +57,14 @@ jobs:
           pip install requests beautifulsoup4 lxml
 
       # ── 4. Create output directories ───────────────────────────────────────
+      # FIX: Changed "dashboard" to "docs" to match GitHub Pages /docs folder setting
       - name: Create output directories
         run: |
-          mkdir -p data dashboard
+          mkdir -p data docs
 
       # ── 5. Run the scraper ─────────────────────────────────────────────────
       - name: Run scraper
         env:
-          # Optional: pass secrets as env vars for authenticated requests
-          # COUNTY_SESSION_TOKEN: ${{ secrets.COUNTY_SESSION_TOKEN }}
           PYTHONPATH: ${{ github.workspace }}/src
           DEBUG: ${{ github.event.inputs.debug_mode || 'false' }}
         run: |
@@ -93,6 +92,7 @@ jobs:
           path: data/output.json
           retention-days: 90
 
+      # FIX: Changed path from "dashboard/index.html" to "docs/index.html"
       - name: Upload dashboard
         uses: actions/upload-artifact@v4
         with:
@@ -100,14 +100,14 @@ jobs:
           path: docs/index.html
           retention-days: 90
 
-      # ── 8. Commit results back to repo (optional) ─────────────────────────
-      # To enable: add a repository secret COMMIT_RESULTS = true
+      # ── 8. Commit results back to repo ────────────────────────────────────
+      # FIX: Commit is now always on (removed the COMMIT_RESULTS gate) and
+      #      git add now references docs/index.html instead of dashboard/index.html
       - name: Commit results to repository
-        if: ${{ vars.COMMIT_RESULTS == 'true' }}
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/output.json dashboard/index.html
+          git add data/output.json docs/index.html
           git diff --cached --quiet || \
             git commit -m "chore: update leads data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           git push
@@ -129,7 +129,7 @@ jobs:
               print(f'| Metric | Value |')
               print(f'|--------|-------|')
               print(f'| Total leads | {len(leads)} |')
-              print(f'| High score (≥70) | {len(high)} |')
+              print(f'| High score (>=70) | {len(high)} |')
               print(f'| Medium score (40-69) | {len(med)} |')
               print(f'| Low score (<40) | {len(low)} |')
               print(f'| Generated at | {data.get(\"generated_at\",\"unknown\")} |')
