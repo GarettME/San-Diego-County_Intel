@@ -97,7 +97,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dashboard-${{ github.run_number }}
-          path: dashboard/index.html
+          path: docs/index.html
           retention-days: 90
 
       # ── 8. Commit results back to repo (optional) ─────────────────────────
