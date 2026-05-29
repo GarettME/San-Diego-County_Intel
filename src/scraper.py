@@ -60,7 +60,7 @@ REQUEST_DELAY = 0.5    # seconds between API calls
 # Output paths
 PROJECT_ROOT   = Path(__file__).resolve().parent.parent
 DATA_DIR       = PROJECT_ROOT / "data"
-DASHBOARD_DIR  = PROJECT_ROOT / "dashboard"
+DASHBOARD_DIR  = PROJECT_ROOT / "docs"
 OUTPUT_JSON    = DATA_DIR / "output.json"
 DASHBOARD_HTML = DASHBOARD_DIR / "index.html"
 
