@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T19:03:58.960211+00:00",
+  "generated_at": "2026-05-29T22:17:25.023019+00:00",
   "total_leads": 523,
   "leads": [
     {
@@ -21,7 +21,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036552+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709693+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120089",
@@ -42,7 +42,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037738+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711220+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120140",
@@ -63,7 +63,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038751+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712558+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120375",
@@ -84,7 +84,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044053+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719253+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120398",
@@ -105,7 +105,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044637+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719988+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120446",
@@ -126,7 +126,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045786+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721461+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120073",
@@ -147,7 +147,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049799+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726664+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120106",
@@ -168,7 +168,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050686+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727791+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120034",
@@ -189,7 +189,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051922+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729361+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120070",
@@ -210,7 +210,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052760+00:00"
+      "scraped_at": "2026-05-29T22:17:22.730438+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120094",
@@ -231,7 +231,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053374+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731215+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120108",
@@ -252,7 +252,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053694+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731626+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120167",
@@ -273,7 +273,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055084+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733389+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120173",
@@ -294,7 +294,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055222+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733569+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120182",
@@ -315,7 +315,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055439+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733856+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120192",
@@ -336,7 +336,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055684+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734164+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120210",
@@ -357,7 +357,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056082+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734688+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120217",
@@ -378,7 +378,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056256+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734899+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120242",
@@ -399,7 +399,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056792+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735605+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120055",
@@ -420,7 +420,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058493+00:00"
+      "scraped_at": "2026-05-29T22:17:22.737776+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120391",
@@ -440,7 +440,7 @@
         "Tax delinquency (+30)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044470+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719779+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120005",
@@ -460,7 +460,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.035861+00:00"
+      "scraped_at": "2026-05-29T22:17:22.708826+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120008",
@@ -480,7 +480,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.035941+00:00"
+      "scraped_at": "2026-05-29T22:17:22.708927+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120010",
@@ -500,7 +500,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036001+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709000+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120014",
@@ -520,7 +520,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036107+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709132+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120020",
@@ -540,7 +540,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036263+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709313+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120023",
@@ -560,7 +560,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036328+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709396+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120031",
@@ -580,7 +580,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036505+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709632+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120034",
@@ -600,7 +600,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036572+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709719+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120035",
@@ -620,7 +620,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036594+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709747+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120037",
@@ -640,7 +640,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036641+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709809+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120041",
@@ -660,7 +660,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036731+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709924+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120047",
@@ -680,7 +680,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036864+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710089+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120048",
@@ -700,7 +700,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036889+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710120+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120062",
@@ -720,7 +720,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037149+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710457+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120068",
@@ -740,7 +740,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037294+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710645+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120081",
@@ -760,7 +760,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037572+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711004+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120084",
@@ -780,7 +780,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037648+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711105+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120086",
@@ -800,7 +800,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037671+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711133+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120090",
@@ -820,7 +820,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037760+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711250+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120095",
@@ -840,7 +840,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037844+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711362+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120099",
@@ -860,7 +860,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037937+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711482+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120114",
@@ -880,7 +880,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038265+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711914+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120115",
@@ -900,7 +900,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038288+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711943+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120155",
@@ -920,7 +920,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039046+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712938+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120156",
@@ -940,7 +940,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039067+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712965+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120157",
@@ -960,7 +960,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039093+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712999+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120160",
@@ -980,7 +980,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039188+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713089+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120165",
@@ -1000,7 +1000,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039264+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713176+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120180",
@@ -1020,7 +1020,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039609+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713629+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120193",
@@ -1040,7 +1040,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039881+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713970+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120194",
@@ -1060,7 +1060,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039905+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714000+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120216",
@@ -1080,7 +1080,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040359+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714574+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120224",
@@ -1100,7 +1100,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040492+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714748+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120231",
@@ -1120,7 +1120,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040661+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714965+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120233",
@@ -1140,7 +1140,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040709+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715021+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120235",
@@ -1160,7 +1160,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040754+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715080+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120236",
@@ -1180,7 +1180,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040776+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715108+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120255",
@@ -1200,7 +1200,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041254+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715697+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120265",
@@ -1220,7 +1220,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041498+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716005+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120275",
@@ -1240,7 +1240,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041756+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716339+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120279",
@@ -1260,7 +1260,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041848+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716456+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120283",
@@ -1280,7 +1280,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041941+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716587+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120285",
@@ -1300,7 +1300,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041986+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716645+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120289",
@@ -1320,7 +1320,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042075+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716758+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120290",
@@ -1340,7 +1340,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042101+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716792+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120295",
@@ -1360,7 +1360,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042220+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716939+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120298",
@@ -1380,7 +1380,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042263+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716996+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120299",
@@ -1400,7 +1400,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042285+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717021+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120300",
@@ -1420,7 +1420,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042317+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717057+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120302",
@@ -1440,7 +1440,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042369+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717121+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120304",
@@ -1460,7 +1460,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042411+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717175+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120305",
@@ -1480,7 +1480,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042446+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717219+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120307",
@@ -1500,7 +1500,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042498+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717285+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120309",
@@ -1520,7 +1520,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042542+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717341+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120311",
@@ -1540,7 +1540,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042589+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717400+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120319",
@@ -1560,7 +1560,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042769+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717647+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120326",
@@ -1580,7 +1580,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042956+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717888+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120330",
@@ -1600,7 +1600,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043041+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717998+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120334",
@@ -1620,7 +1620,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043132+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718113+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120336",
@@ -1640,7 +1640,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043153+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718140+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120337",
@@ -1660,7 +1660,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043201+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718168+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120344",
@@ -1680,7 +1680,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043313+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718308+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120350",
@@ -1700,7 +1700,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043435+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718457+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120358",
@@ -1720,7 +1720,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043637+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718727+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120359",
@@ -1740,7 +1740,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043659+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718758+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120379",
@@ -1760,7 +1760,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044173+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719388+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120381",
@@ -1780,7 +1780,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044217+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719443+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120386",
@@ -1800,7 +1800,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044343+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719617+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120387",
@@ -1820,7 +1820,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044366+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719650+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120388",
@@ -1840,7 +1840,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044391+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719680+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120397",
@@ -1860,7 +1860,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044615+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719959+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120404",
@@ -1880,7 +1880,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044788+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720181+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120406",
@@ -1900,7 +1900,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044833+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720241+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120410",
@@ -1920,7 +1920,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044901+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720326+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120415",
@@ -1940,7 +1940,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045031+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720487+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120425",
@@ -1960,7 +1960,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045280+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720806+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120429",
@@ -1980,7 +1980,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045367+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720923+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120431",
@@ -2000,7 +2000,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045421+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720994+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120433",
@@ -2020,7 +2020,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045466+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721049+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120436",
@@ -2040,7 +2040,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045546+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721158+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120444",
@@ -2060,7 +2060,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045738+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721396+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120448",
@@ -2080,7 +2080,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045835+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721541+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120450",
@@ -2100,7 +2100,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045889+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721600+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120451",
@@ -2120,7 +2120,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045910+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721626+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120452",
@@ -2140,7 +2140,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045930+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721651+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120455",
@@ -2160,7 +2160,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046008+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721746+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120456",
@@ -2180,7 +2180,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046031+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721775+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120461",
@@ -2200,7 +2200,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046141+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721918+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120470",
@@ -2220,7 +2220,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046351+00:00"
+      "scraped_at": "2026-05-29T22:17:22.722170+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120473",
@@ -2240,7 +2240,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046406+00:00"
+      "scraped_at": "2026-05-29T22:17:22.722242+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120476",
@@ -2260,7 +2260,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046487+00:00"
+      "scraped_at": "2026-05-29T22:17:22.722343+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120479",
@@ -2280,7 +2280,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046571+00:00"
+      "scraped_at": "2026-05-29T22:17:22.722455+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120487",
@@ -2300,7 +2300,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046761+00:00"
+      "scraped_at": "2026-05-29T22:17:22.722711+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120492",
@@ -2320,7 +2320,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046875+00:00"
+      "scraped_at": "2026-05-29T22:17:22.722858+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120493",
@@ -2340,7 +2340,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046897+00:00"
+      "scraped_at": "2026-05-29T22:17:22.722885+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120500",
@@ -2360,7 +2360,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046995+00:00"
+      "scraped_at": "2026-05-29T22:17:22.723005+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120514",
@@ -2380,7 +2380,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.047297+00:00"
+      "scraped_at": "2026-05-29T22:17:22.723382+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120516",
@@ -2400,7 +2400,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.047344+00:00"
+      "scraped_at": "2026-05-29T22:17:22.723443+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120535",
@@ -2420,7 +2420,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.047736+00:00"
+      "scraped_at": "2026-05-29T22:17:22.723958+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120537",
@@ -2440,7 +2440,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.047784+00:00"
+      "scraped_at": "2026-05-29T22:17:22.724020+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120546",
@@ -2460,7 +2460,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.047980+00:00"
+      "scraped_at": "2026-05-29T22:17:22.724280+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120547",
@@ -2480,7 +2480,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.048000+00:00"
+      "scraped_at": "2026-05-29T22:17:22.724307+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120024",
@@ -2500,7 +2500,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.048550+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725020+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120047",
@@ -2520,7 +2520,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049155+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725803+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120087",
@@ -2540,7 +2540,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050227+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727196+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120017",
@@ -2560,7 +2560,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051519+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728837+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120021",
@@ -2580,7 +2580,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051611+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728959+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120028",
@@ -2600,7 +2600,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051780+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729182+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120040",
@@ -2620,7 +2620,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052067+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729556+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120055",
@@ -2640,7 +2640,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052417+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729993+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120061",
@@ -2660,7 +2660,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052532+00:00"
+      "scraped_at": "2026-05-29T22:17:22.730147+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120064",
@@ -2680,7 +2680,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052625+00:00"
+      "scraped_at": "2026-05-29T22:17:22.730265+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120078",
@@ -2700,7 +2700,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052983+00:00"
+      "scraped_at": "2026-05-29T22:17:22.730729+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120088",
@@ -2720,7 +2720,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053237+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731041+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120104",
@@ -2740,7 +2740,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053605+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731514+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120135",
@@ -2760,7 +2760,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054308+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732401+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120137",
@@ -2780,7 +2780,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054358+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732460+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120143",
@@ -2800,7 +2800,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054503+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732653+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120147",
@@ -2820,7 +2820,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054597+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732773+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120153",
@@ -2840,7 +2840,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054768+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732987+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120155",
@@ -2860,7 +2860,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054812+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733043+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120157",
@@ -2880,7 +2880,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054854+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733099+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120162",
@@ -2900,7 +2900,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054969+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733243+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120180",
@@ -2920,7 +2920,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055376+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733768+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120207",
@@ -2940,7 +2940,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056031+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734622+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120209",
@@ -2960,7 +2960,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056051+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734647+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120212",
@@ -2980,7 +2980,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056140+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734760+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120256",
@@ -3000,7 +3000,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057091+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735984+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120002",
@@ -3020,7 +3020,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057228+00:00"
+      "scraped_at": "2026-05-29T22:17:22.736147+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120012",
@@ -3040,7 +3040,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057449+00:00"
+      "scraped_at": "2026-05-29T22:17:22.736430+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120018",
@@ -3060,7 +3060,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057591+00:00"
+      "scraped_at": "2026-05-29T22:17:22.736625+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120022",
@@ -3080,7 +3080,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057682+00:00"
+      "scraped_at": "2026-05-29T22:17:22.736745+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120026",
@@ -3100,7 +3100,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057771+00:00"
+      "scraped_at": "2026-05-29T22:17:22.736858+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120036",
@@ -3120,7 +3120,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058001+00:00"
+      "scraped_at": "2026-05-29T22:17:22.737153+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120040",
@@ -3140,7 +3140,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058087+00:00"
+      "scraped_at": "2026-05-29T22:17:22.737267+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120046",
@@ -3160,7 +3160,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058274+00:00"
+      "scraped_at": "2026-05-29T22:17:22.737481+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120062",
@@ -3180,7 +3180,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058648+00:00"
+      "scraped_at": "2026-05-29T22:17:22.737973+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120066",
@@ -3200,7 +3200,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058719+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738060+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120075",
@@ -3220,7 +3220,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058912+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738315+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120076",
@@ -3240,7 +3240,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058940+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738348+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120085",
@@ -3260,7 +3260,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059132+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738607+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120090",
@@ -3280,7 +3280,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059243+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738739+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120093",
@@ -3300,7 +3300,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059302+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738819+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120094",
@@ -3320,7 +3320,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059326+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738850+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120095",
@@ -3340,7 +3340,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059357+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738889+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120102",
@@ -3360,7 +3360,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059510+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739077+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120104",
@@ -3380,7 +3380,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059550+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739129+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120109",
@@ -3400,7 +3400,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059650+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739257+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120111",
@@ -3420,7 +3420,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059694+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739313+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120113",
@@ -3440,7 +3440,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059735+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739364+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120114",
@@ -3460,7 +3460,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059757+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739389+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120120",
@@ -3480,7 +3480,7 @@
         "Code violation (+25)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059884+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739560+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120270",
@@ -3500,7 +3500,7 @@
         "Probate filing (+20)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041620+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716165+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120004",
@@ -3520,7 +3520,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.035829+00:00"
+      "scraped_at": "2026-05-29T22:17:22.708789+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120007",
@@ -3540,7 +3540,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.035916+00:00"
+      "scraped_at": "2026-05-29T22:17:22.708895+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120009",
@@ -3560,7 +3560,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.035966+00:00"
+      "scraped_at": "2026-05-29T22:17:22.708958+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120012",
@@ -3580,7 +3580,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036056+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709067+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120013",
@@ -3600,7 +3600,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036085+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709104+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120015",
@@ -3620,7 +3620,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036131+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709162+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120017",
@@ -3640,7 +3640,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036189+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709220+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120018",
@@ -3660,7 +3660,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036216+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709253+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120019",
@@ -3680,7 +3680,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036237+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709280+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120021",
@@ -3700,7 +3700,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036285+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709340+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120022",
@@ -3720,7 +3720,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036307+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709369+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120024",
@@ -3740,7 +3740,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036348+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709422+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120026",
@@ -3760,7 +3760,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036390+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709475+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120027",
@@ -3780,7 +3780,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036410+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709513+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120029",
@@ -3800,7 +3800,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036459+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709574+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120032",
@@ -3820,7 +3820,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036529+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709663+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120036",
@@ -3840,7 +3840,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036619+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709781+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120039",
@@ -3860,7 +3860,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036689+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709870+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120042",
@@ -3880,7 +3880,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036754+00:00"
+      "scraped_at": "2026-05-29T22:17:22.709954+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120044",
@@ -3900,7 +3900,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036799+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710009+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120045",
@@ -3920,7 +3920,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036822+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710037+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120046",
@@ -3940,7 +3940,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.036845+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710065+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120054",
@@ -3960,7 +3960,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037010+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710276+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120058",
@@ -3980,7 +3980,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037055+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710338+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120060",
@@ -4000,7 +4000,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037102+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710398+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120061",
@@ -4020,7 +4020,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037126+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710428+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120063",
@@ -4040,7 +4040,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037180+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710485+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120064",
@@ -4060,7 +4060,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037202+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710527+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120065",
@@ -4080,7 +4080,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037223+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710555+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120066",
@@ -4100,7 +4100,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037249+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710587+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120069",
@@ -4120,7 +4120,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037324+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710684+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120071",
@@ -4140,7 +4140,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037348+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710714+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120072",
@@ -4160,7 +4160,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037371+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710744+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120073",
@@ -4180,7 +4180,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037394+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710774+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120074",
@@ -4200,7 +4200,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037416+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710802+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120075",
@@ -4220,7 +4220,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037439+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710832+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120077",
@@ -4240,7 +4240,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037480+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710885+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120079",
@@ -4260,7 +4260,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037526+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710946+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120080",
@@ -4280,7 +4280,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037546+00:00"
+      "scraped_at": "2026-05-29T22:17:22.710973+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120082",
@@ -4300,7 +4300,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037601+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711043+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120087",
@@ -4320,7 +4320,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037696+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711165+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120088",
@@ -4340,7 +4340,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037716+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711193+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120091",
@@ -4360,7 +4360,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037782+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711278+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120093",
@@ -4380,7 +4380,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037803+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711305+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120096",
@@ -4400,7 +4400,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037864+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711388+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120097",
@@ -4420,7 +4420,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037883+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711412+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120100",
@@ -4440,7 +4440,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.037959+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711544+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120105",
@@ -4460,7 +4460,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038047+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711657+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120106",
@@ -4480,7 +4480,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038071+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711687+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120107",
@@ -4500,7 +4500,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038096+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711718+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120108",
@@ -4520,7 +4520,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038121+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711749+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120110",
@@ -4540,7 +4540,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038173+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711802+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120111",
@@ -4560,7 +4560,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038194+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711828+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120112",
@@ -4580,7 +4580,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038220+00:00"
+      "scraped_at": "2026-05-29T22:17:22.711858+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120118",
@@ -4600,7 +4600,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038334+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712002+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120119",
@@ -4620,7 +4620,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038359+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712034+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120123",
@@ -4640,7 +4640,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038400+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712089+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120124",
@@ -4660,7 +4660,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038419+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712114+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120127",
@@ -4680,7 +4680,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038458+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712167+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120130",
@@ -4700,7 +4700,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038532+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712262+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120131",
@@ -4720,7 +4720,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038553+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712288+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120136",
@@ -4740,7 +4740,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038660+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712424+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120139",
@@ -4760,7 +4760,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038728+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712528+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120145",
@@ -4780,7 +4780,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038847+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712680+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120146",
@@ -4800,7 +4800,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038869+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712707+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120147",
@@ -4820,7 +4820,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038891+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712735+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120150",
@@ -4840,7 +4840,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038961+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712823+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120151",
@@ -4860,7 +4860,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.038980+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712848+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120154",
@@ -4880,7 +4880,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039025+00:00"
+      "scraped_at": "2026-05-29T22:17:22.712910+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120158",
@@ -4900,7 +4900,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039117+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713028+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120162",
@@ -4920,7 +4920,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039218+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713119+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120164",
@@ -4940,7 +4940,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039242+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713149+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120170",
@@ -4960,7 +4960,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039378+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713318+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120172",
@@ -4980,7 +4980,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039420+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713370+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120174",
@@ -5000,7 +5000,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039461+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713422+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120175",
@@ -5020,7 +5020,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039483+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713451+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120178",
@@ -5040,7 +5040,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039563+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713572+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120179",
@@ -5060,7 +5060,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039586+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713601+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120181",
@@ -5080,7 +5080,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039632+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713658+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120182",
@@ -5100,7 +5100,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039654+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713685+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120183",
@@ -5120,7 +5120,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039677+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713711+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120185",
@@ -5140,7 +5140,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039724+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713769+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120187",
@@ -5160,7 +5160,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039746+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713798+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120189",
@@ -5180,7 +5180,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039769+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713827+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120190",
@@ -5200,7 +5200,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039802+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713870+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120191",
@@ -5220,7 +5220,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039833+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713909+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120192",
@@ -5240,7 +5240,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039856+00:00"
+      "scraped_at": "2026-05-29T22:17:22.713938+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120196",
@@ -5260,7 +5260,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039951+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714058+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120197",
@@ -5280,7 +5280,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.039978+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714093+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120198",
@@ -5300,7 +5300,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040000+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714121+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120201",
@@ -5320,7 +5320,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040076+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714216+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120203",
@@ -5340,7 +5340,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040125+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714281+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120206",
@@ -5360,7 +5360,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040203+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714365+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120208",
@@ -5380,7 +5380,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040250+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714423+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120209",
@@ -5400,7 +5400,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040273+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714452+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120214",
@@ -5420,7 +5420,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040315+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714519+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120215",
@@ -5440,7 +5440,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040336+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714547+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120217",
@@ -5460,7 +5460,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040385+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714608+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120219",
@@ -5480,7 +5480,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040406+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714637+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120225",
@@ -5500,7 +5500,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040516+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714777+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120226",
@@ -5520,7 +5520,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040536+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714804+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120230",
@@ -5540,7 +5540,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040641+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714939+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120232",
@@ -5560,7 +5560,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040684+00:00"
+      "scraped_at": "2026-05-29T22:17:22.714992+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120240",
@@ -5580,7 +5580,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040872+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715227+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120246",
@@ -5600,7 +5600,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.040998+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715385+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120249",
@@ -5620,7 +5620,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041063+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715465+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120254",
@@ -5640,7 +5640,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041230+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715667+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120256",
@@ -5660,7 +5660,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041279+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715727+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120257",
@@ -5680,7 +5680,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041302+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715755+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120258",
@@ -5700,7 +5700,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041324+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715782+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120259",
@@ -5720,7 +5720,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041347+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715810+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120262",
@@ -5740,7 +5740,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041422+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715909+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120263",
@@ -5760,7 +5760,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041447+00:00"
+      "scraped_at": "2026-05-29T22:17:22.715940+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120267",
@@ -5780,7 +5780,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041556+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716080+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120268",
@@ -5800,7 +5800,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041577+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716108+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120272",
@@ -5820,7 +5820,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041671+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716232+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120277",
@@ -5840,7 +5840,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041799+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716392+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120284",
@@ -5860,7 +5860,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.041962+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716614+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120286",
@@ -5880,7 +5880,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042008+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716674+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120287",
@@ -5900,7 +5900,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042030+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716701+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120292",
@@ -5920,7 +5920,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042150+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716854+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120293",
@@ -5940,7 +5940,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042181+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716883+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120294",
@@ -5960,7 +5960,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042201+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716914+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120297",
@@ -5980,7 +5980,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042243+00:00"
+      "scraped_at": "2026-05-29T22:17:22.716968+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120301",
@@ -6000,7 +6000,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042341+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717087+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120312",
@@ -6020,7 +6020,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042614+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717433+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120313",
@@ -6040,7 +6040,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042636+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717460+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120316",
@@ -6060,7 +6060,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042701+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717558+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120317",
@@ -6080,7 +6080,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042725+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717590+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120321",
@@ -6100,7 +6100,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042815+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717705+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120327",
@@ -6120,7 +6120,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.042977+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717917+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120329",
@@ -6140,7 +6140,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043020+00:00"
+      "scraped_at": "2026-05-29T22:17:22.717973+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120332",
@@ -6160,7 +6160,7 @@
         "Multiple records same address (4 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043089+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718058+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120333",
@@ -6180,7 +6180,7 @@
         "Multiple records same address (4 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043111+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718085+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120338",
@@ -6200,7 +6200,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043224+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718197+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120345",
@@ -6220,7 +6220,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043340+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718339+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120346",
@@ -6240,7 +6240,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043365+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718368+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120348",
@@ -6260,7 +6260,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043415+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718431+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120351",
@@ -6280,7 +6280,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043460+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718500+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120357",
@@ -6300,7 +6300,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043614+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718696+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120360",
@@ -6320,7 +6320,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043681+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718785+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120362",
@@ -6340,7 +6340,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043738+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718858+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120363",
@@ -6360,7 +6360,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043767+00:00"
+      "scraped_at": "2026-05-29T22:17:22.718895+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120367",
@@ -6380,7 +6380,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043855+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719008+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120369",
@@ -6400,7 +6400,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043910+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719072+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120370",
@@ -6420,7 +6420,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043930+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719097+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120372",
@@ -6440,7 +6440,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043978+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719157+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120373",
@@ -6460,7 +6460,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.043999+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719184+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120374",
@@ -6480,7 +6480,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044025+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719219+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120377",
@@ -6500,7 +6500,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044095+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719307+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120378",
@@ -6520,7 +6520,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044123+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719342+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120390",
@@ -6540,7 +6540,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044447+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719749+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120393",
@@ -6560,7 +6560,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044522+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719843+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120394",
@@ -6580,7 +6580,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044547+00:00"
+      "scraped_at": "2026-05-29T22:17:22.719875+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120399",
@@ -6600,7 +6600,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044663+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720022+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120402",
@@ -6620,7 +6620,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044733+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720113+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120405",
@@ -6640,7 +6640,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044810+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720209+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120412",
@@ -6660,7 +6660,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.044964+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720403+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120414",
@@ -6680,7 +6680,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045009+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720459+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120416",
@@ -6700,7 +6700,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045057+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720529+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120417",
@@ -6720,7 +6720,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045077+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720554+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120427",
@@ -6740,7 +6740,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045322+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720861+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120430",
@@ -6760,7 +6760,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045396+00:00"
+      "scraped_at": "2026-05-29T22:17:22.720959+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120432",
@@ -6780,7 +6780,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045445+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721022+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120437",
@@ -6800,7 +6800,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045572+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721186+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120438",
@@ -6820,7 +6820,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045593+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721212+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120439",
@@ -6840,7 +6840,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045623+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721251+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120442",
@@ -6860,7 +6860,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045693+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721338+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120449",
@@ -6880,7 +6880,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.045856+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721570+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120463",
@@ -6900,7 +6900,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046197+00:00"
+      "scraped_at": "2026-05-29T22:17:22.721973+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120474",
@@ -6920,7 +6920,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.046433+00:00"
+      "scraped_at": "2026-05-29T22:17:22.722277+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120503",
@@ -6940,7 +6940,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.047061+00:00"
+      "scraped_at": "2026-05-29T22:17:22.723089+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120506",
@@ -6960,7 +6960,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.047136+00:00"
+      "scraped_at": "2026-05-29T22:17:22.723186+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120542",
@@ -6980,7 +6980,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.047883+00:00"
+      "scraped_at": "2026-05-29T22:17:22.724146+00:00"
     },
     {
       "document_number": "PDS2012-1001-20120543",
@@ -7000,7 +7000,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.047934+00:00"
+      "scraped_at": "2026-05-29T22:17:22.724216+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120007",
@@ -7020,7 +7020,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.048148+00:00"
+      "scraped_at": "2026-05-29T22:17:22.724508+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120009",
@@ -7040,7 +7040,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.048212+00:00"
+      "scraped_at": "2026-05-29T22:17:22.724580+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120025",
@@ -7060,7 +7060,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.048584+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725062+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120028",
@@ -7080,7 +7080,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.048668+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725171+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120041",
@@ -7100,7 +7100,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.048994+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725598+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120044",
@@ -7120,7 +7120,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049081+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725712+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120045",
@@ -7140,7 +7140,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049105+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725743+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120046",
@@ -7160,7 +7160,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049131+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725774+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120048",
@@ -7180,7 +7180,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049186+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725833+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120050",
@@ -7200,7 +7200,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049236+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725894+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120051",
@@ -7220,7 +7220,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049262+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725926+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120053",
@@ -7240,7 +7240,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049311+00:00"
+      "scraped_at": "2026-05-29T22:17:22.725993+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120054",
@@ -7260,7 +7260,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049338+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726026+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120055",
@@ -7280,7 +7280,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049367+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726062+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120057",
@@ -7300,7 +7300,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049417+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726127+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120058",
@@ -7320,7 +7320,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049438+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726153+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120059",
@@ -7340,7 +7340,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049460+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726181+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120061",
@@ -7360,7 +7360,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049506+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726240+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120062",
@@ -7380,7 +7380,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049540+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726282+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120063",
@@ -7400,7 +7400,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049565+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726316+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120064",
@@ -7420,7 +7420,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049587+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726346+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120065",
@@ -7440,7 +7440,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049608+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726373+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120066",
@@ -7460,7 +7460,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049633+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726406+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120069",
@@ -7480,7 +7480,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049706+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726545+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120071",
@@ -7500,7 +7500,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049752+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726604+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120075",
@@ -7520,7 +7520,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049921+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726816+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120076",
@@ -7540,7 +7540,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049947+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726849+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120077",
@@ -7560,7 +7560,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049971+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726883+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120078",
@@ -7580,7 +7580,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.049996+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726911+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120079",
@@ -7600,7 +7600,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050019+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726941+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120080",
@@ -7620,7 +7620,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050044+00:00"
+      "scraped_at": "2026-05-29T22:17:22.726972+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120081",
@@ -7640,7 +7640,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050066+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727000+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120082",
@@ -7660,7 +7660,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050091+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727033+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120083",
@@ -7680,7 +7680,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050114+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727062+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120084",
@@ -7700,7 +7700,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050139+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727095+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120085",
@@ -7720,7 +7720,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050176+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727132+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120088",
@@ -7740,7 +7740,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050252+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727228+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120089",
@@ -7760,7 +7760,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050289+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727271+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120090",
@@ -7780,7 +7780,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050310+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727297+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120092",
@@ -7800,7 +7800,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050358+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727358+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120093",
@@ -7820,7 +7820,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050379+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727387+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120094",
@@ -7840,7 +7840,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050401+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727414+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120096",
@@ -7860,7 +7860,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050450+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727477+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120098",
@@ -7880,7 +7880,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050494+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727545+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120099",
@@ -7900,7 +7900,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050518+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727577+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120102",
@@ -7920,7 +7920,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050591+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727669+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120103",
@@ -7940,7 +7940,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050616+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727701+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120104",
@@ -7960,7 +7960,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050637+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727728+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120105",
@@ -7980,7 +7980,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050660+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727756+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120107",
@@ -8000,7 +8000,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050710+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727822+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120108",
@@ -8020,7 +8020,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050737+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727855+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120109",
@@ -8040,7 +8040,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050756+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727879+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120111",
@@ -8060,7 +8060,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050805+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727943+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120112",
@@ -8080,7 +8080,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050827+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727971+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120113",
@@ -8100,7 +8100,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050848+00:00"
+      "scraped_at": "2026-05-29T22:17:22.727998+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120115",
@@ -8120,7 +8120,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050900+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728064+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120116",
@@ -8140,7 +8140,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050923+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728092+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120117",
@@ -8160,7 +8160,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050954+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728131+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120118",
@@ -8180,7 +8180,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050976+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728158+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120119",
@@ -8200,7 +8200,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.050999+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728187+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120120",
@@ -8220,7 +8220,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051024+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728218+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120121",
@@ -8240,7 +8240,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051046+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728250+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120122",
@@ -8260,7 +8260,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051069+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728276+00:00"
     },
     {
       "document_number": "PDS2012-1003-20120123",
@@ -8280,7 +8280,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051094+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728309+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120007",
@@ -8300,7 +8300,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051275+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728529+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120014",
@@ -8320,7 +8320,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051448+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728749+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120019",
@@ -8340,7 +8340,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051568+00:00"
+      "scraped_at": "2026-05-29T22:17:22.728901+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120029",
@@ -8360,7 +8360,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.051804+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729215+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120039",
@@ -8380,7 +8380,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052041+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729523+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120043",
@@ -8400,7 +8400,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052142+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729656+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120044",
@@ -8420,7 +8420,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052180+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729689+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120046",
@@ -8440,7 +8440,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052228+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729753+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120049",
@@ -8460,7 +8460,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052294+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729837+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120051",
@@ -8480,7 +8480,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052345+00:00"
+      "scraped_at": "2026-05-29T22:17:22.729900+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120059",
@@ -8500,7 +8500,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052488+00:00"
+      "scraped_at": "2026-05-29T22:17:22.730088+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120071",
@@ -8520,7 +8520,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052782+00:00"
+      "scraped_at": "2026-05-29T22:17:22.730466+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120074",
@@ -8540,7 +8540,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.052889+00:00"
+      "scraped_at": "2026-05-29T22:17:22.730610+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120082",
@@ -8560,7 +8560,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053077+00:00"
+      "scraped_at": "2026-05-29T22:17:22.730849+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120087",
@@ -8580,7 +8580,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053214+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731013+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120089",
@@ -8600,7 +8600,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053260+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731072+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120090",
@@ -8620,7 +8620,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053283+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731098+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120096",
@@ -8640,7 +8640,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053420+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731268+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120097",
@@ -8660,7 +8660,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053441+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731294+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120099",
@@ -8680,7 +8680,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053483+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731345+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120103",
@@ -8700,7 +8700,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053583+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731473+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120105",
@@ -8720,7 +8720,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053643+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731564+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120106",
@@ -8740,7 +8740,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053668+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731594+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120109",
@@ -8760,7 +8760,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053714+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731652+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120110",
@@ -8780,7 +8780,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053736+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731681+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120113",
@@ -8800,7 +8800,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.053808+00:00"
+      "scraped_at": "2026-05-29T22:17:22.731776+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120124",
@@ -8820,7 +8820,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054017+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732041+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120125",
@@ -8840,7 +8840,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054045+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732075+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120127",
@@ -8860,7 +8860,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054087+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732127+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120128",
@@ -8880,7 +8880,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054108+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732154+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120129",
@@ -8900,7 +8900,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054136+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732190+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120130",
@@ -8920,7 +8920,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054168+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732220+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120131",
@@ -8940,7 +8940,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054196+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732255+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120133",
@@ -8960,7 +8960,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054240+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732310+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120136",
@@ -8980,7 +8980,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054334+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732434+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120141",
@@ -9000,7 +9000,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054452+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732588+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120144",
@@ -9020,7 +9020,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054525+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732680+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120146",
@@ -9040,7 +9040,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054571+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732739+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120148",
@@ -9060,7 +9060,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054619+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732799+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120149",
@@ -9080,7 +9080,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054651+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732840+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120151",
@@ -9100,7 +9100,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054714+00:00"
+      "scraped_at": "2026-05-29T22:17:22.732920+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120154",
@@ -9120,7 +9120,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054791+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733016+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120156",
@@ -9140,7 +9140,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054834+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733069+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120158",
@@ -9160,7 +9160,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054878+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733131+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120160",
@@ -9180,7 +9180,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.054923+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733187+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120164",
@@ -9200,7 +9200,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055009+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733295+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120165",
@@ -9220,7 +9220,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055038+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733331+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120168",
@@ -9240,7 +9240,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055125+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733442+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120169",
@@ -9260,7 +9260,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055148+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733471+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120171",
@@ -9280,7 +9280,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055179+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733513+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120174",
@@ -9300,7 +9300,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055243+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733596+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120176",
@@ -9320,7 +9320,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055285+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733649+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120177",
@@ -9340,7 +9340,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055305+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733675+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120178",
@@ -9360,7 +9360,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055328+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733703+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120179",
@@ -9380,7 +9380,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055352+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733736+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120183",
@@ -9400,7 +9400,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055472+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733889+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120184",
@@ -9420,7 +9420,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055498+00:00"
+      "scraped_at": "2026-05-29T22:17:22.733922+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120187",
@@ -9440,7 +9440,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055562+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734008+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120189",
@@ -9460,7 +9460,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055600+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734058+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120190",
@@ -9480,7 +9480,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055623+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734087+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120191",
@@ -9500,7 +9500,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055663+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734139+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120193",
@@ -9520,7 +9520,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055708+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734195+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120194",
@@ -9540,7 +9540,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055726+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734219+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120195",
@@ -9560,7 +9560,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055745+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734243+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120197",
@@ -9580,7 +9580,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055790+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734302+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120198",
@@ -9600,7 +9600,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055820+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734340+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120199",
@@ -9620,7 +9620,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055841+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734367+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120200",
@@ -9640,7 +9640,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055868+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734402+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120201",
@@ -9660,7 +9660,7 @@
         "Multiple records same address (4 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.055892+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734434+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120206",
@@ -9680,7 +9680,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056007+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734591+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120211",
@@ -9700,7 +9700,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056115+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734730+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120213",
@@ -9720,7 +9720,7 @@
         "Multiple records same address (4 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056170+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734791+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120216",
@@ -9740,7 +9740,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056233+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734871+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120218",
@@ -9760,7 +9760,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056278+00:00"
+      "scraped_at": "2026-05-29T22:17:22.734926+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120221",
@@ -9780,7 +9780,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056342+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735007+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120222",
@@ -9800,7 +9800,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056363+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735038+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120225",
@@ -9820,7 +9820,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056427+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735118+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120226",
@@ -9840,7 +9840,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056447+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735142+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120227",
@@ -9860,7 +9860,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056477+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735179+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120229",
@@ -9880,7 +9880,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056498+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735208+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120230",
@@ -9900,7 +9900,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056523+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735237+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120231",
@@ -9920,7 +9920,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056544+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735263+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120232",
@@ -9940,7 +9940,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056564+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735290+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120234",
@@ -9960,7 +9960,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056618+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735357+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120235",
@@ -9980,7 +9980,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056639+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735384+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120236",
@@ -10000,7 +10000,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056659+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735410+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120237",
@@ -10020,7 +10020,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056680+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735436+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120243",
@@ -10040,7 +10040,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056811+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735629+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120245",
@@ -10060,7 +10060,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056837+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735662+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120246",
@@ -10080,7 +10080,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056860+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735693+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120249",
@@ -10100,7 +10100,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056930+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735782+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120252",
@@ -10120,7 +10120,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.056999+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735867+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120255",
@@ -10140,7 +10140,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057071+00:00"
+      "scraped_at": "2026-05-29T22:17:22.735958+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120259",
@@ -10160,7 +10160,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057151+00:00"
+      "scraped_at": "2026-05-29T22:17:22.736059+00:00"
     },
     {
       "document_number": "PDS2012-1004-20120260",
@@ -10180,7 +10180,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057179+00:00"
+      "scraped_at": "2026-05-29T22:17:22.736083+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120010",
@@ -10200,7 +10200,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057404+00:00"
+      "scraped_at": "2026-05-29T22:17:22.736374+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120029",
@@ -10220,7 +10220,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.057842+00:00"
+      "scraped_at": "2026-05-29T22:17:22.736952+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120041",
@@ -10240,7 +10240,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058112+00:00"
+      "scraped_at": "2026-05-29T22:17:22.737297+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120043",
@@ -10260,7 +10260,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058151+00:00"
+      "scraped_at": "2026-05-29T22:17:22.737347+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120044",
@@ -10280,7 +10280,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058179+00:00"
+      "scraped_at": "2026-05-29T22:17:22.737373+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120053",
@@ -10300,7 +10300,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058438+00:00"
+      "scraped_at": "2026-05-29T22:17:22.737709+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120059",
@@ -10320,7 +10320,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058578+00:00"
+      "scraped_at": "2026-05-29T22:17:22.737883+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120072",
@@ -10340,7 +10340,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058849+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738233+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120073",
@@ -10360,7 +10360,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058868+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738259+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120074",
@@ -10380,7 +10380,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.058893+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738290+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120096",
@@ -10400,7 +10400,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059381+00:00"
+      "scraped_at": "2026-05-29T22:17:22.738920+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120105",
@@ -10420,7 +10420,7 @@
         "Multiple records same address (3 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059573+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739159+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120115",
@@ -10440,7 +10440,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059777+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739417+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120119",
@@ -10460,7 +10460,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.059865+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739536+00:00"
     },
     {
       "document_number": "PDS2012-1005-20120126",
@@ -10480,7 +10480,7 @@
         "Multiple records same address (2 total, +15)"
       ],
       "source_url": "https://data.sandiegocounty.gov/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-      "scraped_at": "2026-05-29T19:03:57.060011+00:00"
+      "scraped_at": "2026-05-29T22:17:22.739721+00:00"
     }
   ]
 }
