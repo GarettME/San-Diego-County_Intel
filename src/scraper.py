@@ -242,12 +242,16 @@ def parse_county_permit(record: dict) -> Optional[Lead]:
 
         combined = f"{status} {desc} {ptype}"
 
-        # FIX: Check lowercase status against lowercase DISTRESS_STATUSES list
-        lead.has_code_violation     = _matches(combined, CODE_KEYWORDS) or \
-                                      any(s in status for s in DISTRESS_STATUSES)
+        # A distress status alone (expired, denied, etc.) is a code violation signal
+        is_distress_status = any(s in status for s in DISTRESS_STATUSES)
+        lead.has_code_violation     = _matches(combined, CODE_KEYWORDS) or is_distress_status
         lead.has_tax_delinquency    = _matches(combined, TAX_KEYWORDS)
         lead.has_probate            = _matches(combined, PROBATE_KEYWORDS)
         lead.has_divorce_bankruptcy = _matches(combined, DIVORCE_BK_KEYWORDS)
+
+        # Always flag the distress status in score_reasons for visibility
+        if is_distress_status and not _matches(combined, CODE_KEYWORDS):
+            lead.score_reasons.append(f"Distress status: {status}")
 
         return lead
 
@@ -289,11 +293,14 @@ def parse_city_permit(record: dict) -> Optional[Lead]:
 
         combined = f"{status} {desc} {ptype}"
 
-        lead.has_code_violation     = _matches(combined, CODE_KEYWORDS) or \
-                                      any(s in status for s in DISTRESS_STATUSES)
+        is_distress_status = any(s in status for s in DISTRESS_STATUSES)
+        lead.has_code_violation     = _matches(combined, CODE_KEYWORDS) or is_distress_status
         lead.has_tax_delinquency    = _matches(combined, TAX_KEYWORDS)
         lead.has_probate            = _matches(combined, PROBATE_KEYWORDS)
         lead.has_divorce_bankruptcy = _matches(combined, DIVORCE_BK_KEYWORDS)
+
+        if is_distress_status and not _matches(combined, CODE_KEYWORDS):
+            lead.score_reasons.append(f"Distress status: {status}")
 
         return lead
 
@@ -456,7 +463,11 @@ def deduplicate(leads: list[Lead]) -> list[Lead]:
 
 
 def filter_has_distress(leads: list[Lead]) -> list[Lead]:
-    filtered = [l for l in leads if l.seller_score > 0]
+    # Keep leads that either:
+    #   (a) have a keyword-based distress signal (score > 0), OR
+    #   (b) were pulled specifically because of a distress status (expired, denied, etc.)
+    #       — these are inherently distress signals even without keyword matches
+    filtered = [l for l in leads if l.seller_score > 0 or l.has_code_violation]
     log.info("Leads with distress signals: %d", len(filtered))
     return filtered
 
