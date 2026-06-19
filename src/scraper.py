@@ -432,21 +432,41 @@ async def _wait_for_results(page) -> bool:
     return False
 
 
+def _row_key(lead: Lead) -> str:
+    """Stable identity for a result row, for end-of-results detection."""
+    dn = (lead.document_number or "").strip().upper()
+    return dn or (f"{lead.file_date}|{lead.doc_type}|{lead.grantor}|"
+                  f"{lead.legal_description}").upper()
+
+
 async def _parse_all_pages(page) -> list[Lead]:
     leads: list[Lead] = []
+    seen_keys: set[str] = set()
     seen_pages = 0
     while seen_pages < MAX_PAGES:
         html = await page.content()
         page_leads = _parse_grid(html)
         seen_pages += 1
-        log.info("Page %d: %d rows (running total %d)", seen_pages, len(page_leads), len(leads) + len(page_leads))
+
+        new_leads = [l for l in page_leads if _row_key(l) not in seen_keys]
+        seen_keys.update(_row_key(l) for l in new_leads)
+        log.info("Page %d: %d rows (%d new, running total %d)",
+                 seen_pages, len(page_leads), len(new_leads), len(leads) + len(new_leads))
 
         # An empty page means we're past the last page of results — stop.
         if not page_leads:
             if seen_pages == 1:
                 log.info("Result grid present but no data rows.")
             break
-        leads.extend(page_leads)
+        leads.extend(new_leads)
+
+        # End-of-results: AcclaimWeb's pager often leaves the next-arrow enabled
+        # past the final page and re-serves a short tail of already-seen rows.
+        # Once a non-empty page contributes nothing new we've reached the end —
+        # stop here instead of clicking through hundreds of duplicate pages.
+        if not new_leads:
+            log.info("Page %d added no new rows — end of results, stopping.", seen_pages)
+            break
 
         # Advance to the next page. The next-arrow carries t-state-disabled on
         # the last page; treat "disabled or absent" as the end.

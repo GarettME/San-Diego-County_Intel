@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T09:21:43.849955+00:00",
+  "generated_at": "2026-06-19T09:26:46.825647+00:00",
   "source": "San Diego County Assessor-Recorder-County Clerk",
   "total_leads": 452,
   "leads": [
@@ -22,7 +22,7 @@
         "Multiple distress records, same party (2, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:05.491621+00:00"
+      "scraped_at": "2026-06-19T09:25:54.677917+00:00"
     },
     {
       "document_number": "",
@@ -43,7 +43,7 @@
         "Multiple distress records, same party (2, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:59.551590+00:00"
+      "scraped_at": "2026-06-19T09:25:48.710562+00:00"
     },
     {
       "document_number": "",
@@ -64,7 +64,7 @@
         "Multiple distress records, same party (5, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:59.551929+00:00"
+      "scraped_at": "2026-06-19T09:25:48.710907+00:00"
     },
     {
       "document_number": "",
@@ -85,7 +85,7 @@
         "Multiple distress records, same party (5, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:33.697613+00:00"
+      "scraped_at": "2026-06-19T09:26:22.568211+00:00"
     },
     {
       "document_number": "",
@@ -106,7 +106,7 @@
         "Multiple distress records, same party (2, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.094004+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227495+00:00"
     },
     {
       "document_number": "",
@@ -127,7 +127,7 @@
         "Multiple distress records, same party (5, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106687+00:00"
+      "scraped_at": "2026-06-19T09:26:07.138498+00:00"
     },
     {
       "document_number": "",
@@ -148,7 +148,7 @@
         "Multiple distress records, same party (5, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:05.491824+00:00"
+      "scraped_at": "2026-06-19T09:25:54.678297+00:00"
     },
     {
       "document_number": "",
@@ -169,7 +169,7 @@
         "Multiple distress records, same party (2, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:07.395094+00:00"
+      "scraped_at": "2026-06-19T09:25:56.566315+00:00"
     },
     {
       "document_number": "",
@@ -190,7 +190,7 @@
         "Multiple distress records, same party (5, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:59.551745+00:00"
+      "scraped_at": "2026-06-19T09:25:48.710723+00:00"
     },
     {
       "document_number": "",
@@ -210,7 +210,7 @@
         "Notice of Trustee's Sale \u2014 imminent foreclosure (+55)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.094237+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227678+00:00"
     },
     {
       "document_number": "",
@@ -230,7 +230,7 @@
         "Notice of Trustee's Sale \u2014 imminent foreclosure (+55)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:07.395627+00:00"
+      "scraped_at": "2026-06-19T09:25:56.566861+00:00"
     },
     {
       "document_number": "",
@@ -250,7 +250,7 @@
         "Notice of Trustee's Sale \u2014 imminent foreclosure (+55)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.138014+00:00"
+      "scraped_at": "2026-06-19T09:26:02.328761+00:00"
     },
     {
       "document_number": "",
@@ -270,7 +270,7 @@
         "Notice of Trustee's Sale \u2014 imminent foreclosure (+55)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090642+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333655+00:00"
     },
     {
       "document_number": "",
@@ -290,7 +290,7 @@
         "Notice of Trustee's Sale \u2014 imminent foreclosure (+55)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.057943+00:00"
+      "scraped_at": "2026-06-19T09:26:04.256647+00:00"
     },
     {
       "document_number": "",
@@ -310,7 +310,7 @@
         "Notice of Trustee's Sale \u2014 imminent foreclosure (+55)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.540181+00:00"
+      "scraped_at": "2026-06-19T09:25:52.635237+00:00"
     },
     {
       "document_number": "",
@@ -330,7 +330,7 @@
         "Notice of Trustee's Sale \u2014 imminent foreclosure (+55)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.540240+00:00"
+      "scraped_at": "2026-06-19T09:25:52.635299+00:00"
     },
     {
       "document_number": "",
@@ -350,7 +350,7 @@
         "Notice of Trustee's Sale \u2014 imminent foreclosure (+55)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.540299+00:00"
+      "scraped_at": "2026-06-19T09:25:52.635362+00:00"
     },
     {
       "document_number": "",
@@ -370,7 +370,7 @@
         "Notice of Trustee's Sale \u2014 imminent foreclosure (+55)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.474943+00:00"
+      "scraped_at": "2026-06-19T09:25:53.617422+00:00"
     },
     {
       "document_number": "",
@@ -390,7 +390,7 @@
         "Notice of Trustee's Sale \u2014 imminent foreclosure (+55)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:05.491553+00:00"
+      "scraped_at": "2026-06-19T09:25:54.677844+00:00"
     },
     {
       "document_number": "",
@@ -410,7 +410,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.094139+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227619+00:00"
     },
     {
       "document_number": "",
@@ -430,7 +430,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:05.491889+00:00"
+      "scraped_at": "2026-06-19T09:25:54.678433+00:00"
     },
     {
       "document_number": "",
@@ -450,7 +450,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:07.395547+00:00"
+      "scraped_at": "2026-06-19T09:25:56.566799+00:00"
     },
     {
       "document_number": "",
@@ -470,7 +470,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090702+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333730+00:00"
     },
     {
       "document_number": "",
@@ -490,7 +490,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.058251+00:00"
+      "scraped_at": "2026-06-19T09:26:04.256951+00:00"
     },
     {
       "document_number": "",
@@ -510,7 +510,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.539849+00:00"
+      "scraped_at": "2026-06-19T09:25:52.634883+00:00"
     },
     {
       "document_number": "",
@@ -530,7 +530,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.474878+00:00"
+      "scraped_at": "2026-06-19T09:25:53.617336+00:00"
     },
     {
       "document_number": "",
@@ -550,7 +550,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.475060+00:00"
+      "scraped_at": "2026-06-19T09:25:53.617545+00:00"
     },
     {
       "document_number": "",
@@ -570,7 +570,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:05.491758+00:00"
+      "scraped_at": "2026-06-19T09:25:54.678162+00:00"
     },
     {
       "document_number": "",
@@ -590,7 +590,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.562921+00:00"
+      "scraped_at": "2026-06-19T09:25:47.785101+00:00"
     },
     {
       "document_number": "",
@@ -610,7 +610,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.563382+00:00"
+      "scraped_at": "2026-06-19T09:25:47.785662+00:00"
     },
     {
       "document_number": "",
@@ -630,7 +630,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.563923+00:00"
+      "scraped_at": "2026-06-19T09:25:47.786024+00:00"
     },
     {
       "document_number": "",
@@ -650,7 +650,7 @@
         "Notice of Default \u2014 pre-foreclosure (+50)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:59.552799+00:00"
+      "scraped_at": "2026-06-19T09:25:48.711097+00:00"
     },
     {
       "document_number": "",
@@ -670,7 +670,7 @@
         "Probate \u2014 Letters of Administration (+40)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.058312+00:00"
+      "scraped_at": "2026-06-19T09:26:04.257010+00:00"
     },
     {
       "document_number": "",
@@ -690,7 +690,7 @@
         "Probate \u2014 Letters of Administration (+40)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.474453+00:00"
+      "scraped_at": "2026-06-19T09:25:53.616822+00:00"
     },
     {
       "document_number": "",
@@ -710,7 +710,7 @@
         "Probate \u2014 Letters of Administration (+40)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.475002+00:00"
+      "scraped_at": "2026-06-19T09:25:53.617484+00:00"
     },
     {
       "document_number": "",
@@ -730,7 +730,7 @@
         "Probate \u2014 Letters of Administration (+40)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:05.491259+00:00"
+      "scraped_at": "2026-06-19T09:25:54.677437+00:00"
     },
     {
       "document_number": "",
@@ -750,7 +750,7 @@
         "Probate \u2014 Letters of Administration (+40)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.686827+00:00"
+      "scraped_at": "2026-06-19T09:25:41.989404+00:00"
     },
     {
       "document_number": "",
@@ -770,7 +770,7 @@
         "Probate \u2014 Letters of Administration (+40)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.563645+00:00"
+      "scraped_at": "2026-06-19T09:25:47.785877+00:00"
     },
     {
       "document_number": "",
@@ -790,7 +790,7 @@
         "Probate \u2014 Letters of Administration (+40)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:59.552394+00:00"
+      "scraped_at": "2026-06-19T09:25:48.710977+00:00"
     },
     {
       "document_number": "",
@@ -811,7 +811,7 @@
         "Multiple distress records, same party (3, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.114530+00:00"
+      "scraped_at": "2026-06-19T09:26:05.269255+00:00"
     },
     {
       "document_number": "",
@@ -832,7 +832,7 @@
         "Multiple distress records, same party (3, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.114720+00:00"
+      "scraped_at": "2026-06-19T09:26:05.269331+00:00"
     },
     {
       "document_number": "",
@@ -853,7 +853,7 @@
         "Multiple distress records, same party (3, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:00.539966+00:00"
+      "scraped_at": "2026-06-19T09:25:49.678510+00:00"
     },
     {
       "document_number": "",
@@ -874,7 +874,7 @@
         "Multiple distress records, same party (2, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:01.544921+00:00"
+      "scraped_at": "2026-06-19T09:25:50.663811+00:00"
     },
     {
       "document_number": "",
@@ -895,7 +895,7 @@
         "Multiple distress records, same party (3, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:01.545076+00:00"
+      "scraped_at": "2026-06-19T09:25:50.664061+00:00"
     },
     {
       "document_number": "",
@@ -916,7 +916,7 @@
         "Multiple distress records, same party (2, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:01.545136+00:00"
+      "scraped_at": "2026-06-19T09:25:50.664216+00:00"
     },
     {
       "document_number": "",
@@ -937,7 +937,7 @@
         "Multiple distress records, same party (3, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:00.538487+00:00"
+      "scraped_at": "2026-06-19T09:25:49.677684+00:00"
     },
     {
       "document_number": "",
@@ -958,7 +958,7 @@
         "Multiple distress records, same party (2, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:00.538590+00:00"
+      "scraped_at": "2026-06-19T09:25:49.677824+00:00"
     },
     {
       "document_number": "",
@@ -979,7 +979,7 @@
         "Multiple distress records, same party (3, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:00.538943+00:00"
+      "scraped_at": "2026-06-19T09:25:49.678056+00:00"
     },
     {
       "document_number": "",
@@ -1000,7 +1000,7 @@
         "Multiple distress records, same party (2, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:00.539284+00:00"
+      "scraped_at": "2026-06-19T09:25:49.678255+00:00"
     },
     {
       "document_number": "",
@@ -1021,7 +1021,7 @@
         "Multiple distress records, same party (2, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.080014+00:00"
+      "scraped_at": "2026-06-19T09:26:10.960085+00:00"
     },
     {
       "document_number": "",
@@ -1042,7 +1042,7 @@
         "Multiple distress records, same party (2, +20)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.749645+00:00"
+      "scraped_at": "2026-06-19T09:25:43.943803+00:00"
     },
     {
       "document_number": "",
@@ -1062,7 +1062,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.113984+00:00"
+      "scraped_at": "2026-06-19T09:26:05.269010+00:00"
     },
     {
       "document_number": "",
@@ -1082,7 +1082,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.115348+00:00"
+      "scraped_at": "2026-06-19T09:26:05.269561+00:00"
     },
     {
       "document_number": "",
@@ -1102,7 +1102,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.093730+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227249+00:00"
     },
     {
       "document_number": "",
@@ -1122,7 +1122,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106752+00:00"
+      "scraped_at": "2026-06-19T09:26:07.138628+00:00"
     },
     {
       "document_number": "",
@@ -1142,7 +1142,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:07.395245+00:00"
+      "scraped_at": "2026-06-19T09:25:56.566477+00:00"
     },
     {
       "document_number": "",
@@ -1162,7 +1162,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:07.395432+00:00"
+      "scraped_at": "2026-06-19T09:25:56.566673+00:00"
     },
     {
       "document_number": "",
@@ -1182,7 +1182,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330342+00:00"
+      "scraped_at": "2026-06-19T09:25:57.525940+00:00"
     },
     {
       "document_number": "",
@@ -1202,7 +1202,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090281+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333187+00:00"
     },
     {
       "document_number": "",
@@ -1222,7 +1222,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090347+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333270+00:00"
     },
     {
       "document_number": "",
@@ -1242,7 +1242,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090408+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333348+00:00"
     },
     {
       "document_number": "",
@@ -1262,7 +1262,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090468+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333426+00:00"
     },
     {
       "document_number": "",
@@ -1282,7 +1282,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090527+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333503+00:00"
     },
     {
       "document_number": "",
@@ -1302,7 +1302,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090585+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333579+00:00"
     },
     {
       "document_number": "",
@@ -1322,7 +1322,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090761+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333804+00:00"
     },
     {
       "document_number": "",
@@ -1342,7 +1342,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090818+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333907+00:00"
     },
     {
       "document_number": "",
@@ -1362,7 +1362,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.057783+00:00"
+      "scraped_at": "2026-06-19T09:26:04.256494+00:00"
     },
     {
       "document_number": "",
@@ -1382,7 +1382,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.057875+00:00"
+      "scraped_at": "2026-06-19T09:26:04.256579+00:00"
     },
     {
       "document_number": "",
@@ -1402,7 +1402,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.058008+00:00"
+      "scraped_at": "2026-06-19T09:26:04.256711+00:00"
     },
     {
       "document_number": "",
@@ -1422,7 +1422,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.058069+00:00"
+      "scraped_at": "2026-06-19T09:26:04.256772+00:00"
     },
     {
       "document_number": "",
@@ -1442,7 +1442,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.058129+00:00"
+      "scraped_at": "2026-06-19T09:26:04.256832+00:00"
     },
     {
       "document_number": "",
@@ -1462,7 +1462,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:01.545195+00:00"
+      "scraped_at": "2026-06-19T09:25:50.664386+00:00"
     },
     {
       "document_number": "",
@@ -1482,7 +1482,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:01.545254+00:00"
+      "scraped_at": "2026-06-19T09:25:50.664567+00:00"
     },
     {
       "document_number": "",
@@ -1502,7 +1502,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:01.545318+00:00"
+      "scraped_at": "2026-06-19T09:25:50.664703+00:00"
     },
     {
       "document_number": "",
@@ -1522,7 +1522,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:01.545376+00:00"
+      "scraped_at": "2026-06-19T09:25:50.664834+00:00"
     },
     {
       "document_number": "",
@@ -1542,7 +1542,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.539999+00:00"
+      "scraped_at": "2026-06-19T09:25:52.635013+00:00"
     },
     {
       "document_number": "",
@@ -1562,7 +1562,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.540064+00:00"
+      "scraped_at": "2026-06-19T09:25:52.635098+00:00"
     },
     {
       "document_number": "",
@@ -1582,7 +1582,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.474544+00:00"
+      "scraped_at": "2026-06-19T09:25:53.616988+00:00"
     },
     {
       "document_number": "",
@@ -1602,7 +1602,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.474611+00:00"
+      "scraped_at": "2026-06-19T09:25:53.617068+00:00"
     },
     {
       "document_number": "",
@@ -1622,7 +1622,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:05.491689+00:00"
+      "scraped_at": "2026-06-19T09:25:54.678038+00:00"
     },
     {
       "document_number": "",
@@ -1642,7 +1642,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.687938+00:00"
+      "scraped_at": "2026-06-19T09:25:41.989819+00:00"
     },
     {
       "document_number": "",
@@ -1662,7 +1662,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.688380+00:00"
+      "scraped_at": "2026-06-19T09:25:41.989885+00:00"
     },
     {
       "document_number": "",
@@ -1682,7 +1682,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:56.642034+00:00"
+      "scraped_at": "2026-06-19T09:25:45.890864+00:00"
     },
     {
       "document_number": "",
@@ -1702,7 +1702,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:57.610120+00:00"
+      "scraped_at": "2026-06-19T09:25:46.822603+00:00"
     },
     {
       "document_number": "",
@@ -1722,7 +1722,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:57.610180+00:00"
+      "scraped_at": "2026-06-19T09:25:46.822662+00:00"
     },
     {
       "document_number": "",
@@ -1742,7 +1742,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:57.610247+00:00"
+      "scraped_at": "2026-06-19T09:25:46.822728+00:00"
     },
     {
       "document_number": "",
@@ -1762,7 +1762,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.563148+00:00"
+      "scraped_at": "2026-06-19T09:25:47.785412+00:00"
     },
     {
       "document_number": "",
@@ -1782,7 +1782,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.563239+00:00"
+      "scraped_at": "2026-06-19T09:25:47.785537+00:00"
     },
     {
       "document_number": "",
@@ -1802,7 +1802,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.564239+00:00"
+      "scraped_at": "2026-06-19T09:25:47.786159+00:00"
     },
     {
       "document_number": "",
@@ -1822,7 +1822,7 @@
         "Abstract of Judgment (+18)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:59.551805+00:00"
+      "scraped_at": "2026-06-19T09:25:48.710785+00:00"
     },
     {
       "document_number": "",
@@ -1842,7 +1842,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.114181+00:00"
+      "scraped_at": "2026-06-19T09:26:05.269096+00:00"
     },
     {
       "document_number": "",
@@ -1862,7 +1862,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.114359+00:00"
+      "scraped_at": "2026-06-19T09:26:05.269177+00:00"
     },
     {
       "document_number": "",
@@ -1882,7 +1882,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.114955+00:00"
+      "scraped_at": "2026-06-19T09:26:05.269409+00:00"
     },
     {
       "document_number": "",
@@ -1902,7 +1902,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.115177+00:00"
+      "scraped_at": "2026-06-19T09:26:05.269486+00:00"
     },
     {
       "document_number": "",
@@ -1922,7 +1922,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.115511+00:00"
+      "scraped_at": "2026-06-19T09:26:05.269667+00:00"
     },
     {
       "document_number": "",
@@ -1942,7 +1942,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.115678+00:00"
+      "scraped_at": "2026-06-19T09:26:05.269746+00:00"
     },
     {
       "document_number": "",
@@ -1962,7 +1962,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.093800+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227313+00:00"
     },
     {
       "document_number": "",
@@ -1982,7 +1982,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.093869+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227375+00:00"
     },
     {
       "document_number": "",
@@ -2002,7 +2002,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106346+00:00"
+      "scraped_at": "2026-06-19T09:26:07.137808+00:00"
     },
     {
       "document_number": "",
@@ -2022,7 +2022,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106415+00:00"
+      "scraped_at": "2026-06-19T09:26:07.137947+00:00"
     },
     {
       "document_number": "",
@@ -2042,7 +2042,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106494+00:00"
+      "scraped_at": "2026-06-19T09:26:07.138100+00:00"
     },
     {
       "document_number": "",
@@ -2062,7 +2062,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106558+00:00"
+      "scraped_at": "2026-06-19T09:26:07.138236+00:00"
     },
     {
       "document_number": "",
@@ -2082,7 +2082,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106624+00:00"
+      "scraped_at": "2026-06-19T09:26:07.138365+00:00"
     },
     {
       "document_number": "",
@@ -2102,7 +2102,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106816+00:00"
+      "scraped_at": "2026-06-19T09:26:07.138759+00:00"
     },
     {
       "document_number": "",
@@ -2122,7 +2122,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106888+00:00"
+      "scraped_at": "2026-06-19T09:26:07.138885+00:00"
     },
     {
       "document_number": "",
@@ -2142,7 +2142,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:07.395309+00:00"
+      "scraped_at": "2026-06-19T09:25:56.566543+00:00"
     },
     {
       "document_number": "",
@@ -2162,7 +2162,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:07.395759+00:00"
+      "scraped_at": "2026-06-19T09:25:56.566924+00:00"
     },
     {
       "document_number": "",
@@ -2182,7 +2182,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:07.395882+00:00"
+      "scraped_at": "2026-06-19T09:25:56.566986+00:00"
     },
     {
       "document_number": "",
@@ -2202,7 +2202,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330192+00:00"
+      "scraped_at": "2026-06-19T09:25:57.525792+00:00"
     },
     {
       "document_number": "",
@@ -2222,7 +2222,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330276+00:00"
+      "scraped_at": "2026-06-19T09:25:57.525874+00:00"
     },
     {
       "document_number": "",
@@ -2242,7 +2242,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:00.540170+00:00"
+      "scraped_at": "2026-06-19T09:25:49.678573+00:00"
     },
     {
       "document_number": "",
@@ -2262,7 +2262,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.539915+00:00"
+      "scraped_at": "2026-06-19T09:25:52.634949+00:00"
     },
     {
       "document_number": "",
@@ -2282,7 +2282,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.540123+00:00"
+      "scraped_at": "2026-06-19T09:25:52.635166+00:00"
     },
     {
       "document_number": "",
@@ -2302,7 +2302,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.474671+00:00"
+      "scraped_at": "2026-06-19T09:25:53.617135+00:00"
     },
     {
       "document_number": "",
@@ -2322,7 +2322,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.475123+00:00"
+      "scraped_at": "2026-06-19T09:25:53.617630+00:00"
     },
     {
       "document_number": "",
@@ -2342,7 +2342,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:05.491337+00:00"
+      "scraped_at": "2026-06-19T09:25:54.677591+00:00"
     },
     {
       "document_number": "",
@@ -2362,7 +2362,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:05.491409+00:00"
+      "scraped_at": "2026-06-19T09:25:54.677695+00:00"
     },
     {
       "document_number": "",
@@ -2382,7 +2382,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.563783+00:00"
+      "scraped_at": "2026-06-19T09:25:47.785946+00:00"
     },
     {
       "document_number": "",
@@ -2402,7 +2402,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.564099+00:00"
+      "scraped_at": "2026-06-19T09:25:47.786090+00:00"
     },
     {
       "document_number": "",
@@ -2422,7 +2422,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:59.552629+00:00"
+      "scraped_at": "2026-06-19T09:25:48.711039+00:00"
     },
     {
       "document_number": "",
@@ -2442,7 +2442,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:59.552974+00:00"
+      "scraped_at": "2026-06-19T09:25:48.711156+00:00"
     },
     {
       "document_number": "",
@@ -2462,7 +2462,7 @@
         "Mechanic's Lien (+15)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:59.553152+00:00"
+      "scraped_at": "2026-06-19T09:25:48.711216+00:00"
     },
     {
       "document_number": "",
@@ -2482,7 +2482,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.094477+00:00"
+      "scraped_at": "2026-06-19T09:26:08.102519+00:00"
     },
     {
       "document_number": "",
@@ -2502,7 +2502,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.094640+00:00"
+      "scraped_at": "2026-06-19T09:26:08.102603+00:00"
     },
     {
       "document_number": "",
@@ -2522,7 +2522,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.094785+00:00"
+      "scraped_at": "2026-06-19T09:26:08.102672+00:00"
     },
     {
       "document_number": "",
@@ -2542,7 +2542,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.094949+00:00"
+      "scraped_at": "2026-06-19T09:26:08.102736+00:00"
     },
     {
       "document_number": "",
@@ -2562,7 +2562,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.095137+00:00"
+      "scraped_at": "2026-06-19T09:26:08.102796+00:00"
     },
     {
       "document_number": "",
@@ -2582,7 +2582,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.095341+00:00"
+      "scraped_at": "2026-06-19T09:26:08.102855+00:00"
     },
     {
       "document_number": "",
@@ -2602,7 +2602,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.095485+00:00"
+      "scraped_at": "2026-06-19T09:26:08.102912+00:00"
     },
     {
       "document_number": "",
@@ -2622,7 +2622,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.095655+00:00"
+      "scraped_at": "2026-06-19T09:26:08.102970+00:00"
     },
     {
       "document_number": "",
@@ -2642,7 +2642,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.095813+00:00"
+      "scraped_at": "2026-06-19T09:26:08.103028+00:00"
     },
     {
       "document_number": "",
@@ -2662,7 +2662,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.095970+00:00"
+      "scraped_at": "2026-06-19T09:26:08.103086+00:00"
     },
     {
       "document_number": "",
@@ -2682,7 +2682,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:19.096136+00:00"
+      "scraped_at": "2026-06-19T09:26:08.103145+00:00"
     },
     {
       "document_number": "",
@@ -2702,7 +2702,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088090+00:00"
+      "scraped_at": "2026-06-19T09:26:09.052855+00:00"
     },
     {
       "document_number": "",
@@ -2722,7 +2722,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088178+00:00"
+      "scraped_at": "2026-06-19T09:26:09.052942+00:00"
     },
     {
       "document_number": "",
@@ -2742,7 +2742,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088248+00:00"
+      "scraped_at": "2026-06-19T09:26:09.053009+00:00"
     },
     {
       "document_number": "",
@@ -2762,7 +2762,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088319+00:00"
+      "scraped_at": "2026-06-19T09:26:09.053073+00:00"
     },
     {
       "document_number": "",
@@ -2782,7 +2782,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088383+00:00"
+      "scraped_at": "2026-06-19T09:26:09.053136+00:00"
     },
     {
       "document_number": "",
@@ -2802,7 +2802,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088445+00:00"
+      "scraped_at": "2026-06-19T09:26:09.053198+00:00"
     },
     {
       "document_number": "",
@@ -2822,7 +2822,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088504+00:00"
+      "scraped_at": "2026-06-19T09:26:09.053256+00:00"
     },
     {
       "document_number": "",
@@ -2842,7 +2842,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088564+00:00"
+      "scraped_at": "2026-06-19T09:26:09.053352+00:00"
     },
     {
       "document_number": "",
@@ -2862,7 +2862,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088623+00:00"
+      "scraped_at": "2026-06-19T09:26:09.053497+00:00"
     },
     {
       "document_number": "",
@@ -2882,7 +2882,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088681+00:00"
+      "scraped_at": "2026-06-19T09:26:09.053638+00:00"
     },
     {
       "document_number": "",
@@ -2902,7 +2902,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:20.088742+00:00"
+      "scraped_at": "2026-06-19T09:26:09.053708+00:00"
     },
     {
       "document_number": "",
@@ -2922,7 +2922,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.074906+00:00"
+      "scraped_at": "2026-06-19T09:26:10.001563+00:00"
     },
     {
       "document_number": "",
@@ -2942,7 +2942,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.074996+00:00"
+      "scraped_at": "2026-06-19T09:26:10.001649+00:00"
     },
     {
       "document_number": "",
@@ -2962,7 +2962,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.075065+00:00"
+      "scraped_at": "2026-06-19T09:26:10.001715+00:00"
     },
     {
       "document_number": "",
@@ -2982,7 +2982,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.075129+00:00"
+      "scraped_at": "2026-06-19T09:26:10.001777+00:00"
     },
     {
       "document_number": "",
@@ -3002,7 +3002,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.075191+00:00"
+      "scraped_at": "2026-06-19T09:26:10.001838+00:00"
     },
     {
       "document_number": "",
@@ -3022,7 +3022,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.075252+00:00"
+      "scraped_at": "2026-06-19T09:26:10.001898+00:00"
     },
     {
       "document_number": "",
@@ -3042,7 +3042,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.075312+00:00"
+      "scraped_at": "2026-06-19T09:26:10.001956+00:00"
     },
     {
       "document_number": "",
@@ -3062,7 +3062,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.075372+00:00"
+      "scraped_at": "2026-06-19T09:26:10.002038+00:00"
     },
     {
       "document_number": "",
@@ -3082,7 +3082,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.075434+00:00"
+      "scraped_at": "2026-06-19T09:26:10.002100+00:00"
     },
     {
       "document_number": "",
@@ -3102,7 +3102,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.075492+00:00"
+      "scraped_at": "2026-06-19T09:26:10.002159+00:00"
     },
     {
       "document_number": "",
@@ -3122,7 +3122,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:21.075552+00:00"
+      "scraped_at": "2026-06-19T09:26:10.002218+00:00"
     },
     {
       "document_number": "",
@@ -3142,7 +3142,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.079521+00:00"
+      "scraped_at": "2026-06-19T09:26:10.959599+00:00"
     },
     {
       "document_number": "",
@@ -3162,7 +3162,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.079611+00:00"
+      "scraped_at": "2026-06-19T09:26:10.959699+00:00"
     },
     {
       "document_number": "",
@@ -3182,7 +3182,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.079682+00:00"
+      "scraped_at": "2026-06-19T09:26:10.959767+00:00"
     },
     {
       "document_number": "",
@@ -3202,7 +3202,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.079749+00:00"
+      "scraped_at": "2026-06-19T09:26:10.959830+00:00"
     },
     {
       "document_number": "",
@@ -3222,7 +3222,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.079813+00:00"
+      "scraped_at": "2026-06-19T09:26:10.959890+00:00"
     },
     {
       "document_number": "",
@@ -3242,7 +3242,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.079873+00:00"
+      "scraped_at": "2026-06-19T09:26:10.959948+00:00"
     },
     {
       "document_number": "",
@@ -3262,7 +3262,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.079934+00:00"
+      "scraped_at": "2026-06-19T09:26:10.960024+00:00"
     },
     {
       "document_number": "",
@@ -3282,7 +3282,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.080080+00:00"
+      "scraped_at": "2026-06-19T09:26:10.960144+00:00"
     },
     {
       "document_number": "",
@@ -3302,7 +3302,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.080142+00:00"
+      "scraped_at": "2026-06-19T09:26:10.960201+00:00"
     },
     {
       "document_number": "",
@@ -3322,7 +3322,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:22.080204+00:00"
+      "scraped_at": "2026-06-19T09:26:10.960259+00:00"
     },
     {
       "document_number": "",
@@ -3342,7 +3342,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.066526+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949335+00:00"
     },
     {
       "document_number": "",
@@ -3362,7 +3362,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.066614+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949419+00:00"
     },
     {
       "document_number": "",
@@ -3382,7 +3382,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.066684+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949485+00:00"
     },
     {
       "document_number": "",
@@ -3402,7 +3402,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.066748+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949546+00:00"
     },
     {
       "document_number": "",
@@ -3422,7 +3422,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.066809+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949607+00:00"
     },
     {
       "document_number": "",
@@ -3442,7 +3442,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.066868+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949665+00:00"
     },
     {
       "document_number": "",
@@ -3462,7 +3462,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.066927+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949722+00:00"
     },
     {
       "document_number": "",
@@ -3482,7 +3482,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.066987+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949779+00:00"
     },
     {
       "document_number": "",
@@ -3502,7 +3502,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.067044+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949836+00:00"
     },
     {
       "document_number": "",
@@ -3522,7 +3522,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.067104+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949892+00:00"
     },
     {
       "document_number": "",
@@ -3542,7 +3542,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:23.067163+00:00"
+      "scraped_at": "2026-06-19T09:26:11.949950+00:00"
     },
     {
       "document_number": "",
@@ -3562,7 +3562,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050066+00:00"
+      "scraped_at": "2026-06-19T09:26:12.889626+00:00"
     },
     {
       "document_number": "",
@@ -3582,7 +3582,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050154+00:00"
+      "scraped_at": "2026-06-19T09:26:12.889729+00:00"
     },
     {
       "document_number": "",
@@ -3602,7 +3602,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050225+00:00"
+      "scraped_at": "2026-06-19T09:26:12.889801+00:00"
     },
     {
       "document_number": "",
@@ -3622,7 +3622,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050291+00:00"
+      "scraped_at": "2026-06-19T09:26:12.889868+00:00"
     },
     {
       "document_number": "",
@@ -3642,7 +3642,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050355+00:00"
+      "scraped_at": "2026-06-19T09:26:12.889932+00:00"
     },
     {
       "document_number": "",
@@ -3662,7 +3662,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050416+00:00"
+      "scraped_at": "2026-06-19T09:26:12.889995+00:00"
     },
     {
       "document_number": "",
@@ -3682,7 +3682,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050477+00:00"
+      "scraped_at": "2026-06-19T09:26:12.890059+00:00"
     },
     {
       "document_number": "",
@@ -3702,7 +3702,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050538+00:00"
+      "scraped_at": "2026-06-19T09:26:12.890122+00:00"
     },
     {
       "document_number": "",
@@ -3722,7 +3722,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050596+00:00"
+      "scraped_at": "2026-06-19T09:26:12.890182+00:00"
     },
     {
       "document_number": "",
@@ -3742,7 +3742,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050655+00:00"
+      "scraped_at": "2026-06-19T09:26:12.890243+00:00"
     },
     {
       "document_number": "",
@@ -3762,7 +3762,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:24.050736+00:00"
+      "scraped_at": "2026-06-19T09:26:12.890306+00:00"
     },
     {
       "document_number": "",
@@ -3782,7 +3782,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.014774+00:00"
+      "scraped_at": "2026-06-19T09:26:13.855545+00:00"
     },
     {
       "document_number": "",
@@ -3802,7 +3802,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.015041+00:00"
+      "scraped_at": "2026-06-19T09:26:13.855706+00:00"
     },
     {
       "document_number": "",
@@ -3822,7 +3822,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.015246+00:00"
+      "scraped_at": "2026-06-19T09:26:13.855842+00:00"
     },
     {
       "document_number": "",
@@ -3842,7 +3842,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.015467+00:00"
+      "scraped_at": "2026-06-19T09:26:13.855975+00:00"
     },
     {
       "document_number": "",
@@ -3862,7 +3862,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.015698+00:00"
+      "scraped_at": "2026-06-19T09:26:13.856127+00:00"
     },
     {
       "document_number": "",
@@ -3882,7 +3882,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.015933+00:00"
+      "scraped_at": "2026-06-19T09:26:13.856258+00:00"
     },
     {
       "document_number": "",
@@ -3902,7 +3902,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.016171+00:00"
+      "scraped_at": "2026-06-19T09:26:13.856386+00:00"
     },
     {
       "document_number": "",
@@ -3922,7 +3922,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.016313+00:00"
+      "scraped_at": "2026-06-19T09:26:13.856516+00:00"
     },
     {
       "document_number": "",
@@ -3942,7 +3942,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.016413+00:00"
+      "scraped_at": "2026-06-19T09:26:13.856644+00:00"
     },
     {
       "document_number": "",
@@ -3962,7 +3962,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.016537+00:00"
+      "scraped_at": "2026-06-19T09:26:13.856771+00:00"
     },
     {
       "document_number": "",
@@ -3982,7 +3982,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.016651+00:00"
+      "scraped_at": "2026-06-19T09:26:13.856900+00:00"
     },
     {
       "document_number": "",
@@ -4002,7 +4002,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980274+00:00"
+      "scraped_at": "2026-06-19T09:26:14.806565+00:00"
     },
     {
       "document_number": "",
@@ -4022,7 +4022,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980356+00:00"
+      "scraped_at": "2026-06-19T09:26:14.806712+00:00"
     },
     {
       "document_number": "",
@@ -4042,7 +4042,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980422+00:00"
+      "scraped_at": "2026-06-19T09:26:14.806841+00:00"
     },
     {
       "document_number": "",
@@ -4062,7 +4062,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980484+00:00"
+      "scraped_at": "2026-06-19T09:26:14.806958+00:00"
     },
     {
       "document_number": "",
@@ -4082,7 +4082,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980544+00:00"
+      "scraped_at": "2026-06-19T09:26:14.807026+00:00"
     },
     {
       "document_number": "",
@@ -4102,7 +4102,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980603+00:00"
+      "scraped_at": "2026-06-19T09:26:14.807088+00:00"
     },
     {
       "document_number": "",
@@ -4122,7 +4122,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980660+00:00"
+      "scraped_at": "2026-06-19T09:26:14.807147+00:00"
     },
     {
       "document_number": "",
@@ -4142,7 +4142,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980716+00:00"
+      "scraped_at": "2026-06-19T09:26:14.807207+00:00"
     },
     {
       "document_number": "",
@@ -4162,7 +4162,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980772+00:00"
+      "scraped_at": "2026-06-19T09:26:14.807264+00:00"
     },
     {
       "document_number": "",
@@ -4182,7 +4182,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980828+00:00"
+      "scraped_at": "2026-06-19T09:26:14.807323+00:00"
     },
     {
       "document_number": "",
@@ -4202,7 +4202,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:25.980886+00:00"
+      "scraped_at": "2026-06-19T09:26:14.807381+00:00"
     },
     {
       "document_number": "",
@@ -4222,7 +4222,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897260+00:00"
+      "scraped_at": "2026-06-19T09:26:15.736508+00:00"
     },
     {
       "document_number": "",
@@ -4242,7 +4242,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897349+00:00"
+      "scraped_at": "2026-06-19T09:26:15.736669+00:00"
     },
     {
       "document_number": "",
@@ -4262,7 +4262,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897420+00:00"
+      "scraped_at": "2026-06-19T09:26:15.736826+00:00"
     },
     {
       "document_number": "",
@@ -4282,7 +4282,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897498+00:00"
+      "scraped_at": "2026-06-19T09:26:15.736992+00:00"
     },
     {
       "document_number": "",
@@ -4302,7 +4302,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897558+00:00"
+      "scraped_at": "2026-06-19T09:26:15.737135+00:00"
     },
     {
       "document_number": "",
@@ -4322,7 +4322,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897618+00:00"
+      "scraped_at": "2026-06-19T09:26:15.737231+00:00"
     },
     {
       "document_number": "",
@@ -4342,7 +4342,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897679+00:00"
+      "scraped_at": "2026-06-19T09:26:15.737297+00:00"
     },
     {
       "document_number": "",
@@ -4362,7 +4362,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897740+00:00"
+      "scraped_at": "2026-06-19T09:26:15.737361+00:00"
     },
     {
       "document_number": "",
@@ -4382,7 +4382,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897802+00:00"
+      "scraped_at": "2026-06-19T09:26:15.737423+00:00"
     },
     {
       "document_number": "",
@@ -4402,7 +4402,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897864+00:00"
+      "scraped_at": "2026-06-19T09:26:15.737494+00:00"
     },
     {
       "document_number": "",
@@ -4422,7 +4422,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:26.897933+00:00"
+      "scraped_at": "2026-06-19T09:26:15.737605+00:00"
     },
     {
       "document_number": "",
@@ -4442,7 +4442,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.921430+00:00"
+      "scraped_at": "2026-06-19T09:26:16.757490+00:00"
     },
     {
       "document_number": "",
@@ -4462,7 +4462,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.921513+00:00"
+      "scraped_at": "2026-06-19T09:26:16.757573+00:00"
     },
     {
       "document_number": "",
@@ -4482,7 +4482,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.921583+00:00"
+      "scraped_at": "2026-06-19T09:26:16.757639+00:00"
     },
     {
       "document_number": "",
@@ -4502,7 +4502,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.921647+00:00"
+      "scraped_at": "2026-06-19T09:26:16.757701+00:00"
     },
     {
       "document_number": "",
@@ -4522,7 +4522,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.921709+00:00"
+      "scraped_at": "2026-06-19T09:26:16.757761+00:00"
     },
     {
       "document_number": "",
@@ -4542,7 +4542,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.921767+00:00"
+      "scraped_at": "2026-06-19T09:26:16.757819+00:00"
     },
     {
       "document_number": "",
@@ -4562,7 +4562,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.921826+00:00"
+      "scraped_at": "2026-06-19T09:26:16.757876+00:00"
     },
     {
       "document_number": "",
@@ -4582,7 +4582,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.921885+00:00"
+      "scraped_at": "2026-06-19T09:26:16.757936+00:00"
     },
     {
       "document_number": "",
@@ -4602,7 +4602,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.921943+00:00"
+      "scraped_at": "2026-06-19T09:26:16.757993+00:00"
     },
     {
       "document_number": "",
@@ -4622,7 +4622,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.922000+00:00"
+      "scraped_at": "2026-06-19T09:26:16.758049+00:00"
     },
     {
       "document_number": "",
@@ -4642,7 +4642,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:27.922058+00:00"
+      "scraped_at": "2026-06-19T09:26:16.758105+00:00"
     },
     {
       "document_number": "",
@@ -4662,7 +4662,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.878444+00:00"
+      "scraped_at": "2026-06-19T09:26:17.701272+00:00"
     },
     {
       "document_number": "",
@@ -4682,7 +4682,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.878539+00:00"
+      "scraped_at": "2026-06-19T09:26:17.701450+00:00"
     },
     {
       "document_number": "",
@@ -4702,7 +4702,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.878609+00:00"
+      "scraped_at": "2026-06-19T09:26:17.701595+00:00"
     },
     {
       "document_number": "",
@@ -4722,7 +4722,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.878676+00:00"
+      "scraped_at": "2026-06-19T09:26:17.701799+00:00"
     },
     {
       "document_number": "",
@@ -4742,7 +4742,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.878741+00:00"
+      "scraped_at": "2026-06-19T09:26:17.702035+00:00"
     },
     {
       "document_number": "",
@@ -4762,7 +4762,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.878805+00:00"
+      "scraped_at": "2026-06-19T09:26:17.702278+00:00"
     },
     {
       "document_number": "",
@@ -4782,7 +4782,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.878866+00:00"
+      "scraped_at": "2026-06-19T09:26:17.702687+00:00"
     },
     {
       "document_number": "",
@@ -4802,7 +4802,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.878926+00:00"
+      "scraped_at": "2026-06-19T09:26:17.703135+00:00"
     },
     {
       "document_number": "",
@@ -4822,7 +4822,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.878987+00:00"
+      "scraped_at": "2026-06-19T09:26:17.703634+00:00"
     },
     {
       "document_number": "",
@@ -4842,7 +4842,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.879048+00:00"
+      "scraped_at": "2026-06-19T09:26:17.704158+00:00"
     },
     {
       "document_number": "",
@@ -4862,7 +4862,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:28.879109+00:00"
+      "scraped_at": "2026-06-19T09:26:17.704628+00:00"
     },
     {
       "document_number": "",
@@ -4882,7 +4882,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.825611+00:00"
+      "scraped_at": "2026-06-19T09:26:18.693972+00:00"
     },
     {
       "document_number": "",
@@ -4902,7 +4902,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.825717+00:00"
+      "scraped_at": "2026-06-19T09:26:18.694084+00:00"
     },
     {
       "document_number": "",
@@ -4922,7 +4922,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.825832+00:00"
+      "scraped_at": "2026-06-19T09:26:18.694155+00:00"
     },
     {
       "document_number": "",
@@ -4942,7 +4942,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.825907+00:00"
+      "scraped_at": "2026-06-19T09:26:18.694221+00:00"
     },
     {
       "document_number": "",
@@ -4962,7 +4962,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.825976+00:00"
+      "scraped_at": "2026-06-19T09:26:18.694285+00:00"
     },
     {
       "document_number": "",
@@ -4982,7 +4982,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.826041+00:00"
+      "scraped_at": "2026-06-19T09:26:18.694347+00:00"
     },
     {
       "document_number": "",
@@ -5002,7 +5002,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.826106+00:00"
+      "scraped_at": "2026-06-19T09:26:18.694410+00:00"
     },
     {
       "document_number": "",
@@ -5022,7 +5022,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.826172+00:00"
+      "scraped_at": "2026-06-19T09:26:18.694472+00:00"
     },
     {
       "document_number": "",
@@ -5042,7 +5042,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.826234+00:00"
+      "scraped_at": "2026-06-19T09:26:18.694533+00:00"
     },
     {
       "document_number": "",
@@ -5062,7 +5062,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.826298+00:00"
+      "scraped_at": "2026-06-19T09:26:18.694593+00:00"
     },
     {
       "document_number": "",
@@ -5082,7 +5082,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:29.826362+00:00"
+      "scraped_at": "2026-06-19T09:26:18.694654+00:00"
     },
     {
       "document_number": "",
@@ -5102,7 +5102,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.745427+00:00"
+      "scraped_at": "2026-06-19T09:26:19.679366+00:00"
     },
     {
       "document_number": "",
@@ -5122,7 +5122,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.745515+00:00"
+      "scraped_at": "2026-06-19T09:26:19.679463+00:00"
     },
     {
       "document_number": "",
@@ -5142,7 +5142,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.745586+00:00"
+      "scraped_at": "2026-06-19T09:26:19.679531+00:00"
     },
     {
       "document_number": "",
@@ -5162,7 +5162,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.745652+00:00"
+      "scraped_at": "2026-06-19T09:26:19.679596+00:00"
     },
     {
       "document_number": "",
@@ -5182,7 +5182,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.745752+00:00"
+      "scraped_at": "2026-06-19T09:26:19.679659+00:00"
     },
     {
       "document_number": "",
@@ -5202,7 +5202,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.745825+00:00"
+      "scraped_at": "2026-06-19T09:26:19.679720+00:00"
     },
     {
       "document_number": "",
@@ -5222,7 +5222,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.745889+00:00"
+      "scraped_at": "2026-06-19T09:26:19.679780+00:00"
     },
     {
       "document_number": "",
@@ -5242,7 +5242,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.745958+00:00"
+      "scraped_at": "2026-06-19T09:26:19.679842+00:00"
     },
     {
       "document_number": "",
@@ -5262,7 +5262,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.746019+00:00"
+      "scraped_at": "2026-06-19T09:26:19.679902+00:00"
     },
     {
       "document_number": "",
@@ -5282,7 +5282,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.746079+00:00"
+      "scraped_at": "2026-06-19T09:26:19.679961+00:00"
     },
     {
       "document_number": "",
@@ -5302,7 +5302,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:30.746141+00:00"
+      "scraped_at": "2026-06-19T09:26:19.680041+00:00"
     },
     {
       "document_number": "",
@@ -5322,7 +5322,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.695584+00:00"
+      "scraped_at": "2026-06-19T09:26:20.614183+00:00"
     },
     {
       "document_number": "",
@@ -5342,7 +5342,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.695693+00:00"
+      "scraped_at": "2026-06-19T09:26:20.614281+00:00"
     },
     {
       "document_number": "",
@@ -5362,7 +5362,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.695768+00:00"
+      "scraped_at": "2026-06-19T09:26:20.614354+00:00"
     },
     {
       "document_number": "",
@@ -5382,7 +5382,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.695835+00:00"
+      "scraped_at": "2026-06-19T09:26:20.614433+00:00"
     },
     {
       "document_number": "",
@@ -5402,7 +5402,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.695899+00:00"
+      "scraped_at": "2026-06-19T09:26:20.614502+00:00"
     },
     {
       "document_number": "",
@@ -5422,7 +5422,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.695960+00:00"
+      "scraped_at": "2026-06-19T09:26:20.614593+00:00"
     },
     {
       "document_number": "",
@@ -5442,7 +5442,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.696042+00:00"
+      "scraped_at": "2026-06-19T09:26:20.614738+00:00"
     },
     {
       "document_number": "",
@@ -5462,7 +5462,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.696106+00:00"
+      "scraped_at": "2026-06-19T09:26:20.614867+00:00"
     },
     {
       "document_number": "",
@@ -5482,7 +5482,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.696168+00:00"
+      "scraped_at": "2026-06-19T09:26:20.615030+00:00"
     },
     {
       "document_number": "",
@@ -5502,7 +5502,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.696231+00:00"
+      "scraped_at": "2026-06-19T09:26:20.615195+00:00"
     },
     {
       "document_number": "",
@@ -5522,7 +5522,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:31.696297+00:00"
+      "scraped_at": "2026-06-19T09:26:20.615347+00:00"
     },
     {
       "document_number": "",
@@ -5542,7 +5542,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.704452+00:00"
+      "scraped_at": "2026-06-19T09:26:21.615565+00:00"
     },
     {
       "document_number": "",
@@ -5562,7 +5562,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.704644+00:00"
+      "scraped_at": "2026-06-19T09:26:21.615773+00:00"
     },
     {
       "document_number": "",
@@ -5582,7 +5582,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.704819+00:00"
+      "scraped_at": "2026-06-19T09:26:21.615964+00:00"
     },
     {
       "document_number": "",
@@ -5602,7 +5602,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.704956+00:00"
+      "scraped_at": "2026-06-19T09:26:21.616509+00:00"
     },
     {
       "document_number": "",
@@ -5622,7 +5622,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.705090+00:00"
+      "scraped_at": "2026-06-19T09:26:21.616679+00:00"
     },
     {
       "document_number": "",
@@ -5642,7 +5642,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.705208+00:00"
+      "scraped_at": "2026-06-19T09:26:21.616830+00:00"
     },
     {
       "document_number": "",
@@ -5662,7 +5662,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.705322+00:00"
+      "scraped_at": "2026-06-19T09:26:21.616972+00:00"
     },
     {
       "document_number": "",
@@ -5682,7 +5682,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.705462+00:00"
+      "scraped_at": "2026-06-19T09:26:21.617176+00:00"
     },
     {
       "document_number": "",
@@ -5702,7 +5702,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.705611+00:00"
+      "scraped_at": "2026-06-19T09:26:21.617415+00:00"
     },
     {
       "document_number": "",
@@ -5722,7 +5722,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.705745+00:00"
+      "scraped_at": "2026-06-19T09:26:21.617568+00:00"
     },
     {
       "document_number": "",
@@ -5742,7 +5742,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:32.705890+00:00"
+      "scraped_at": "2026-06-19T09:26:21.617703+00:00"
     },
     {
       "document_number": "",
@@ -5762,7 +5762,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:33.697382+00:00"
+      "scraped_at": "2026-06-19T09:26:22.567813+00:00"
     },
     {
       "document_number": "",
@@ -5782,7 +5782,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:33.697519+00:00"
+      "scraped_at": "2026-06-19T09:26:22.567967+00:00"
     },
     {
       "document_number": "",
@@ -5802,7 +5802,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.058434+00:00"
+      "scraped_at": "2026-06-19T09:26:04.257191+00:00"
     },
     {
       "document_number": "",
@@ -5822,7 +5822,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:16.113769+00:00"
+      "scraped_at": "2026-06-19T09:26:05.268901+00:00"
     },
     {
       "document_number": "",
@@ -5842,7 +5842,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:06.475663+00:00"
+      "scraped_at": "2026-06-19T09:25:55.625617+00:00"
     },
     {
       "document_number": "",
@@ -5862,7 +5862,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:06.475745+00:00"
+      "scraped_at": "2026-06-19T09:25:55.625787+00:00"
     },
     {
       "document_number": "",
@@ -5882,7 +5882,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:06.475811+00:00"
+      "scraped_at": "2026-06-19T09:25:55.625941+00:00"
     },
     {
       "document_number": "",
@@ -5902,7 +5902,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:06.475873+00:00"
+      "scraped_at": "2026-06-19T09:25:55.626012+00:00"
     },
     {
       "document_number": "",
@@ -5922,7 +5922,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:06.475933+00:00"
+      "scraped_at": "2026-06-19T09:25:55.626076+00:00"
     },
     {
       "document_number": "",
@@ -5942,7 +5942,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:06.476035+00:00"
+      "scraped_at": "2026-06-19T09:25:55.626138+00:00"
     },
     {
       "document_number": "",
@@ -5962,7 +5962,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:06.476164+00:00"
+      "scraped_at": "2026-06-19T09:25:55.626200+00:00"
     },
     {
       "document_number": "",
@@ -5982,7 +5982,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:06.476277+00:00"
+      "scraped_at": "2026-06-19T09:25:55.626261+00:00"
     },
     {
       "document_number": "",
@@ -6002,7 +6002,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330405+00:00"
+      "scraped_at": "2026-06-19T09:25:57.526002+00:00"
     },
     {
       "document_number": "",
@@ -6022,7 +6022,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330464+00:00"
+      "scraped_at": "2026-06-19T09:25:57.526062+00:00"
     },
     {
       "document_number": "",
@@ -6042,7 +6042,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330522+00:00"
+      "scraped_at": "2026-06-19T09:25:57.526121+00:00"
     },
     {
       "document_number": "",
@@ -6062,7 +6062,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330582+00:00"
+      "scraped_at": "2026-06-19T09:25:57.526180+00:00"
     },
     {
       "document_number": "",
@@ -6082,7 +6082,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330639+00:00"
+      "scraped_at": "2026-06-19T09:25:57.526238+00:00"
     },
     {
       "document_number": "",
@@ -6102,7 +6102,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330696+00:00"
+      "scraped_at": "2026-06-19T09:25:57.526295+00:00"
     },
     {
       "document_number": "",
@@ -6122,7 +6122,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330753+00:00"
+      "scraped_at": "2026-06-19T09:25:57.526356+00:00"
     },
     {
       "document_number": "",
@@ -6142,7 +6142,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:08.330811+00:00"
+      "scraped_at": "2026-06-19T09:25:57.526489+00:00"
     },
     {
       "document_number": "",
@@ -6162,7 +6162,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.301613+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453047+00:00"
     },
     {
       "document_number": "",
@@ -6182,7 +6182,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.301776+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453132+00:00"
     },
     {
       "document_number": "",
@@ -6202,7 +6202,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.301931+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453198+00:00"
     },
     {
       "document_number": "",
@@ -6222,7 +6222,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.302060+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453261+00:00"
     },
     {
       "document_number": "",
@@ -6242,7 +6242,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.302201+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453323+00:00"
     },
     {
       "document_number": "",
@@ -6262,7 +6262,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.302312+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453381+00:00"
     },
     {
       "document_number": "",
@@ -6282,7 +6282,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.302404+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453444+00:00"
     },
     {
       "document_number": "",
@@ -6302,7 +6302,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.302470+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453504+00:00"
     },
     {
       "document_number": "",
@@ -6322,7 +6322,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.302531+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453562+00:00"
     },
     {
       "document_number": "",
@@ -6342,7 +6342,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.302590+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453619+00:00"
     },
     {
       "document_number": "",
@@ -6362,7 +6362,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:09.302651+00:00"
+      "scraped_at": "2026-06-19T09:25:58.453677+00:00"
     },
     {
       "document_number": "",
@@ -6382,7 +6382,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.290225+00:00"
+      "scraped_at": "2026-06-19T09:25:59.434912+00:00"
     },
     {
       "document_number": "",
@@ -6402,7 +6402,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.290371+00:00"
+      "scraped_at": "2026-06-19T09:25:59.434994+00:00"
     },
     {
       "document_number": "",
@@ -6422,7 +6422,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.290500+00:00"
+      "scraped_at": "2026-06-19T09:25:59.435061+00:00"
     },
     {
       "document_number": "",
@@ -6442,7 +6442,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.290625+00:00"
+      "scraped_at": "2026-06-19T09:25:59.435124+00:00"
     },
     {
       "document_number": "",
@@ -6462,7 +6462,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.290754+00:00"
+      "scraped_at": "2026-06-19T09:25:59.435184+00:00"
     },
     {
       "document_number": "",
@@ -6482,7 +6482,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.290876+00:00"
+      "scraped_at": "2026-06-19T09:25:59.435242+00:00"
     },
     {
       "document_number": "",
@@ -6502,7 +6502,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.290998+00:00"
+      "scraped_at": "2026-06-19T09:25:59.435300+00:00"
     },
     {
       "document_number": "",
@@ -6522,7 +6522,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.291122+00:00"
+      "scraped_at": "2026-06-19T09:25:59.435358+00:00"
     },
     {
       "document_number": "",
@@ -6542,7 +6542,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.291244+00:00"
+      "scraped_at": "2026-06-19T09:25:59.435415+00:00"
     },
     {
       "document_number": "",
@@ -6562,7 +6562,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.291367+00:00"
+      "scraped_at": "2026-06-19T09:25:59.435471+00:00"
     },
     {
       "document_number": "",
@@ -6582,7 +6582,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:10.291481+00:00"
+      "scraped_at": "2026-06-19T09:25:59.435527+00:00"
     },
     {
       "document_number": "",
@@ -6602,7 +6602,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:11.259507+00:00"
+      "scraped_at": "2026-06-19T09:26:00.372201+00:00"
     },
     {
       "document_number": "",
@@ -6622,7 +6622,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:11.259590+00:00"
+      "scraped_at": "2026-06-19T09:26:00.372287+00:00"
     },
     {
       "document_number": "",
@@ -6642,7 +6642,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:11.259655+00:00"
+      "scraped_at": "2026-06-19T09:26:00.372353+00:00"
     },
     {
       "document_number": "",
@@ -6662,7 +6662,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:11.259776+00:00"
+      "scraped_at": "2026-06-19T09:26:00.372476+00:00"
     },
     {
       "document_number": "",
@@ -6682,7 +6682,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:11.259835+00:00"
+      "scraped_at": "2026-06-19T09:26:00.372570+00:00"
     },
     {
       "document_number": "",
@@ -6702,7 +6702,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:11.259894+00:00"
+      "scraped_at": "2026-06-19T09:26:00.372630+00:00"
     },
     {
       "document_number": "",
@@ -6722,7 +6722,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:11.259952+00:00"
+      "scraped_at": "2026-06-19T09:26:00.372690+00:00"
     },
     {
       "document_number": "",
@@ -6742,7 +6742,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:11.260027+00:00"
+      "scraped_at": "2026-06-19T09:26:00.372747+00:00"
     },
     {
       "document_number": "",
@@ -6762,7 +6762,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:11.260161+00:00"
+      "scraped_at": "2026-06-19T09:26:00.372859+00:00"
     },
     {
       "document_number": "",
@@ -6782,7 +6782,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.192787+00:00"
+      "scraped_at": "2026-06-19T09:26:01.368913+00:00"
     },
     {
       "document_number": "",
@@ -6802,7 +6802,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.192870+00:00"
+      "scraped_at": "2026-06-19T09:26:01.368999+00:00"
     },
     {
       "document_number": "",
@@ -6822,7 +6822,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.192935+00:00"
+      "scraped_at": "2026-06-19T09:26:01.369067+00:00"
     },
     {
       "document_number": "",
@@ -6842,7 +6842,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.192997+00:00"
+      "scraped_at": "2026-06-19T09:26:01.369130+00:00"
     },
     {
       "document_number": "",
@@ -6862,7 +6862,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.193059+00:00"
+      "scraped_at": "2026-06-19T09:26:01.369191+00:00"
     },
     {
       "document_number": "",
@@ -6882,7 +6882,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.193117+00:00"
+      "scraped_at": "2026-06-19T09:26:01.369251+00:00"
     },
     {
       "document_number": "",
@@ -6902,7 +6902,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.193174+00:00"
+      "scraped_at": "2026-06-19T09:26:01.369311+00:00"
     },
     {
       "document_number": "",
@@ -6922,7 +6922,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.193234+00:00"
+      "scraped_at": "2026-06-19T09:26:01.369370+00:00"
     },
     {
       "document_number": "",
@@ -6942,7 +6942,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.193291+00:00"
+      "scraped_at": "2026-06-19T09:26:01.369430+00:00"
     },
     {
       "document_number": "",
@@ -6962,7 +6962,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.193372+00:00"
+      "scraped_at": "2026-06-19T09:26:01.369492+00:00"
     },
     {
       "document_number": "",
@@ -6982,7 +6982,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:12.193433+00:00"
+      "scraped_at": "2026-06-19T09:26:01.369552+00:00"
     },
     {
       "document_number": "",
@@ -7002,7 +7002,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.137613+00:00"
+      "scraped_at": "2026-06-19T09:26:02.327555+00:00"
     },
     {
       "document_number": "",
@@ -7022,7 +7022,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.137703+00:00"
+      "scraped_at": "2026-06-19T09:26:02.327721+00:00"
     },
     {
       "document_number": "",
@@ -7042,7 +7042,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.137772+00:00"
+      "scraped_at": "2026-06-19T09:26:02.327911+00:00"
     },
     {
       "document_number": "",
@@ -7062,7 +7062,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.137836+00:00"
+      "scraped_at": "2026-06-19T09:26:02.328156+00:00"
     },
     {
       "document_number": "",
@@ -7082,7 +7082,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.137896+00:00"
+      "scraped_at": "2026-06-19T09:26:02.328366+00:00"
     },
     {
       "document_number": "",
@@ -7102,7 +7102,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:00.539783+00:00"
+      "scraped_at": "2026-06-19T09:25:49.678446+00:00"
     },
     {
       "document_number": "",
@@ -7122,7 +7122,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.687239+00:00"
+      "scraped_at": "2026-06-19T09:25:41.989525+00:00"
     },
     {
       "document_number": "",
@@ -7142,7 +7142,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.687461+00:00"
+      "scraped_at": "2026-06-19T09:25:41.989605+00:00"
     },
     {
       "document_number": "",
@@ -7162,7 +7162,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.687638+00:00"
+      "scraped_at": "2026-06-19T09:25:41.989677+00:00"
     },
     {
       "document_number": "",
@@ -7182,7 +7182,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.688614+00:00"
+      "scraped_at": "2026-06-19T09:25:41.989948+00:00"
     },
     {
       "document_number": "",
@@ -7202,7 +7202,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.688829+00:00"
+      "scraped_at": "2026-06-19T09:25:41.990029+00:00"
     },
     {
       "document_number": "",
@@ -7222,7 +7222,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.689017+00:00"
+      "scraped_at": "2026-06-19T09:25:41.990093+00:00"
     },
     {
       "document_number": "",
@@ -7242,7 +7242,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.689199+00:00"
+      "scraped_at": "2026-06-19T09:25:41.990154+00:00"
     },
     {
       "document_number": "",
@@ -7262,7 +7262,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.752970+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977006+00:00"
     },
     {
       "document_number": "",
@@ -7282,7 +7282,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.753070+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977097+00:00"
     },
     {
       "document_number": "",
@@ -7302,7 +7302,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.753151+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977166+00:00"
     },
     {
       "document_number": "",
@@ -7322,7 +7322,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.753258+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977229+00:00"
     },
     {
       "document_number": "",
@@ -7342,7 +7342,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.753330+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977293+00:00"
     },
     {
       "document_number": "",
@@ -7362,7 +7362,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.753400+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977352+00:00"
     },
     {
       "document_number": "",
@@ -7382,7 +7382,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.753497+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977410+00:00"
     },
     {
       "document_number": "",
@@ -7402,7 +7402,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.753576+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977467+00:00"
     },
     {
       "document_number": "",
@@ -7422,7 +7422,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.753644+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977524+00:00"
     },
     {
       "document_number": "",
@@ -7442,7 +7442,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.753712+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977583+00:00"
     },
     {
       "document_number": "",
@@ -7462,7 +7462,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:53.753781+00:00"
+      "scraped_at": "2026-06-19T09:25:42.977684+00:00"
     },
     {
       "document_number": "",
@@ -7482,7 +7482,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.749359+00:00"
+      "scraped_at": "2026-06-19T09:25:43.943513+00:00"
     },
     {
       "document_number": "",
@@ -7502,7 +7502,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.749444+00:00"
+      "scraped_at": "2026-06-19T09:25:43.943599+00:00"
     },
     {
       "document_number": "",
@@ -7522,7 +7522,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.749515+00:00"
+      "scraped_at": "2026-06-19T09:25:43.943668+00:00"
     },
     {
       "document_number": "",
@@ -7542,7 +7542,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.749581+00:00"
+      "scraped_at": "2026-06-19T09:25:43.943731+00:00"
     },
     {
       "document_number": "",
@@ -7562,7 +7562,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.749710+00:00"
+      "scraped_at": "2026-06-19T09:25:43.943947+00:00"
     },
     {
       "document_number": "",
@@ -7582,7 +7582,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.749770+00:00"
+      "scraped_at": "2026-06-19T09:25:43.944043+00:00"
     },
     {
       "document_number": "",
@@ -7602,7 +7602,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.749872+00:00"
+      "scraped_at": "2026-06-19T09:25:43.944108+00:00"
     },
     {
       "document_number": "",
@@ -7622,7 +7622,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.749953+00:00"
+      "scraped_at": "2026-06-19T09:25:43.944176+00:00"
     },
     {
       "document_number": "",
@@ -7642,7 +7642,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.750015+00:00"
+      "scraped_at": "2026-06-19T09:25:43.944237+00:00"
     },
     {
       "document_number": "",
@@ -7662,7 +7662,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:54.750075+00:00"
+      "scraped_at": "2026-06-19T09:25:43.944297+00:00"
     },
     {
       "document_number": "",
@@ -7682,7 +7682,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.737722+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928038+00:00"
     },
     {
       "document_number": "",
@@ -7702,7 +7702,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.737812+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928127+00:00"
     },
     {
       "document_number": "",
@@ -7722,7 +7722,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.737883+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928197+00:00"
     },
     {
       "document_number": "",
@@ -7742,7 +7742,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.737951+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928261+00:00"
     },
     {
       "document_number": "",
@@ -7762,7 +7762,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.738015+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928324+00:00"
     },
     {
       "document_number": "",
@@ -7782,7 +7782,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.738076+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928385+00:00"
     },
     {
       "document_number": "",
@@ -7802,7 +7802,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.738139+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928469+00:00"
     },
     {
       "document_number": "",
@@ -7822,7 +7822,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.738199+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928526+00:00"
     },
     {
       "document_number": "",
@@ -7842,7 +7842,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.738258+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928583+00:00"
     },
     {
       "document_number": "",
@@ -7862,7 +7862,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.738316+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928639+00:00"
     },
     {
       "document_number": "",
@@ -7882,7 +7882,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:55.738375+00:00"
+      "scraped_at": "2026-06-19T09:25:44.928698+00:00"
     },
     {
       "document_number": "",
@@ -7902,7 +7902,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:56.640999+00:00"
+      "scraped_at": "2026-06-19T09:25:45.890210+00:00"
     },
     {
       "document_number": "",
@@ -7922,7 +7922,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:56.641164+00:00"
+      "scraped_at": "2026-06-19T09:25:45.890295+00:00"
     },
     {
       "document_number": "",
@@ -7942,7 +7942,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:56.641308+00:00"
+      "scraped_at": "2026-06-19T09:25:45.890362+00:00"
     },
     {
       "document_number": "",
@@ -7962,7 +7962,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:56.641556+00:00"
+      "scraped_at": "2026-06-19T09:25:45.890485+00:00"
     },
     {
       "document_number": "",
@@ -7982,7 +7982,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:56.641627+00:00"
+      "scraped_at": "2026-06-19T09:25:45.890543+00:00"
     },
     {
       "document_number": "",
@@ -8002,7 +8002,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:56.641693+00:00"
+      "scraped_at": "2026-06-19T09:25:45.890607+00:00"
     },
     {
       "document_number": "",
@@ -8022,7 +8022,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:56.641756+00:00"
+      "scraped_at": "2026-06-19T09:25:45.890664+00:00"
     },
     {
       "document_number": "",
@@ -8042,7 +8042,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:56.641839+00:00"
+      "scraped_at": "2026-06-19T09:25:45.890722+00:00"
     },
     {
       "document_number": "",
@@ -8062,7 +8062,7 @@
         "Tax lien \u2014 financial distress (+12)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:56.641943+00:00"
+      "scraped_at": "2026-06-19T09:25:45.890802+00:00"
     },
     {
       "document_number": "",
@@ -8082,7 +8082,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.058372+00:00"
+      "scraped_at": "2026-06-19T09:26:04.257070+00:00"
     },
     {
       "document_number": "",
@@ -8102,7 +8102,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.093484+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227024+00:00"
     },
     {
       "document_number": "",
@@ -8122,7 +8122,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.093579+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227113+00:00"
     },
     {
       "document_number": "",
@@ -8142,7 +8142,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.093657+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227183+00:00"
     },
     {
       "document_number": "",
@@ -8162,7 +8162,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.093936+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227435+00:00"
     },
     {
       "document_number": "",
@@ -8182,7 +8182,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:17.094071+00:00"
+      "scraped_at": "2026-06-19T09:26:06.227556+00:00"
     },
     {
       "document_number": "",
@@ -8202,7 +8202,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106187+00:00"
+      "scraped_at": "2026-06-19T09:26:07.137488+00:00"
     },
     {
       "document_number": "",
@@ -8222,7 +8222,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:18.106276+00:00"
+      "scraped_at": "2026-06-19T09:26:07.137654+00:00"
     },
     {
       "document_number": "",
@@ -8242,7 +8242,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:06.476340+00:00"
+      "scraped_at": "2026-06-19T09:25:55.626330+00:00"
     },
     {
       "document_number": "",
@@ -8262,7 +8262,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:06.476401+00:00"
+      "scraped_at": "2026-06-19T09:25:55.626392+00:00"
     },
     {
       "document_number": "",
@@ -8282,7 +8282,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:07.395176+00:00"
+      "scraped_at": "2026-06-19T09:25:56.566404+00:00"
     },
     {
       "document_number": "",
@@ -8302,7 +8302,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:07.395372+00:00"
+      "scraped_at": "2026-06-19T09:25:56.566608+00:00"
     },
     {
       "document_number": "",
@@ -8322,7 +8322,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.137955+00:00"
+      "scraped_at": "2026-06-19T09:26:02.328597+00:00"
     },
     {
       "document_number": "",
@@ -8342,7 +8342,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.138074+00:00"
+      "scraped_at": "2026-06-19T09:26:02.328920+00:00"
     },
     {
       "document_number": "",
@@ -8362,7 +8362,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.138135+00:00"
+      "scraped_at": "2026-06-19T09:26:02.329159+00:00"
     },
     {
       "document_number": "",
@@ -8382,7 +8382,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.138220+00:00"
+      "scraped_at": "2026-06-19T09:26:02.329744+00:00"
     },
     {
       "document_number": "",
@@ -8402,7 +8402,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:13.138283+00:00"
+      "scraped_at": "2026-06-19T09:26:02.330314+00:00"
     },
     {
       "document_number": "",
@@ -8422,7 +8422,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:14.090197+00:00"
+      "scraped_at": "2026-06-19T09:26:03.333082+00:00"
     },
     {
       "document_number": "",
@@ -8442,7 +8442,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:15.058189+00:00"
+      "scraped_at": "2026-06-19T09:26:04.256891+00:00"
     },
     {
       "document_number": "",
@@ -8462,7 +8462,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:00.539618+00:00"
+      "scraped_at": "2026-06-19T09:25:49.678382+00:00"
     },
     {
       "document_number": "",
@@ -8482,7 +8482,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:01.545433+00:00"
+      "scraped_at": "2026-06-19T09:25:50.664992+00:00"
     },
     {
       "document_number": "",
@@ -8502,7 +8502,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:01.545493+00:00"
+      "scraped_at": "2026-06-19T09:25:50.665194+00:00"
     },
     {
       "document_number": "",
@@ -8522,7 +8522,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:01.545551+00:00"
+      "scraped_at": "2026-06-19T09:25:50.665347+00:00"
     },
     {
       "document_number": "",
@@ -8542,7 +8542,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.551611+00:00"
+      "scraped_at": "2026-06-19T09:25:51.628880+00:00"
     },
     {
       "document_number": "",
@@ -8562,7 +8562,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.551697+00:00"
+      "scraped_at": "2026-06-19T09:25:51.628974+00:00"
     },
     {
       "document_number": "",
@@ -8582,7 +8582,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.551763+00:00"
+      "scraped_at": "2026-06-19T09:25:51.629044+00:00"
     },
     {
       "document_number": "",
@@ -8602,7 +8602,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.551826+00:00"
+      "scraped_at": "2026-06-19T09:25:51.629150+00:00"
     },
     {
       "document_number": "",
@@ -8622,7 +8622,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.551886+00:00"
+      "scraped_at": "2026-06-19T09:25:51.629255+00:00"
     },
     {
       "document_number": "",
@@ -8642,7 +8642,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.551945+00:00"
+      "scraped_at": "2026-06-19T09:25:51.629390+00:00"
     },
     {
       "document_number": "",
@@ -8662,7 +8662,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.552023+00:00"
+      "scraped_at": "2026-06-19T09:25:51.629475+00:00"
     },
     {
       "document_number": "",
@@ -8682,7 +8682,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.552090+00:00"
+      "scraped_at": "2026-06-19T09:25:51.629539+00:00"
     },
     {
       "document_number": "",
@@ -8702,7 +8702,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.552148+00:00"
+      "scraped_at": "2026-06-19T09:25:51.629600+00:00"
     },
     {
       "document_number": "",
@@ -8722,7 +8722,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.552220+00:00"
+      "scraped_at": "2026-06-19T09:25:51.629669+00:00"
     },
     {
       "document_number": "",
@@ -8742,7 +8742,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:02.552381+00:00"
+      "scraped_at": "2026-06-19T09:25:51.629733+00:00"
     },
     {
       "document_number": "",
@@ -8762,7 +8762,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.539619+00:00"
+      "scraped_at": "2026-06-19T09:25:52.634657+00:00"
     },
     {
       "document_number": "",
@@ -8782,7 +8782,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.539705+00:00"
+      "scraped_at": "2026-06-19T09:25:52.634746+00:00"
     },
     {
       "document_number": "",
@@ -8802,7 +8802,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:03.539773+00:00"
+      "scraped_at": "2026-06-19T09:25:52.634816+00:00"
     },
     {
       "document_number": "",
@@ -8822,7 +8822,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.474731+00:00"
+      "scraped_at": "2026-06-19T09:25:53.617205+00:00"
     },
     {
       "document_number": "",
@@ -8842,7 +8842,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:04.474815+00:00"
+      "scraped_at": "2026-06-19T09:25:53.617271+00:00"
     },
     {
       "document_number": "",
@@ -8862,7 +8862,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:17:05.491160+00:00"
+      "scraped_at": "2026-06-19T09:25:54.677331+00:00"
     },
     {
       "document_number": "",
@@ -8882,7 +8882,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:52.687791+00:00"
+      "scraped_at": "2026-06-19T09:25:41.989745+00:00"
     },
     {
       "document_number": "",
@@ -8902,7 +8902,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:57.609826+00:00"
+      "scraped_at": "2026-06-19T09:25:46.822307+00:00"
     },
     {
       "document_number": "",
@@ -8922,7 +8922,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:57.609991+00:00"
+      "scraped_at": "2026-06-19T09:25:46.822475+00:00"
     },
     {
       "document_number": "",
@@ -8942,7 +8942,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:57.610058+00:00"
+      "scraped_at": "2026-06-19T09:25:46.822540+00:00"
     },
     {
       "document_number": "",
@@ -8962,7 +8962,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:57.610308+00:00"
+      "scraped_at": "2026-06-19T09:25:46.822787+00:00"
     },
     {
       "document_number": "",
@@ -8982,7 +8982,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:57.610366+00:00"
+      "scraped_at": "2026-06-19T09:25:46.822845+00:00"
     },
     {
       "document_number": "",
@@ -9002,7 +9002,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:57.610423+00:00"
+      "scraped_at": "2026-06-19T09:25:46.822902+00:00"
     },
     {
       "document_number": "",
@@ -9022,7 +9022,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:57.610482+00:00"
+      "scraped_at": "2026-06-19T09:25:46.822959+00:00"
     },
     {
       "document_number": "",
@@ -9042,7 +9042,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.563014+00:00"
+      "scraped_at": "2026-06-19T09:25:47.785269+00:00"
     },
     {
       "document_number": "",
@@ -9062,7 +9062,7 @@
         "Lien (+10)"
       ],
       "source_url": "https://arcc-acclaim.sdcounty.ca.gov/search/SearchTypeDocType",
-      "scraped_at": "2026-06-19T09:16:58.563521+00:00"
+      "scraped_at": "2026-06-19T09:25:47.785769+00:00"
     }
   ]
 }
