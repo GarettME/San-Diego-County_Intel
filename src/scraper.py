@@ -535,7 +535,8 @@ def _parse_grid(html: str) -> list[Lead]:
     idx_legal   = col("LEGAL")
     idx_date    = col("RECORD DATE", "DATE")
     idx_type    = col("DOCUMENT TYPE", "DOC TYPE")
-    idx_docnum  = col("FEE NUMBER", "INSTRUMENT", "DOC NUMBER", "DOCUMENT NUMBER", "RECORDING")
+    idx_docnum  = col("DOCUMENT #", "DOC #", "FEE NUMBER", "INSTRUMENT",
+                      "DOC NUMBER", "DOCUMENT NUMBER", "RECORDING")
 
     leads: list[Lead] = []
     for tr in data_rows:
@@ -658,9 +659,15 @@ def score_lead(lead: Lead, all_leads: list) -> Lead:
     if lead.has_code_violation:
         score += 25; reasons.append("Code violation (+25)")
 
-    # Same grantor appearing under multiple distress docs → stacked distress,
-    # a strong motivated-seller signal that can push a foreclosure into "High".
-    if lead.grantor:
+    # Same grantor appearing under multiple distress docs → stacked distress, a
+    # strong motivated-seller signal. SKIP this for foreclosure docs (Notice of
+    # Default / trustee's sale): there the indexed "grantor" is the foreclosure
+    # TRUSTEE/servicer (e.g. MTC FINANCIAL), so "5 records, same party" just
+    # means one busy trustee — not one distressed owner — and wrongly inflates
+    # the score. For tax/judgment liens the grantor IS the owner, so it stands.
+    dt = (lead.doc_type or "").upper()
+    is_foreclosure = "NOTICE OF DEFAULT" in dt or "TRUSTEE" in dt
+    if lead.grantor and not is_foreclosure:
         key = lead.grantor.lower().strip()
         same = [l for l in all_leads if l is not lead and l.grantor.lower().strip() == key]
         if same:
