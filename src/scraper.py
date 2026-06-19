@@ -572,29 +572,81 @@ def _apply_distress_flags(lead: Lead) -> None:
 # SCORING / DEDUP / FILTER
 # ════════════════════════════════════════════════════════════════════════════
 
+# Per-document-type base weights, most→least motivated from a seller's angle.
+# The FIRST substring found in lead.doc_type wins, so strong/specific signals
+# are listed before generic ones. Foreclosure (Notice of Default / trustee's
+# sale) and probate (heirs who typically want a fast sale) deliberately outrank
+# plain tax liens — those are common and a much weaker direct sell signal, and
+# many are business/income liens unrelated to the property at all.
+DOCTYPE_SCORE_WEIGHTS: list[tuple[str, int, str]] = [
+    ("NOTICE OF TRUSTEE",         55, "Notice of Trustee's Sale — imminent foreclosure (+55)"),
+    ("TRUSTEE'S SALE",            55, "Trustee's Sale — imminent foreclosure (+55)"),
+    ("TRUSTEE SALE",              55, "Trustee Sale — imminent foreclosure (+55)"),
+    ("NOTICE OF DEFAULT",         50, "Notice of Default — pre-foreclosure (+50)"),
+    ("LETTERS TESTAMENTARY",      40, "Probate — Letters Testamentary (+40)"),
+    ("LETTERS OF ADMINISTRATION", 40, "Probate — Letters of Administration (+40)"),
+    ("DECREE OF DISTRIBUTION",    40, "Probate — Decree of Distribution (+40)"),
+    ("AFFIDAVIT DEATH",           40, "Affidavit of Death — likely inherited property (+40)"),
+    ("AFFIDAVIT - DEATH",         40, "Affidavit of Death — likely inherited property (+40)"),
+    ("PROBATE",                   40, "Probate filing — heirs likely to sell (+40)"),
+    ("LIS PENDENS",               30, "Lis Pendens — pending litigation (+30)"),
+    ("BANKRUPTCY",                25, "Bankruptcy (+25)"),
+    ("DISSOLUTION",               20, "Divorce / dissolution of marriage (+20)"),
+    ("TRUSTEE'S DEED",            20, "Trustee's Deed (+20)"),
+    ("TRUSTEE DEED",              20, "Trustee's Deed (+20)"),
+    ("TAX DEED",                  20, "Tax Deed (+20)"),
+    ("ABSTRACT OF JUDGMENT",      18, "Abstract of Judgment (+18)"),
+    ("JUDGMENT LIEN",             18, "Judgment Lien (+18)"),
+    ("MECHANIC",                  15, "Mechanic's Lien (+15)"),
+    ("TAX LIEN",                  12, "Tax lien — financial distress (+12)"),
+    ("LIEN",                      10, "Lien (+10)"),
+]
+
+# Used only if the doc-type label matches none of the weighted keywords above,
+# so a flagged lead never silently scores zero.
+_FLAG_FALLBACK_SCORE: list[tuple[str, int]] = [
+    ("has_probate",            40),
+    ("has_divorce_bankruptcy", 20),
+    ("has_tax_delinquency",    12),
+    ("has_multiple_liens",     10),
+]
+
+
+def _doctype_base_score(lead: Lead) -> tuple[int, Optional[str]]:
+    """Base score from the document type itself (the strongest single signal)."""
+    dt = (lead.doc_type or "").upper()
+    for keyword, pts, reason in DOCTYPE_SCORE_WEIGHTS:
+        if keyword in dt:
+            return pts, reason
+    for field_name, pts in _FLAG_FALLBACK_SCORE:
+        if getattr(lead, field_name):
+            label = field_name.replace("has_", "").replace("_", " ")
+            return pts, f"Distress signal: {label} (+{pts})"
+    return 0, None
+
+
 def score_lead(lead: Lead, all_leads: list) -> Lead:
     score = 0
     reasons = list(lead.score_reasons)
 
-    if lead.has_tax_delinquency:
-        score += 30; reasons.append("Default / tax / foreclosure (+30)")
+    base, reason = _doctype_base_score(lead)
+    if base:
+        score += base
+        if reason:
+            reasons.append(reason)
+
     if lead.has_code_violation:
         score += 25; reasons.append("Code violation (+25)")
-    if lead.has_probate:
-        score += 20; reasons.append("Probate filing (+20)")
-    if lead.has_divorce_bankruptcy:
-        score += 10; reasons.append("Divorce / bankruptcy (+10)")
 
-    # Same grantor appearing under multiple distress docs → stacked distress.
+    # Same grantor appearing under multiple distress docs → stacked distress,
+    # a strong motivated-seller signal that can push a foreclosure into "High".
     if lead.grantor:
         key = lead.grantor.lower().strip()
         same = [l for l in all_leads if l is not lead and l.grantor.lower().strip() == key]
         if same:
             lead.has_multiple_liens = True
-            score += 15
-            reasons.append(f"Multiple distress records, same party ({len(same)+1}, +15)")
-    elif lead.has_multiple_liens:
-        score += 15; reasons.append("Lien / lis pendens (+15)")
+            score += 20
+            reasons.append(f"Multiple distress records, same party ({len(same)+1}, +20)")
 
     lead.seller_score = min(score, 100)
     lead.score_reasons = reasons
