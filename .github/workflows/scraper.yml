@@ -1,108 +1,117 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # SD County Motivated Seller Lead Scraper — GitHub Actions Workflow
 #
-# Schedule: Runs automatically every day at 6 AM UTC (10 PM PST / 11 PM PDT)
-# Manual:   Can also be triggered from the Actions tab via "Run workflow"
+# Source : San Diego County ARCC "Official Records" (AcclaimWeb), updated daily.
+# Method : Playwright drives the recorder portal and scrapes distress filings
+#          (Notice of Default, Lis Pendens, tax/judgment liens, probate, …).
+# Schedule: every day at 06:00 UTC. Also manually triggerable.
 #
-# Artifacts:
-#   - data/output.json        (lead data)
-#   - docs/index.html         (visual dashboard — served by GitHub Pages)
+# IMPORTANT — the SD portal is behind Akamai bot protection that blocks
+# datacenter IPs (incl. GitHub runners). Add a residential proxy as repo
+# secrets so the run can reach it:
+#   Settings → Secrets and variables → Actions →
+#     PROXY_SERVER    e.g. http://gate.smartproxy.com:7000
+#     PROXY_USERNAME  your proxy user
+#     PROXY_PASSWORD  your proxy pass
+# Without a working proxy the scraper FAILS the job (exit 1) instead of
+# committing stale data.
 #
-# Both outputs are uploaded as GitHub Artifacts and committed back to the
-# repository so GitHub Pages always serves the latest dashboard.
+# Outputs (committed back to the repo so GitHub Pages serves the dashboard):
+#   data/output.json     lead data
+#   docs/index.html      dashboard
 # ─────────────────────────────────────────────────────────────────────────────
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 name: Scrape SD County Leads
 
 on:
   schedule:
-    # Every day at 06:00 UTC  (cron format: minute hour dom month dow)
-    - cron: "0 6 * * *"
-
-  # Allow manual trigger from the GitHub Actions UI
+    - cron: "0 6 * * *"        # 06:00 UTC daily
   workflow_dispatch:
     inputs:
       debug_mode:
-        description: "Enable verbose logging"
+        description: "Enable verbose logging (DEBUG=true)"
         required: false
         default: "false"
         type: boolean
+      lookback_days:
+        description: "Recording-date window in days"
+        required: false
+        default: "30"
+        type: string
 
 jobs:
   scrape:
     name: Run Scraper
     runs-on: ubuntu-latest
-    timeout-minutes: 60        # Kill hung runs after 1 hour
+    timeout-minutes: 60
 
     permissions:
-      contents: write          # Needed to commit results back to repo
+      contents: write          # commit results back to the repo
 
     steps:
-      # ── 1. Checkout code ───────────────────────────────────────────────────
+      # ── 1. Checkout ────────────────────────────────────────────────────────
       - name: Checkout repository
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5
 
-      # ── 2. Set up Python ───────────────────────────────────────────────────
+      # ── 2. Python ──────────────────────────────────────────────────────────
       - name: Set up Python 3.11
-        uses: actions/setup-python@v5.6.0
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
           cache: "pip"
 
-      # ── 3. Install dependencies ────────────────────────────────────────────
+      # ── 3. Dependencies ────────────────────────────────────────────────────
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 lxml
+          pip install -r requirements.txt
 
-      # ── 4. Create output directories ───────────────────────────────────────
-      # FIX: Changed "dashboard" to "docs" to match GitHub Pages /docs folder setting
+      - name: Install Playwright Chromium
+        run: python -m playwright install --with-deps chromium
+
+      # ── 4. Output directories ──────────────────────────────────────────────
       - name: Create output directories
-        run: |
-          mkdir -p data docs
+        run: mkdir -p data docs
 
       # ── 5. Run the scraper ─────────────────────────────────────────────────
       - name: Run scraper
         env:
-          PYTHONPATH: ${{ github.workspace }}/src
-          DEBUG: ${{ github.event.inputs.debug_mode || 'false' }}
-        run: |
-          python src/scraper.py
+          DEBUG:         ${{ github.event.inputs.debug_mode || 'false' }}
+          LOOKBACK_DAYS: ${{ github.event.inputs.lookback_days || '30' }}
+          PROXY_SERVER:   ${{ secrets.PROXY_SERVER }}
+          PROXY_USERNAME: ${{ secrets.PROXY_USERNAME }}
+          PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+        run: python src/scraper.py
 
       # ── 6. Validate output ─────────────────────────────────────────────────
       - name: Validate JSON output
         run: |
           python -c "
-          import json, sys
+          import json
           with open('data/output.json') as f:
               data = json.load(f)
           leads = data.get('leads', [])
-          print(f'✅ output.json is valid — {len(leads)} leads found')
-          if leads:
-              top = leads[0]
-              print(f'   Top lead: {top[\"grantor\"]} (score={top[\"seller_score\"]})')
+          assert leads, 'No leads in output.json'
+          print(f'output.json valid — {len(leads)} leads')
+          top = leads[0]
+          print(f'   Top lead: {top.get(\"grantor\") or top.get(\"grantee\")} (score={top[\"seller_score\"]})')
           "
 
       # ── 7. Upload artifacts ────────────────────────────────────────────────
       - name: Upload JSON output
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: leads-json-${{ github.run_number }}
           path: data/output.json
           retention-days: 90
 
-      # FIX: Changed path from "dashboard/index.html" to "docs/index.html"
       - name: Upload dashboard
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: dashboard-${{ github.run_number }}
           path: docs/index.html
           retention-days: 90
 
-      # ── 8. Commit results back to repo ────────────────────────────────────
-      # FIX: Commit is now always on (removed the COMMIT_RESULTS gate) and
-      #      git add now references docs/index.html instead of dashboard/index.html
+      # ── 8. Commit results back to the repo ─────────────────────────────────
       - name: Commit results to repository
         run: |
           git config user.name  "github-actions[bot]"
@@ -112,13 +121,13 @@ jobs:
             git commit -m "chore: update leads data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           git push
 
-      # ── 9. Summary ────────────────────────────────────────────────────────
+      # ── 9. Job summary ─────────────────────────────────────────────────────
       - name: Print run summary
         if: always()
         run: |
           echo "## SD County Leads Scraper Results" >> $GITHUB_STEP_SUMMARY
           python -c "
-          import json
+          import json, os
           try:
               with open('data/output.json') as f:
                   data = json.load(f)
@@ -126,13 +135,16 @@ jobs:
               high  = [l for l in leads if l['seller_score'] >= 70]
               med   = [l for l in leads if 40 <= l['seller_score'] < 70]
               low   = [l for l in leads if l['seller_score'] < 40]
-              print(f'| Metric | Value |')
-              print(f'|--------|-------|')
-              print(f'| Total leads | {len(leads)} |')
-              print(f'| High score (>=70) | {len(high)} |')
-              print(f'| Medium score (40-69) | {len(med)} |')
-              print(f'| Low score (<40) | {len(low)} |')
-              print(f'| Generated at | {data.get(\"generated_at\",\"unknown\")} |')
+              out = os.getenv('GITHUB_STEP_SUMMARY')
+              with open(out, 'a') as s:
+                  s.write('| Metric | Value |\n|--------|-------|\n')
+                  s.write(f'| Total leads | {len(leads)} |\n')
+                  s.write(f'| High score (>=70) | {len(high)} |\n')
+                  s.write(f'| Medium score (40-69) | {len(med)} |\n')
+                  s.write(f'| Low score (<40) | {len(low)} |\n')
+                  s.write(f'| Source | {data.get(\"source\",\"?\")} |\n')
+                  s.write(f'| Generated at | {data.get(\"generated_at\",\"unknown\")} |\n')
           except Exception as e:
-              print(f'| Error | {e} |')
-          " >> $GITHUB_STEP_SUMMARY
+              with open(os.getenv('GITHUB_STEP_SUMMARY'), 'a') as s:
+                  s.write(f'| Error | {e} |\n')
+          "

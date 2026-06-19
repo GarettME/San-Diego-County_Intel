@@ -1,101 +1,157 @@
 """
-San Diego County Motivated Seller Lead Scraper  v2.2
+San Diego County Motivated Seller Lead Scraper  v3.0
 =====================================================
-CHANGES FROM v2.1:
-  - Integrated tax_enrichment.py: SD County Recorder dataset now pulled as
-    a 4th data source (Notices of Default, Trustee Sales, Lis Pendens,
-    Probate docs, Dissolution/Bankruptcy filings).
-  - enrich_leads_with_recorder() cross-matches permit/code leads against
-    recorder data to stack distress signals → leads now reach 70+ scores.
-  - rescore_lead() called after enrichment so scores reflect all signals.
-  - Threshold comments updated: High ≥70 is now achievable.
+COMPLETE REWRITE — data source changed.
 
-Original sources (unchanged):
-  1. Building Permits  — SD County unincorporated (gs2m-invt)
-  2. Building Permits  — City of San Diego (dyzh-7eat)
-  3. Code Enforcement  — City of San Diego (scsb-hfcn)
+WHY:
+  v2.x relied on Socrata Open Data APIs that are all dead or frozen:
+    - data.sandiego.gov (City permits + code enforcement) migrated OFF
+      Socrata to a static S3/CKAN portal → every /resource/<id>.json 404s.
+    - County permit datasets (gs2m-invt, dyzh-7eat) are frozen historical
+      sets (last updated 2012 and 2023-12-05 respectively).
+    - The County Recorder Socrata dataset (2s4g-c2vu) never existed.
+  The old scraper "succeeded" only because it swallowed the errors and
+  re-committed the same fallback 523 rows every run.
 
-New source:
-  4. Recorded Documents — SD County Recorder (2s4g-c2vu)
-     Filters for: Notice of Default, Trustee Sale, Lis Pendens,
-                  Mechanic Lien, Probate docs, Dissolution, Bankruptcy
+NEW SOURCE (mirrors the working Ventura County scraper's approach):
+  San Diego County Assessor-Recorder-County Clerk "Official Records" search,
+  an AcclaimWeb portal (arcc-acclaim.sdcounty.ca.gov), updated DAILY.
+  We drive it with Playwright, searching recorded distress documents
+  (Notice of Default, Lis Pendens, tax/judgment liens, probate, etc.) over
+  a rolling date window — so leads are genuinely fresh each day.
+
+NOTE ON ACCESS:
+  The SD portal is behind Akamai bot protection that blocks datacenter IPs
+  (incl. GitHub Actions runners). Set PROXY_SERVER/PROXY_USERNAME/
+  PROXY_PASSWORD (a residential proxy) so the CI run reaches it. The
+  scraper FAILS LOUDLY (exit 1) if it is blocked or the form never loads,
+  so it never silently re-commits stale data again.
+
+PORTABILITY / TESTING:
+  ACCLAIM_BASE selects the portal. It defaults to San Diego but can point at
+  any AcclaimWeb instance (they share identical DOM), which is how this is
+  tested end-to-end against a reachable county before deploying for SD.
+
+Output schema is unchanged from v2.x, so docs/index.html keeps working.
 """
 
+from __future__ import annotations
+
+import asyncio
 import json
 import logging
-import time
+import os
+import re
+import sys
 from dataclasses import dataclass, field, asdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
-import requests
-
 # ─── Logging ────────────────────────────────────────────────────────────────
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG if os.getenv("DEBUG", "").lower() == "true" else logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
+    stream=sys.stdout,
 )
 log = logging.getLogger(__name__)
 
-# ─── Socrata API Config ───────────────────────────────────────────────────────
-COUNTY_DOMAIN    = "data.sandiegocounty.gov"
-CITY_DOMAIN      = "data.sandiego.gov"
-COUNTY_BASE      = f"https://{COUNTY_DOMAIN}/resource"
-CITY_BASE        = f"https://{CITY_DOMAIN}/resource"
+# ─── Portal config ────────────────────────────────────────────────────────────
+# Default: San Diego County ARCC Official Records (AcclaimWeb).
+ACCLAIM_BASE = os.getenv("ACCLAIM_BASE", "https://arcc-acclaim.sdcounty.ca.gov/AcclaimWeb").rstrip("/")
+SOURCE_NAME  = os.getenv("SOURCE_NAME", "San Diego County Assessor-Recorder-County Clerk")
 
-PAGE_SIZE     = 1000
-MAX_RECORDS   = 5000
-REQUEST_DELAY = 0.5
+DOCTYPE_SEARCH_URL = f"{ACCLAIM_BASE}/search/SearchTypeDocType"
+DISCLAIMER_PATH    = "/Search/Disclaimer"
 
+LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "30"))
+MAX_PAGES     = int(os.getenv("MAX_PAGES", "25"))
+NAV_TIMEOUT   = int(os.getenv("NAV_TIMEOUT_MS", "45000"))
+
+# Proxy (residential) — only used if PROXY_SERVER is set.
+PROXY_SERVER   = os.getenv("PROXY_SERVER", "").strip()
+PROXY_USERNAME = os.getenv("PROXY_USERNAME", "").strip()
+PROXY_PASSWORD = os.getenv("PROXY_PASSWORD", "").strip()
+
+CHROME_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+)
+
+# ─── Paths ────────────────────────────────────────────────────────────────────
 PROJECT_ROOT   = Path(__file__).resolve().parent.parent
 DATA_DIR       = PROJECT_ROOT / "data"
 DASHBOARD_DIR  = PROJECT_ROOT / "docs"
 OUTPUT_JSON    = DATA_DIR / "output.json"
 DASHBOARD_HTML = DASHBOARD_DIR / "index.html"
 
-# ─── Distress keyword maps ────────────────────────────────────────────────────
-TAX_KEYWORDS        = ["tax default","delinquent","tax lien","tax deed","ttc","treasurer"]
-CODE_KEYWORDS       = ["code violation","code enforcement","unpermitted","illegal","abatement",
-                       "nuisance","blight","unsafe","substandard","red tag","stop work"]
-PROBATE_KEYWORDS    = ["probate","estate","decedent","trust","trustee sale","successor"]
-LIEN_KEYWORDS       = ["lien","notice of default","lis pendens","mechanic","judgment lien"]
-DIVORCE_BK_KEYWORDS = ["divorce","dissolution","bankruptcy","bankrupt","chapter 7","chapter 13"]
-
-DISTRESS_STATUSES = [
-    "expired","cancelled","revoked","denied","voided",
-    "application expired","permit expired","application cancelled",
-    "issued - not finaled","stop work","withdrawn","incomplete",
+# ─── Distress document types ──────────────────────────────────────────────────
+# Each entry: substring to look for in the AcclaimWeb checkbox `title`
+# (e.g. "NOTICE OF DEFAULT - ...") → (distress flag, human category).
+# "flag" maps onto the Lead boolean fields used for scoring + the dashboard.
+DISTRESS_DOCTYPES: list[tuple[str, str, str]] = [
+    # keyword (uppercase substring)      flag                      label
+    ("NOTICE OF DEFAULT",                "tax",     "Notice of Default"),
+    ("NOTICE OF TRUSTEE",                "tax",     "Notice of Trustee Sale"),
+    ("TRUSTEE SALE",                     "tax",     "Trustee Sale"),
+    ("TRUSTEE'S SALE",                   "tax",     "Trustee Sale"),
+    ("TRUSTEE DEED",                     "tax",     "Trustee's Deed"),
+    ("TAX DEED",                         "tax",     "Tax Deed"),
+    ("TAX LIEN",                         "tax",     "Tax Lien"),
+    ("LIS PENDENS",                      "lien",    "Lis Pendens"),
+    ("MECHANIC",                         "lien",    "Mechanic's Lien"),
+    ("ABSTRACT OF JUDGMENT",             "lien",    "Abstract of Judgment"),
+    ("JUDGMENT LIEN",                    "lien",    "Judgment Lien"),
+    ("LIEN",                             "lien",    "Lien"),
+    ("PROBATE",                          "probate", "Probate"),
+    ("LETTERS TESTAMENTARY",             "probate", "Letters Testamentary"),
+    ("LETTERS OF ADMINISTRATION",        "probate", "Letters of Administration"),
+    ("AFFIDAVIT DEATH",                  "probate", "Affidavit - Death"),
+    ("DECREE OF DISTRIBUTION",           "probate", "Decree of Distribution"),
+    ("DISSOLUTION",                      "divorce", "Dissolution of Marriage"),
+    ("BANKRUPTCY",                       "divorce", "Bankruptcy"),
 ]
 
-# ─── Recorder distress document types ────────────────────────────────────────
-RECORDER_DATASET = "2s4g-c2vu"
+# Flag → which Lead boolean it sets
+FLAG_TO_FIELD = {
+    "tax":     "has_tax_delinquency",
+    "lien":    "has_multiple_liens",
+    "probate": "has_probate",
+    "divorce": "has_divorce_bankruptcy",
+}
 
-RECORDER_TAX_TYPES = [
-    "NOTICE OF DEFAULT","NOTICE OF TRUSTEE","TRUSTEE DEED",
-    "TAX DEED","CERTIFICATE OF TAX SALE",
-    "FEDERAL TAX LIEN","STATE TAX LIEN","NOTICE OF FEDERAL TAX LIEN",
+# Skip the "resolution" variants of distress docs — releases, terminations,
+# satisfactions, assignments and corrections are NOT motivated-seller signals.
+EXCLUDE_DOCTYPE_KEYWORDS = [
+    "RELEASE", "TERMINATION", "SATISFACTION", "DISCHARGE", "ASSIGNMENT",
+    "CORRECTION", "MODIFICATION", "AMENDMENT", "RESCISSION", "WITHDRAWAL",
+    "CANCELLATION", "SUBORDINATION", "REVOCATION", "EXPUNGE",
 ]
-RECORDER_LIEN_TYPES = [
-    "LIS PENDENS","MECHANIC'S LIEN","MECHANICS LIEN",
-    "ABSTRACT OF JUDGMENT","JUDGMENT LIEN",
-]
-RECORDER_PROBATE_TYPES = [
-    "LETTERS TESTAMENTARY","LETTERS OF ADMINISTRATION",
-    "AFFIDAVIT DEATH TRUSTEE","ORDER CONFIRMING SALE",
-    "DECREE OF DISTRIBUTION","PROBATE",
-]
-RECORDER_DIVORCE_BK_TYPES = [
-    "DISSOLUTION","INTERLOCUTORY DECREE","BANKRUPTCY","DISCHARGE OF DEBTOR",
-]
-RECORDER_ALL_TYPES = (
-    RECORDER_TAX_TYPES + RECORDER_LIEN_TYPES +
-    RECORDER_PROBATE_TYPES + RECORDER_DIVORCE_BK_TYPES
-)
+
+# Built at runtime from the live portal: grid document-type CODE → (flag, label)
+# e.g. "FTL" → ("tax", "Federal Tax Lien"), "LIS" → ("lien", "Lis Pendens").
+# Filled in by _select_distress_doctypes(); used by _apply_distress_flags().
+DOCTYPE_CODE_MAP: dict[str, tuple[str, str]] = {}
 
 
-# ─── Data Model ──────────────────────────────────────────────────────────────
+def _classify_title(title: str) -> Optional[tuple[str, str, str]]:
+    """
+    Given an AcclaimWeb doc-type `title` ("CODE - FULL DESCRIPTION"), decide
+    whether it's a distress lead type we want. Returns (code, flag, label) or
+    None if it should be skipped.
+    """
+    t = title.upper().strip()
+    if any(x in t for x in EXCLUDE_DOCTYPE_KEYWORDS):
+        return None
+    for keyword, flag, label in DISTRESS_DOCTYPES:
+        if keyword in t:
+            code = t.split(" - ", 1)[0].strip() if " - " in t else t
+            return code, flag, label
+    return None
+
+
+# ─── Data Model (schema unchanged → dashboard stays compatible) ───────────────
 @dataclass
 class Lead:
     document_number:   str = ""
@@ -118,468 +174,430 @@ class Lead:
     scraped_at:    str  = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 
-# ─── HTTP helpers ─────────────────────────────────────────────────────────────
-def build_session() -> requests.Session:
-    s = requests.Session()
-    s.headers.update({
-        "User-Agent": "SDLeadScraper/2.2 (public data research)",
-        "Accept":     "application/json",
-    })
-    return s
+# ════════════════════════════════════════════════════════════════════════════
+# ACCLAIMWEB SCRAPER
+# ════════════════════════════════════════════════════════════════════════════
+
+class PortalBlockedError(RuntimeError):
+    """Raised when the portal denies access (e.g. Akamai 403) — fail loudly."""
 
 
-def socrata_get(session: requests.Session, url: str, params: dict) -> list[dict]:
-    try:
-        time.sleep(REQUEST_DELAY)
-        resp = session.get(url, params=params, timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        if isinstance(data, dict) and "error" in data:
-            log.error("Socrata API error: %s — url: %s params: %s", data, url, params)
-            return []
-        return data
-    except requests.exceptions.HTTPError as e:
-        log.error("HTTP %s — %s | params=%s", e.response.status_code, url, params)
+async def scrape_recorder(date_from: str, date_to: str) -> list[Lead]:
+    from playwright.async_api import async_playwright, TimeoutError as PWTimeout
+
+    leads: list[Lead] = []
+
+    launch_kwargs: dict = {
+        "headless": True,
+        "args": ["--no-sandbox", "--disable-dev-shm-usage"],
+    }
+    # Use the system Chromium if Playwright's own download is unavailable.
+    for exe in ("/usr/lib/chromium/chromium", "/usr/bin/chromium", "/usr/bin/chromium-browser"):
+        if os.getenv("CHROMIUM_PATH"):
+            launch_kwargs["executable_path"] = os.getenv("CHROMIUM_PATH"); break
+        if os.path.exists(exe):
+            launch_kwargs["executable_path"] = exe; break
+
+    if PROXY_SERVER:
+        proxy: dict = {"server": PROXY_SERVER}
+        if PROXY_USERNAME:
+            proxy["username"] = PROXY_USERNAME
+            proxy["password"] = PROXY_PASSWORD
+        launch_kwargs["proxy"] = proxy
+        log.info("Using residential proxy: %s", PROXY_SERVER)
+    else:
+        log.warning("No PROXY_SERVER set — the SD portal will likely 403 from a datacenter IP.")
+
+    async with async_playwright() as pw:
+        browser = await pw.chromium.launch(**launch_kwargs)
+        context = await browser.new_context(user_agent=CHROME_UA,
+                                             viewport={"width": 1366, "height": 900})
+        page = await context.new_page()
+        page.set_default_timeout(NAV_TIMEOUT)
+
+        # ── Load the Document-Type search page (may show the disclaimer) ──────
+        log.info("Opening %s", DOCTYPE_SEARCH_URL)
         try:
-            log.error("Response body: %s", e.response.text[:400])
+            resp = await page.goto(DOCTYPE_SEARCH_URL, wait_until="domcontentloaded", timeout=NAV_TIMEOUT)
+        except PWTimeout as e:
+            raise PortalBlockedError(f"Timed out loading portal: {e}")
+
+        if resp is not None and resp.status in (401, 403, 407):
+            raise PortalBlockedError(f"Portal returned HTTP {resp.status} (bot/IP block). "
+                                     f"A residential proxy is required.")
+        body = (await page.content()).lower()
+        if "access denied" in body or "akamai" in body or "edgesuite" in body:
+            raise PortalBlockedError("Portal returned an Akamai 'Access Denied' page. "
+                                     "A residential proxy is required.")
+
+        # ── Accept disclaimer if present ──────────────────────────────────────
+        await _accept_disclaimer(page)
+
+        # ── Wait for the search form ──────────────────────────────────────────
+        try:
+            await page.wait_for_selector("#RecordDateFrom", timeout=NAV_TIMEOUT)
+        except PWTimeout:
+            raise PortalBlockedError("Search form (#RecordDateFrom) never appeared — "
+                                     "portal blocked or markup changed.")
+        log.info("Search form loaded.")
+
+        # ── Select distress document types ────────────────────────────────────
+        code_map = await _select_distress_doctypes(page)
+        if not code_map:
+            log.warning("No distress doc types matched the portal's list — "
+                        "the search will run across all types and filter afterward.")
+
+        # ── Fill the recording-date range ─────────────────────────────────────
+        await _fill_dates(page, date_from, date_to)
+
+        # ── Submit ────────────────────────────────────────────────────────────
+        log.info("Submitting search for %s → %s …", date_from, date_to)
+        await page.click("#btnSearch")
+        await _wait_for_results(page)
+
+        # ── Parse all result pages ────────────────────────────────────────────
+        leads = await _parse_all_pages(page)
+        await browser.close()
+
+    return leads
+
+
+async def _accept_disclaimer(page) -> None:
+    """The AcclaimWeb disclaimer is a form whose submit button is #btnButton."""
+    try:
+        btn = page.locator("#btnButton")
+        if await btn.is_visible(timeout=4000):
+            await btn.click()
+            await page.wait_for_load_state("domcontentloaded")
+            log.info("Disclaimer accepted.")
+    except Exception:
+        # Some instances skip the disclaimer once a session cookie exists.
+        log.debug("No disclaimer button shown — continuing.")
+
+
+async def _select_distress_doctypes(page) -> dict[str, tuple[str, str]]:
+    """
+    Open the doc-type picker, check every checkbox whose `title` is a distress
+    lead type, then commit via the portal's own GetDocTypeString() (the commit
+    handler behind the "Doc Type List" tab's Done button — note this is NOT
+    GetDocTypeStringFromGroup(), which belongs to the *category* tab).
+
+    Populates and returns DOCTYPE_CODE_MAP: grid CODE → (flag, label).
+
+    AcclaimWeb renders each type as:
+      <input name="DocTypeInfoCheckBox" title="FTL - FEDERAL TAX LIEN" value="62" type="checkbox">
+    """
+    # Open the picker (a Telerik window).
+    for opener in ("#DocTypesDisplay-input", "#DocTypesDisplay", "#DocTypesWin"):
+        try:
+            el = page.locator(opener).first
+            if await el.is_visible(timeout=2500):
+                await el.click()
+                break
         except Exception:
-            pass
-    except requests.exceptions.ConnectionError:
-        log.error("Connection error — %s", url)
-    except requests.exceptions.Timeout:
-        log.error("Timeout — %s", url)
-    except Exception as e:
-        log.error("Unexpected error — %s: %s", url, e)
-    return []
+            continue
 
-
-def fetch_all_pages(session: requests.Session, base_url: str,
-                    extra_params: dict = None,
-                    max_records: int = MAX_RECORDS) -> list[dict]:
-    all_records = []
-    offset = 0
-
-    while len(all_records) < max_records:
-        limit  = min(PAGE_SIZE, max_records - len(all_records))
-        params = {"$limit": limit, "$offset": offset}
-        if extra_params:
-            params.update(extra_params)
-
-        batch = socrata_get(session, base_url, params)
-
-        if not batch and offset == 0 and extra_params and "$where" in extra_params:
-            log.warning("   $where filter returned 0 rows — retrying without filter…")
-            fallback_params = {k: v for k, v in params.items() if k != "$where"}
-            fallback_params.pop("$order", None)
-            batch = socrata_get(session, base_url, fallback_params)
-            if batch:
-                log.warning("   Fallback returned %d rows — check $where field names", len(batch))
-                log.warning("   Sample record keys: %s", list(batch[0].keys()))
-                for key in batch[0]:
-                    if "status" in key.lower():
-                        log.warning("   Status field '%s' sample value: %s", key, batch[0][key])
-                all_records.extend(batch)
+    # Switch to the "Doc Type List" tab so the checkboxes are present.
+    for tab in ("a[href='#DocumentTypesList-2']", "li:has-text('Doc Type List') a"):
+        try:
+            t = page.locator(tab).first
+            if await t.is_visible(timeout=2000):
+                await t.click()
                 break
-            else:
-                log.error("   Endpoint returned 0 rows even without filters.")
-                break
+        except Exception:
+            continue
+    await asyncio.sleep(0.8)
 
-        if not batch:
+    # Read every available type title up-front, decide which to keep here in
+    # Python (so exclusions + classification live in one place), then check
+    # exactly those values in the DOM.
+    titles = await page.evaluate(
+        """() => Array.from(document.querySelectorAll("input[name='DocTypeInfoCheckBox']"))
+                     .map(b => ({value: b.value, title: (b.getAttribute('title') || '')}))"""
+    )
+
+    DOCTYPE_CODE_MAP.clear()
+    wanted_values: list[str] = []
+    for item in titles:
+        classified = _classify_title(item["title"])
+        if classified:
+            code, flag, label = classified
+            wanted_values.append(item["value"])
+            DOCTYPE_CODE_MAP[code.upper()] = (flag, label)
+
+    if not wanted_values:
+        return DOCTYPE_CODE_MAP
+
+    # Tick the chosen checkboxes, then commit with the portal's own function.
+    await page.evaluate(
+        """(values) => {
+            const want = new Set(values);
+            document.querySelectorAll("input[name='DocTypeInfoCheckBox']").forEach(b => {
+                if (want.has(b.value)) b.checked = true;
+            });
+            if (typeof GetDocTypeString === 'function') GetDocTypeString();
+        }""",
+        wanted_values,
+    )
+    await asyncio.sleep(0.3)
+
+    # Verify the hidden field actually populated; if not, fall back to the
+    # visible Done button (covers markup variants on other AcclaimWeb versions).
+    hidden = await page.evaluate("() => (document.querySelector('#DocTypes') || {}).value || ''")
+    if not hidden or hidden == "undefined":
+        for done in ("input[onclick*='GetDocTypeString']", "input[value='Done']"):
+            try:
+                d = page.locator(done).first
+                if await d.is_visible(timeout=1500):
+                    await d.click()
+                    break
+            except Exception:
+                continue
+
+    log.info("Selected %d distress document types (%d distinct codes).",
+             len(wanted_values), len(DOCTYPE_CODE_MAP))
+    log.debug("   codes: %s", sorted(DOCTYPE_CODE_MAP.keys()))
+    return DOCTYPE_CODE_MAP
+
+
+async def _fill_dates(page, date_from: str, date_to: str) -> None:
+    for sel, val in (("#RecordDateFrom", date_from), ("#RecordDateTo", date_to)):
+        try:
+            box = page.locator(sel)
+            await box.click()
+            await box.fill("")
+            await box.type(val, delay=20)
+            await page.keyboard.press("Tab")
+            await asyncio.sleep(0.2)
+        except Exception as e:
+            log.warning("Could not fill %s: %s", sel, e)
+
+
+async def _wait_for_results(page) -> bool:
+    """
+    Poll until the grid actually contains DATA rows (a cell holding a mm/dd/yyyy
+    record date) — the Telerik grid loads asynchronously, and a naive wait on
+    any <td> matches the filter-control row before data arrives. Returns True if
+    data rows appeared, False on a confirmed empty result or timeout.
+    """
+    start = asyncio.get_event_loop().time()
+    deadline = start + (NAV_TIMEOUT / 1000.0)
+    # Don't honor an "empty" signal until this grace period passes — the grid
+    # transiently shows a 0-row skeleton while the AJAX results load (~6s).
+    EMPTY_GRACE_S = 7.0
+    while asyncio.get_event_loop().time() < deadline:
+        state = await page.evaluate(
+            r"""() => {
+                const g = document.querySelector('#SearchGridDiv');
+                if (!g) return {rows: 0, empty: false};
+                // Telerik splits header + data into separate tables; the data
+                // lives in .t-grid-content (fall back to the densest tbody).
+                let content = g.querySelector('.t-grid-content');
+                let rows = 0;
+                if (content) {
+                    rows = [...content.querySelectorAll('tbody tr')]
+                             .filter(r => r.querySelector('td')).length;
+                } else {
+                    for (const tb of g.querySelectorAll('tbody')) {
+                        rows = Math.max(rows, [...tb.querySelectorAll('tr')]
+                                 .filter(r => r.querySelector('td')).length);
+                    }
+                }
+                // Pager reads "Displaying items 1 - 11 of 6653"; trust its total.
+                const m = (g.innerText || '').match(/of\s+([\d,]+)/i);
+                const total = m ? parseInt(m[1].replace(/,/g, ''), 10) : null;
+                const txt = (g.innerText || '').toLowerCase();
+                const empty = total === 0 ||
+                              txt.includes('no records to display') ||
+                              txt.includes('no items to display') ||
+                              txt.includes('no records found');
+                return {rows, empty};
+            }"""
+        )
+        if state["rows"] > 0:
+            await asyncio.sleep(0.8)  # let the rest of the page settle
+            return True
+        if state["empty"] and (asyncio.get_event_loop().time() - start) >= EMPTY_GRACE_S:
+            return False
+        await asyncio.sleep(0.5)
+    log.info("Timed out waiting for result rows.")
+    return False
+
+
+async def _parse_all_pages(page) -> list[Lead]:
+    leads: list[Lead] = []
+    seen_pages = 0
+    while seen_pages < MAX_PAGES:
+        html = await page.content()
+        page_leads = _parse_grid(html)
+        seen_pages += 1
+        log.info("Page %d: %d rows (running total %d)", seen_pages, len(page_leads), len(leads) + len(page_leads))
+
+        # An empty page means we're past the last page of results — stop.
+        if not page_leads:
+            if seen_pages == 1:
+                log.info("Result grid present but no data rows.")
             break
+        leads.extend(page_leads)
 
-        all_records.extend(batch)
-        log.info("   Fetched %d records (total so far: %d)", len(batch), len(all_records))
-
-        if len(batch) < limit:
+        # Advance to the next page. The next-arrow carries t-state-disabled on
+        # the last page; treat "disabled or absent" as the end.
+        moved = False
+        for nxt in (
+            "#SearchGridDiv .t-arrow-next:not(.t-state-disabled)",
+            "#SearchGridDiv a[title='Go to the next page']:not(.t-state-disabled)",
+            ".t-grid-pager .t-arrow-next:not(.t-state-disabled)",
+        ):
+            try:
+                btn = page.locator(nxt).first
+                if await btn.is_visible(timeout=1200):
+                    await btn.click()
+                    await _wait_for_results(page)
+                    moved = True
+                    break
+            except Exception:
+                continue
+        if not moved:
             break
-        offset += limit
-
-    return all_records
+    return leads
 
 
-# ─── Dataset parsers ──────────────────────────────────────────────────────────
+def _parse_grid(html: str) -> list[Lead]:
+    """
+    Parse the AcclaimWeb result table inside #SearchGridDiv. Columns are mapped
+    by HEADER LABEL (resilient to per-county column-order differences):
+      FIRST NAME / GRANTOR → grantor   GRANTEE → grantee
+      DOC LEGAL / LEGAL    → legal      RECORD DATE / DATE → file_date
+      DOCUMENT TYPE        → doc_type   FEE NUMBER / INSTRUMENT / DOC # → document_number
+    """
+    from bs4 import BeautifulSoup
 
-def parse_county_permit(record: dict) -> Optional[Lead]:
-    try:
-        status = (record.get("statuscurrent") or record.get("StatusCurrent") or "").lower().strip()
-        desc   = (record.get("description")   or record.get("Description")   or "").lower()
-        ptype  = (
-            record.get("permittypedesc")   or record.get("PermitTypeDesc")   or
-            record.get("permittypemapped") or record.get("PermitTypeMapped") or
-            record.get("permittype")       or record.get("PermitType")       or ""
-        ).lower()
+    soup = BeautifulSoup(html, "lxml")
+    grid = soup.select_one("#SearchGridDiv")
+    if grid is None:
+        return []
 
-        addr = _join(
-            record.get("originaladdress1") or record.get("OriginalAddress1") or "",
-            record.get("originalcity")     or record.get("OriginalCity")     or "",
-            "CA",
-            record.get("originalzip")      or record.get("OriginalZip")      or "",
-        )
+    # Headers come from whichever table actually has <th> cells (the Telerik
+    # header table); data rows come from .t-grid-content (a separate table).
+    headers: list[str] = []
+    for t in grid.find_all("table"):
+        ths = t.find_all("th")
+        if ths:
+            headers = [th.get_text(" ", strip=True).upper() for th in ths]
+            break
+    if not headers:
+        return []
 
-        lead = Lead(
-            document_number   = record.get("permitnum") or record.get("PermitNum") or "",
-            file_date         = _format_date(record.get("applieddate") or record.get("AppliedDate") or ""),
-            doc_type          = f"PERMIT — {ptype.upper()}" if ptype else "BUILDING PERMIT",
-            grantor           = "",
-            grantee           = _join(
-                                    record.get("contractorfullname")    or record.get("ContractorFullName")    or "",
-                                    record.get("contractorcompanyname") or record.get("ContractorCompanyName") or "",
-                                ),
-            legal_description = f"PIN: {record.get('pin') or record.get('PIN') or ''}",
-            property_address  = addr,
-            source_url        = f"https://{COUNTY_DOMAIN}/Housing-and-Infrastructure/Building-Permits/gs2m-invt",
-        )
+    content = grid.select_one(".t-grid-content")
+    if content is not None:
+        data_rows = content.select("tbody tr")
+    else:
+        # Fallback: the tbody with the most rows is the data table.
+        bodies = grid.find_all("tbody")
+        data_rows = max((tb.find_all("tr") for tb in bodies), key=len, default=[])
 
-        combined = f"{status} {desc} {ptype}"
-        is_distress_status = any(s in status for s in DISTRESS_STATUSES)
-        lead.has_code_violation     = _matches(combined, CODE_KEYWORDS) or is_distress_status
-        lead.has_tax_delinquency    = _matches(combined, TAX_KEYWORDS)
-        lead.has_probate            = _matches(combined, PROBATE_KEYWORDS)
-        lead.has_divorce_bankruptcy = _matches(combined, DIVORCE_BK_KEYWORDS)
-
-        if is_distress_status and not _matches(combined, CODE_KEYWORDS):
-            lead.score_reasons.append(f"Distress status: {status}")
-
-        return lead
-
-    except Exception as e:
-        log.debug("Skipping county permit record: %s", e)
+    def col(*names) -> Optional[int]:
+        for i, h in enumerate(headers):
+            if any(n in h for n in names):
+                return i
         return None
 
+    idx_name    = col("GRANTOR", "FIRST NAME", "NAME")
+    idx_grantee = col("GRANTEE", "SECOND NAME")
+    idx_legal   = col("LEGAL")
+    idx_date    = col("RECORD DATE", "DATE")
+    idx_type    = col("DOCUMENT TYPE", "DOC TYPE")
+    idx_docnum  = col("FEE NUMBER", "INSTRUMENT", "DOC NUMBER", "DOCUMENT NUMBER", "RECORDING")
 
-def parse_city_permit(record: dict) -> Optional[Lead]:
-    try:
-        status = (record.get("status") or "").lower().strip()
-        desc   = (record.get("description") or record.get("work_description") or "").lower()
-        ptype  = (record.get("permit_type") or record.get("work_description") or "").lower()
+    leads: list[Lead] = []
+    for tr in data_rows:
+        cells = tr.find_all("td")
+        if not cells:
+            continue
+        vals = [c.get_text(" ", strip=True) for c in cells]
 
-        addr = _join(
-            record.get("address")           or "",
-            record.get("city", "San Diego"),
-            "CA",
-            record.get("zip")               or "",
-        )
+        def get(i):
+            return vals[i] if (i is not None and i < len(vals)) else ""
 
-        lead = Lead(
-            document_number   = record.get("permit_number") or record.get("project_id") or "",
-            file_date         = _format_date(
-                                    record.get("date_application_filed") or
-                                    record.get("date_issued") or ""),
-            doc_type          = f"PERMIT — {ptype.upper()}" if ptype else "BUILDING PERMIT",
-            grantor           = record.get("owner_name") or "",
-            grantee           = record.get("contractor_name") or "",
-            legal_description = record.get("apn") or "",
-            property_address  = addr,
-            source_url        = f"https://{CITY_DOMAIN}/datasets/building-permits/",
-        )
-
-        combined = f"{status} {desc} {ptype}"
-        is_distress_status = any(s in status for s in DISTRESS_STATUSES)
-        lead.has_code_violation     = _matches(combined, CODE_KEYWORDS) or is_distress_status
-        lead.has_tax_delinquency    = _matches(combined, TAX_KEYWORDS)
-        lead.has_probate            = _matches(combined, PROBATE_KEYWORDS)
-        lead.has_divorce_bankruptcy = _matches(combined, DIVORCE_BK_KEYWORDS)
-
-        if is_distress_status and not _matches(combined, CODE_KEYWORDS):
-            lead.score_reasons.append(f"Distress status: {status}")
-
-        return lead
-
-    except Exception as e:
-        log.debug("Skipping city permit record: %s", e)
-        return None
-
-
-def parse_code_enforcement(record: dict) -> Optional[Lead]:
-    try:
-        case_type = (
-            record.get("case_type")      or
-            record.get("violation_type") or
-            "CODE ENFORCEMENT"
-        ).upper()
-        status = (record.get("status") or "").lower()
-        desc   = (record.get("violation_description") or record.get("description") or "").lower()
-
-        addr = _join(
-            record.get("address")         or "",
-            record.get("city", "San Diego"),
-            "CA",
-            record.get("zip")             or "",
-        )
+        grantor  = get(idx_name)
+        doc_type = get(idx_type)
+        docnum   = get(idx_docnum)
+        if not (grantor or docnum):
+            continue  # skip filler / empty rows
 
         lead = Lead(
-            document_number   = record.get("case_number") or record.get("record_id") or "",
-            file_date         = _format_date(record.get("date_opened") or record.get("open_date") or ""),
-            doc_type          = f"CODE ENFORCEMENT — {case_type}",
-            grantor           = record.get("owner") or "",
-            grantee           = "",
-            legal_description = record.get("apn") or "",
-            property_address  = addr,
-            source_url        = f"https://{CITY_DOMAIN}/datasets/code-enforcement-violations/",
-        )
-
-        lead.has_code_violation = True
-        combined = f"{desc} {status} {case_type}"
-        lead.has_tax_delinquency    = _matches(combined, TAX_KEYWORDS)
-        lead.has_probate            = _matches(combined, PROBATE_KEYWORDS)
-        lead.has_divorce_bankruptcy = _matches(combined, DIVORCE_BK_KEYWORDS)
-
-        return lead
-
-    except Exception as e:
-        log.debug("Skipping code enforcement record: %s", e)
-        return None
-
-
-def parse_recorder_doc(record: dict) -> Optional[Lead]:
-    """NEW in v2.2 — Parse a recorded document from the SD County Recorder."""
-    try:
-        doc_type_raw = (
-            record.get("document_type") or
-            record.get("doc_type")      or
-            record.get("type")          or ""
-        ).upper().strip()
-
-        grantor = (record.get("grantor_name") or record.get("grantor") or "").strip()
-        grantee = (record.get("grantee_name") or record.get("grantee") or "").strip()
-        legal   = (record.get("legal_description") or record.get("legal") or "").strip()
-        doc_num = (
-            record.get("document_number") or
-            record.get("doc_number")      or
-            record.get("instrument_number") or ""
-        ).strip()
-        rec_date = (
-            record.get("recording_date") or
-            record.get("recorded_date")  or
-            record.get("document_date")  or ""
-        )
-        address = (
-            record.get("situs_address")    or
-            record.get("property_address") or
-            legal or ""
-        ).strip()
-
-        lead = Lead(
-            document_number   = doc_num,
-            file_date         = _format_date(rec_date),
-            doc_type          = f"RECORDED — {doc_type_raw}",
+            document_number   = docnum,
+            file_date         = _fmt_date(get(idx_date)),
+            doc_type          = doc_type.upper(),
             grantor           = grantor,
-            grantee           = grantee,
-            legal_description = legal,
-            property_address  = address,
-            source_url        = (
-                f"https://{COUNTY_DOMAIN}/Housing-and-Infrastructure/"
-                f"Official-Recorded-Documents/{RECORDER_DATASET}"
-            ),
+            grantee           = get(idx_grantee),
+            legal_description = get(idx_legal),
+            property_address  = "",
+            source_url        = DOCTYPE_SEARCH_URL,
         )
-
-        lead.has_tax_delinquency = any(t in doc_type_raw for t in RECORDER_TAX_TYPES)
-        lead.has_multiple_liens  = any(t in doc_type_raw for t in RECORDER_LIEN_TYPES)
-        lead.has_probate         = any(t in doc_type_raw for t in RECORDER_PROBATE_TYPES)
-        lead.has_divorce_bankruptcy = any(t in doc_type_raw for t in RECORDER_DIVORCE_BK_TYPES)
-
-        if not any([
-            lead.has_tax_delinquency, lead.has_multiple_liens,
-            lead.has_probate, lead.has_divorce_bankruptcy,
-        ]):
-            return None
-
-        return lead
-
-    except Exception as e:
-        log.debug("Skipping recorder record: %s", e)
-        return None
+        _apply_distress_flags(lead)
+        leads.append(lead)
+    return leads
 
 
-# ─── Scoring ──────────────────────────────────────────────────────────────────
+def _apply_distress_flags(lead: Lead) -> None:
+    """
+    Set distress booleans from the document type. The grid shows the short CODE
+    (e.g. "FTL", "LIS"), so first look the code up in DOCTYPE_CODE_MAP (built
+    from the live portal); fall back to full-name keyword matching.
+    """
+    dt = (lead.doc_type or "").upper().strip()
+
+    mapped = DOCTYPE_CODE_MAP.get(dt) or DOCTYPE_CODE_MAP.get(dt.split()[0] if dt else "")
+    if mapped:
+        flag, label = mapped
+        setattr(lead, FLAG_TO_FIELD[flag], True)
+        lead.doc_type = label.upper()  # expand cryptic code → readable label
+        return
+
+    for keyword, flag, _label in DISTRESS_DOCTYPES:
+        if keyword in dt:
+            setattr(lead, FLAG_TO_FIELD[flag], True)
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# SCORING / DEDUP / FILTER
+# ════════════════════════════════════════════════════════════════════════════
+
 def score_lead(lead: Lead, all_leads: list) -> Lead:
-    score   = 0
-    reasons = list(lead.score_reasons)   # preserve any pre-existing reasons
+    score = 0
+    reasons = list(lead.score_reasons)
 
     if lead.has_tax_delinquency:
-        score += 30
-        reasons.append("Tax delinquency (+30)")
-
+        score += 30; reasons.append("Default / tax / foreclosure (+30)")
     if lead.has_code_violation:
-        score += 25
-        reasons.append("Code violation (+25)")
-
+        score += 25; reasons.append("Code violation (+25)")
     if lead.has_probate:
-        score += 20
-        reasons.append("Probate filing (+20)")
-
+        score += 20; reasons.append("Probate filing (+20)")
     if lead.has_divorce_bankruptcy:
-        score += 10
-        reasons.append("Divorce/bankruptcy (+10)")
+        score += 10; reasons.append("Divorce / bankruptcy (+10)")
 
-    if lead.property_address:
-        addr_key = lead.property_address.lower().split(",")[0].strip()
-        same_addr = [
-            l for l in all_leads
-            if l is not lead
-            and l.property_address.lower().split(",")[0].strip() == addr_key
-        ]
-        if len(same_addr) >= 1:
+    # Same grantor appearing under multiple distress docs → stacked distress.
+    if lead.grantor:
+        key = lead.grantor.lower().strip()
+        same = [l for l in all_leads if l is not lead and l.grantor.lower().strip() == key]
+        if same:
             lead.has_multiple_liens = True
             score += 15
-            reasons.append(f"Multiple records same address ({len(same_addr)+1} total, +15)")
+            reasons.append(f"Multiple distress records, same party ({len(same)+1}, +15)")
+    elif lead.has_multiple_liens:
+        score += 15; reasons.append("Lien / lis pendens (+15)")
 
-    lead.seller_score  = min(score, 100)
+    lead.seller_score = min(score, 100)
     lead.score_reasons = reasons
     return lead
-
-
-# ─── Cross-enrichment: stack recorder signals onto permit/code leads ──────────
-def enrich_with_recorder(permit_leads: list[Lead], recorder_leads: list[Lead]) -> list[Lead]:
-    """
-    NEW in v2.2 — If a permit/code lead shares an APN or address prefix with a
-    recorder document, upgrade its distress flags.
-
-    This is what turns 25-point code-violation leads into 55-70+ leads.
-    """
-    if not recorder_leads:
-        return permit_leads
-
-    def _key(lead: Lead) -> str:
-        # Use APN from legal_description if available, else address prefix
-        legal = lead.legal_description.lower().strip()
-        addr  = lead.property_address.lower().strip()
-        # APN pattern: digits-digits-digits (e.g. 123-456-78)
-        for text in (legal, addr):
-            parts = text.replace("-", "").split()
-            for p in parts:
-                if p.isdigit() and len(p) >= 6:
-                    return p[:8]
-        # Fallback: first 12 chars of address
-        return addr[:12]
-
-    recorder_index: dict[str, list[Lead]] = {}
-    for rl in recorder_leads:
-        k = _key(rl)
-        if k and len(k) > 3:
-            recorder_index.setdefault(k, []).append(rl)
-
-    enriched = 0
-    for lead in permit_leads:
-        k = _key(lead)
-        if not k or len(k) <= 3:
-            continue
-        matches = recorder_index.get(k, [])
-        for rm in matches:
-            changed = False
-            if rm.has_tax_delinquency and not lead.has_tax_delinquency:
-                lead.has_tax_delinquency = True
-                lead.score_reasons.append(
-                    f"Recorder: {rm.doc_type.replace('RECORDED — ','')} (+30 tax)"
-                )
-                changed = True
-            if rm.has_probate and not lead.has_probate:
-                lead.has_probate = True
-                lead.score_reasons.append(
-                    f"Recorder: {rm.doc_type.replace('RECORDED — ','')} (+20 probate)"
-                )
-                changed = True
-            if rm.has_multiple_liens and not lead.has_multiple_liens:
-                lead.has_multiple_liens = True
-                lead.score_reasons.append(
-                    f"Recorder: {rm.doc_type.replace('RECORDED — ','')} (+15 lien)"
-                )
-                changed = True
-            if rm.has_divorce_bankruptcy and not lead.has_divorce_bankruptcy:
-                lead.has_divorce_bankruptcy = True
-                lead.score_reasons.append(
-                    f"Recorder: {rm.doc_type.replace('RECORDED — ','')} (+10 divorce/BK)"
-                )
-                changed = True
-            if changed:
-                enriched += 1
-
-    log.info("   Cross-enrichment: upgraded %d permit/code leads with recorder signals", enriched)
-    return permit_leads
-
-
-# ─── Main orchestration ───────────────────────────────────────────────────────
-def scrape_all() -> list[Lead]:
-    session   = build_session()
-    all_leads: list[Lead] = []
-
-    # ── 1. SD County Building Permits ────────────────────────────────────────
-    log.info("── Fetching SD County Building Permits (gs2m-invt)…")
-    url = f"{COUNTY_BASE}/gs2m-invt.json"
-    params = {
-        "$where": (
-            "statuscurrent in('Expired','Application Expired','Cancelled',"
-            "'Revoked','Denied','Issued - Not Finaled')"
-        ),
-        "$order": "issueddate DESC",
-    }
-    records = fetch_all_pages(session, url, extra_params=params)
-    log.info("   Parsing %d county permit records…", len(records))
-    permit_leads = []
-    for r in records:
-        lead = parse_county_permit(r)
-        if lead:
-            permit_leads.append(lead)
-
-    # ── 2. City of SD Building Permits ───────────────────────────────────────
-    log.info("── Fetching City of SD Building Permits (dyzh-7eat)…")
-    url = f"{CITY_BASE}/dyzh-7eat.json"
-    params = {
-        "$where": (
-            "status in('Expired','Application Expired','Cancelled',"
-            "'Revoked','Denied','Issued - Not Finaled')"
-        ),
-        "$order": "date_issued DESC",
-    }
-    records = fetch_all_pages(session, url, extra_params=params)
-    log.info("   Parsing %d city permit records…", len(records))
-    for r in records:
-        lead = parse_city_permit(r)
-        if lead:
-            permit_leads.append(lead)
-
-    # ── 3. City Code Enforcement ─────────────────────────────────────────────
-    log.info("── Fetching City Code Enforcement (scsb-hfcn)…")
-    url = f"{CITY_BASE}/scsb-hfcn.json"
-    params = {"$order": "date_opened DESC"}
-    records = fetch_all_pages(session, url, extra_params=params)
-    log.info("   Parsing %d code enforcement records…", len(records))
-    for r in records:
-        lead = parse_code_enforcement(r)
-        if lead:
-            permit_leads.append(lead)
-
-    # ── 4. SD County Recorder — Distress Documents (NEW) ─────────────────────
-    log.info("── Fetching SD County Recorder Documents (%s)…", RECORDER_DATASET)
-    url = f"{COUNTY_BASE}/{RECORDER_DATASET}.json"
-    where_clauses = [f"upper(document_type) like '%{t}%'" for t in RECORDER_ALL_TYPES]
-    params = {
-        "$where": " OR ".join(where_clauses),
-        "$order": "recording_date DESC",
-    }
-    records = fetch_all_pages(session, url, extra_params=params)
-    log.info("   Parsing %d recorder records…", len(records))
-    recorder_leads = []
-    for r in records:
-        lead = parse_recorder_doc(r)
-        if lead:
-            recorder_leads.append(lead)
-    log.info("   Recorder leads: %d", len(recorder_leads))
-
-    # ── Cross-enrich: stack recorder signals onto permit/code leads ───────────
-    permit_leads = enrich_with_recorder(permit_leads, recorder_leads)
-
-    # Combine all leads
-    all_leads = permit_leads + recorder_leads
-    log.info("Total raw leads collected: %d", len(all_leads))
-    return all_leads
 
 
 def deduplicate(leads: list[Lead]) -> list[Lead]:
     seen: set[str] = set()
     unique = []
     for lead in leads:
-        key = (lead.document_number or lead.property_address or str(id(lead))).strip().lower()
+        key = (lead.document_number or f"{lead.grantor}:{lead.file_date}:{lead.doc_type}").strip().lower()
         if key not in seen:
             seen.add(key)
             unique.append(lead)
@@ -588,16 +606,20 @@ def deduplicate(leads: list[Lead]) -> list[Lead]:
 
 
 def filter_has_distress(leads: list[Lead]) -> list[Lead]:
-    filtered = [l for l in leads if l.seller_score > 0 or l.has_code_violation]
+    filtered = [l for l in leads if l.seller_score > 0]
     log.info("Leads with distress signals: %d", len(filtered))
     return filtered
 
 
-# ─── Output (unchanged from v2.1) ────────────────────────────────────────────
+# ════════════════════════════════════════════════════════════════════════════
+# OUTPUT  (unchanged schema → docs/index.html dashboard stays compatible)
+# ════════════════════════════════════════════════════════════════════════════
+
 def save_json(leads: list[Lead]) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "source":       SOURCE_NAME,
         "total_leads":  len(leads),
         "leads":        [asdict(l) for l in leads],
     }
@@ -609,145 +631,57 @@ def generate_dashboard(leads: list[Lead]) -> None:
     DASHBOARD_DIR.mkdir(parents=True, exist_ok=True)
     leads_json = json.dumps([asdict(l) for l in leads], indent=2, default=str)
     generated  = datetime.now(timezone.utc).isoformat()
-
-    # Dashboard HTML is identical to v2.1 — no changes needed
-    html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>SD County Motivated Seller Leads</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
-<style>
-  :root {{
-    --bg:#0a0d14;--surface:#111520;--border:#1e2535;
-    --accent:#e8ff47;--accent2:#ff4757;--text:#d4dbe8;--text-dim:#5a6475;
-    --green:#39d98a;--orange:#ff7b2e;
-    --mono:'Space Mono',monospace;--sans:'Syne',sans-serif;
-  }}
-  *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0}}
-  body{{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh}}
-  header{{border-bottom:1px solid var(--border);padding:2rem 3rem;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap}}
-  .logo-block h1{{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;letter-spacing:-.04em;line-height:1}}
-  .logo-block h1 span{{color:var(--accent)}}
-  .logo-block p{{font-family:var(--mono);font-size:.72rem;color:var(--text-dim);margin-top:.4rem;letter-spacing:.08em;text-transform:uppercase}}
-  .stats-row{{display:flex;gap:2rem;flex-wrap:wrap}}
-  .stat .num{{font-family:var(--mono);font-size:1.8rem;font-weight:700;color:var(--accent);line-height:1}}
-  .stat .lbl{{font-size:.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em;margin-top:.15rem}}
-  .controls{{padding:1.5rem 3rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--border)}}
-  .search-box{{flex:1;min-width:200px;max-width:380px;background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.6rem 1rem;color:var(--text);font-family:var(--mono);font-size:.8rem;outline:none;transition:border-color .2s}}
-  .search-box:focus{{border-color:var(--accent)}}
-  .filter-btn{{background:var(--surface);border:1px solid var(--border);color:var(--text-dim);padding:.6rem 1.1rem;border-radius:4px;font-family:var(--mono);font-size:.72rem;cursor:pointer;text-transform:uppercase;letter-spacing:.05em;transition:all .15s}}
-  .filter-btn:hover,.filter-btn.active{{border-color:var(--accent);color:var(--accent);background:rgba(232,255,71,.06)}}
-  #count-display{{font-family:var(--mono);font-size:.72rem;color:var(--text-dim);margin-left:auto}}
-  .export-btn{{background:var(--accent);border:none;color:#0a0d14;padding:.6rem 1.2rem;border-radius:4px;font-family:var(--mono);font-size:.72rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.05em;transition:opacity .15s}}
-  .export-btn:hover{{opacity:.85}}
-  .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1px;background:var(--border)}}
-  .card{{background:var(--surface);padding:1.4rem 1.6rem;cursor:pointer;transition:background .15s;position:relative;overflow:hidden}}
-  .card:hover{{background:#161b28}}
-  .card::before{{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--score-color,var(--text-dim))}}
-  .card-top{{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem}}
-  .doc-type{{font-family:var(--mono);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);background:var(--border);padding:.2rem .5rem;border-radius:2px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
-  .score-badge{{font-family:var(--mono);font-size:.8rem;font-weight:700;padding:.2rem .6rem;border-radius:2px;border:1px solid var(--score-color,var(--text-dim));color:var(--score-color,var(--text-dim));background:rgba(255,255,255,.03)}}
-  .grantor{{font-size:1.05rem;font-weight:600;letter-spacing:-.02em;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-  .address{{font-family:var(--mono);font-size:.72rem;color:var(--text-dim);margin-top:.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-  .card-meta{{margin-top:1rem;display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1rem}}
-  .meta-label{{font-family:var(--mono);font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim)}}
-  .meta-value{{font-family:var(--mono);font-size:.72rem;color:var(--text);margin-top:.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-  .tags{{margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.35rem}}
-  .tag{{font-family:var(--mono);font-size:.58rem;padding:.15rem .45rem;border-radius:2px;text-transform:uppercase;letter-spacing:.06em}}
-  .tag.tax{{background:rgba(57,217,138,.1);color:var(--green);border:1px solid rgba(57,217,138,.25)}}
-  .tag.code{{background:rgba(255,123,46,.1);color:var(--orange);border:1px solid rgba(255,123,46,.25)}}
-  .tag.prob{{background:rgba(232,255,71,.1);color:var(--accent);border:1px solid rgba(232,255,71,.25)}}
-  .tag.lien{{background:rgba(255,71,87,.12);color:var(--accent2);border:1px solid rgba(255,71,87,.25)}}
-  .tag.div{{background:rgba(147,112,219,.12);color:#b39ddb;border:1px solid rgba(147,112,219,.25)}}
-  .empty{{grid-column:1/-1;text-align:center;padding:5rem 2rem;color:var(--text-dim);font-family:var(--mono);font-size:.8rem}}
-  footer{{padding:1.5rem 3rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:.65rem;color:var(--text-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}}
-</style>
-</head>
-<body>
-<header>
-  <div class="logo-block">
-    <h1>SD<span> Leads</span></h1>
-    <p>San Diego County · Motivated Seller Intelligence · Live Open Data</p>
-  </div>
-  <div class="stats-row" id="header-stats"></div>
-</header>
-<div class="controls">
-  <input class="search-box" type="text" id="search" placeholder="Search address, doc #, name…"/>
-  <button class="filter-btn" data-filter="all">All</button>
-  <button class="filter-btn" data-filter="tax">Tax</button>
-  <button class="filter-btn" data-filter="code">Code</button>
-  <button class="filter-btn" data-filter="probate">Probate</button>
-  <button class="filter-btn" data-filter="lien">Multi-Lien</button>
-  <button class="filter-btn" data-filter="div">Divorce/BK</button>
-  <span id="count-display"></span>
-  <button class="export-btn" id="export-csv">Export CSV</button>
-</div>
-<div class="grid" id="grid"></div>
-<footer>
-  <span>Source: SD County &amp; City Open Data Portals + County Recorder (Socrata API) — Public Records</span>
-  <span id="footer-ts"></span>
-</footer>
-<script>
-const RAW = {leads_json};
-const META_GENERATED = "{generated}";
-function scoreColor(s){{if(s>=70)return'#e8ff47';if(s>=40)return'#ff7b2e';if(s>=20)return'#ff4757';return'#5a6475';}}
-function tagHtml(l){{let t='';if(l.has_tax_delinquency)t+='<span class="tag tax">Tax Delinquency</span>';if(l.has_code_violation)t+='<span class="tag code">Code Violation</span>';if(l.has_probate)t+='<span class="tag prob">Probate</span>';if(l.has_multiple_liens)t+='<span class="tag lien">Multi-Lien</span>';if(l.has_divorce_bankruptcy)t+='<span class="tag div">Divorce/BK</span>';return t;}}
-function renderCards(leads){{const grid=document.getElementById('grid');document.getElementById('count-display').textContent=`${{leads.length}} leads`;if(!leads.length){{grid.innerHTML='<div class="empty">No leads match your filter.</div>';return;}}grid.innerHTML=leads.map(l=>{{const c=scoreColor(l.seller_score);return`<div class="card" style="--score-color:${{c}}" title="${{(l.score_reasons||[]).join(' | ')}}"><div class="card-top"><span class="doc-type">${{l.doc_type||'—'}}</span><span class="score-badge">${{l.seller_score}}</span></div><div class="grantor">${{l.grantor||l.grantee||'Property Record'}}</div><div class="address">${{l.property_address||l.legal_description||'No address'}}</div><div class="card-meta"><div><div class="meta-label">Doc #</div><div class="meta-value">${{l.document_number||'—'}}</div></div><div><div class="meta-label">Filed</div><div class="meta-value">${{l.file_date||'—'}}</div></div><div><div class="meta-label">Grantee</div><div class="meta-value">${{l.grantee||'—'}}</div></div></div><div class="tags">${{tagHtml(l)}}</div></div>`;}}).join('');}}
-function initStats(leads){{const total=leads.length;const high=leads.filter(l=>l.seller_score>=70).length;const avg=total?Math.round(leads.reduce((a,l)=>a+l.seller_score,0)/total):0;document.getElementById('header-stats').innerHTML=`<div class="stat"><div class="num">${{total}}</div><div class="lbl">Total Leads</div></div><div class="stat"><div class="num">${{high}}</div><div class="lbl">High Score ≥70</div></div><div class="stat"><div class="num">${{avg}}</div><div class="lbl">Avg Score</div></div>`;document.getElementById('footer-ts').textContent='Generated: '+new Date(META_GENERATED).toLocaleString();}}
-let currentFilter='all',currentSearch='';
-function applyFilters(){{let leads=[...RAW];if(currentFilter==='tax')leads=leads.filter(l=>l.has_tax_delinquency);if(currentFilter==='code')leads=leads.filter(l=>l.has_code_violation);if(currentFilter==='probate')leads=leads.filter(l=>l.has_probate);if(currentFilter==='lien')leads=leads.filter(l=>l.has_multiple_liens);if(currentFilter==='div')leads=leads.filter(l=>l.has_divorce_bankruptcy);if(currentSearch){{const q=currentSearch.toLowerCase();leads=leads.filter(l=>(l.property_address||'').toLowerCase().includes(q)||(l.document_number||'').toLowerCase().includes(q)||(l.grantor||'').toLowerCase().includes(q)||(l.grantee||'').toLowerCase().includes(q));}}renderCards(leads);}}
-document.querySelectorAll('.filter-btn').forEach(btn=>{{btn.addEventListener('click',()=>{{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentFilter=btn.dataset.filter;applyFilters();}});}});
-document.getElementById('search').addEventListener('input',e=>{{currentSearch=e.target.value.trim();applyFilters();}});
-document.getElementById('export-csv').addEventListener('click',()=>{{const cols=['document_number','file_date','doc_type','grantor','grantee','property_address','legal_description','seller_score','has_tax_delinquency','has_code_violation','has_probate','has_multiple_liens','has_divorce_bankruptcy','score_reasons','source_url'];const escape=v=>{{const s=(v===null||v===undefined)?'':Array.isArray(v)?v.join('; '):String(v);return'"'+s.replace(/"/g,'""')+'"';}};const rows=[cols.join(',')];let visible=[...RAW];if(currentFilter==='tax')visible=visible.filter(l=>l.has_tax_delinquency);if(currentFilter==='code')visible=visible.filter(l=>l.has_code_violation);if(currentFilter==='probate')visible=visible.filter(l=>l.has_probate);if(currentFilter==='lien')visible=visible.filter(l=>l.has_multiple_liens);if(currentFilter==='div')visible=visible.filter(l=>l.has_divorce_bankruptcy);if(currentSearch){{const q=currentSearch.toLowerCase();visible=visible.filter(l=>(l.property_address||'').toLowerCase().includes(q)||(l.document_number||'').toLowerCase().includes(q)||(l.grantor||'').toLowerCase().includes(q)||(l.grantee||'').toLowerCase().includes(q));}}visible.forEach(l=>rows.push(cols.map(c=>escape(l[c])).join(',')));const blob=new Blob([rows.join('\\n')],{{type:'text/csv'}});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='sd_leads_'+new Date().toISOString().slice(0,10)+'.csv';a.click();URL.revokeObjectURL(a.href);}});
-initStats(RAW);document.querySelector('[data-filter="all"]').classList.add('active');applyFilters();
-</script>
-</body>
-</html>"""
-
+    html = _DASHBOARD_TEMPLATE.replace("__LEADS_JSON__", leads_json).replace("__GENERATED__", generated)
     DASHBOARD_HTML.write_text(html, encoding="utf-8")
     log.info("Dashboard saved → %s", DASHBOARD_HTML)
 
 
 # ─── Helpers ──────────────────────────────────────────────────────────────────
-def _matches(text: str, keywords: list[str]) -> bool:
-    t = text.lower()
-    return any(k in t for k in keywords)
-
-def _join(*parts) -> str:
-    return ", ".join(p.strip() for p in parts if p and p.strip())
-
-def _format_date(raw: str) -> str:
+def _fmt_date(raw: str) -> str:
     if not raw:
         return ""
-    for fmt in (
-        "%Y-%m-%dT%H:%M:%S.%f",
-        "%Y-%m-%dT%H:%M:%S",
-        "%m/%d/%Y %H:%M:%S %p",
-        "%m/%d/%Y",
-    ):
+    raw = raw.strip()
+    for fmt in ("%m/%d/%Y", "%Y-%m-%d", "%m/%d/%Y %H:%M:%S %p", "%m/%d/%Y %I:%M %p"):
         try:
             return datetime.strptime(raw[:len(fmt)], fmt).strftime("%m/%d/%Y")
         except Exception:
             pass
-    return raw[:10]
+    m = re.search(r"\d{2}/\d{2}/\d{4}", raw)
+    return m.group(0) if m else raw[:10]
 
 
-# ─── Entry point ──────────────────────────────────────────────────────────────
-def main():
+# ════════════════════════════════════════════════════════════════════════════
+# MAIN
+# ════════════════════════════════════════════════════════════════════════════
+
+def main() -> None:
     log.info("╔══════════════════════════════════════════════════╗")
-    log.info("║  SD County Motivated Seller Lead Scraper v2.2    ║")
-    log.info("║  NEW: Recorder docs (NOD, Lis Pendens, Probate)  ║")
+    log.info("║  SD County Motivated Seller Lead Scraper v3.0    ║")
+    log.info("║  Source: ARCC Official Records (AcclaimWeb)       ║")
     log.info("╚══════════════════════════════════════════════════╝")
 
-    leads = scrape_all()
-    leads = deduplicate(leads)
+    today     = datetime.now(timezone.utc).date()
+    date_from = (today - timedelta(days=LOOKBACK_DAYS)).strftime("%m/%d/%Y")
+    date_to   = today.strftime("%m/%d/%Y")
+    log.info("Recording-date window: %s → %s (%d days)", date_from, date_to, LOOKBACK_DAYS)
 
+    try:
+        leads = asyncio.run(scrape_recorder(date_from, date_to))
+    except PortalBlockedError as e:
+        log.error("PORTAL BLOCKED: %s", e)
+        log.error("Refusing to write stale data. Exiting non-zero so CI fails visibly.")
+        sys.exit(1)
+
+    if not leads:
+        # A real, reachable search that returns nothing is possible but
+        # unusual over a 30-day window — treat as failure so it never silently
+        # commits an empty/stale file.
+        log.error("Search returned 0 rows over a %d-day window — treating as failure.", LOOKBACK_DAYS)
+        sys.exit(1)
+
+    leads = deduplicate(leads)
     for lead in leads:
         score_lead(lead, leads)
-
     leads = filter_has_distress(leads)
     leads.sort(key=lambda l: l.seller_score, reverse=True)
 
@@ -759,9 +693,100 @@ def main():
     log.info("  High (≥70)   : %d", sum(1 for l in leads if l.seller_score >= 70))
     log.info("  Medium (40+) : %d", sum(1 for l in leads if 40 <= l.seller_score < 70))
     if leads:
-        log.info("  Top lead     : %s [score=%d]", leads[0].property_address, leads[0].seller_score)
-        log.info("  Top reasons  : %s", " | ".join(leads[0].score_reasons))
+        top = leads[0]
+        log.info("  Top lead     : %s [%s] score=%d", top.grantor, top.doc_type, top.seller_score)
     log.info("─" * 50)
+
+
+# Dashboard HTML (carried over from v2.x — same look, same fields) ─────────────
+_DASHBOARD_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SD County Motivated Seller Leads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+<style>
+  :root{--bg:#0a0d14;--surface:#111520;--border:#1e2535;--accent:#e8ff47;--accent2:#ff4757;--text:#d4dbe8;--text-dim:#5a6475;--green:#39d98a;--orange:#ff7b2e;--mono:'Space Mono',monospace;--sans:'Syne',sans-serif;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:2rem 3rem;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  .logo-block h1{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;letter-spacing:-.04em;line-height:1}
+  .logo-block h1 span{color:var(--accent)}
+  .logo-block p{font-family:var(--mono);font-size:.72rem;color:var(--text-dim);margin-top:.4rem;letter-spacing:.08em;text-transform:uppercase}
+  .stats-row{display:flex;gap:2rem;flex-wrap:wrap}
+  .stat .num{font-family:var(--mono);font-size:1.8rem;font-weight:700;color:var(--accent);line-height:1}
+  .stat .lbl{font-size:.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em;margin-top:.15rem}
+  .controls{padding:1.5rem 3rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--border)}
+  .search-box{flex:1;min-width:200px;max-width:380px;background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.6rem 1rem;color:var(--text);font-family:var(--mono);font-size:.8rem;outline:none}
+  .search-box:focus{border-color:var(--accent)}
+  .filter-btn{background:var(--surface);border:1px solid var(--border);color:var(--text-dim);padding:.6rem 1.1rem;border-radius:4px;font-family:var(--mono);font-size:.72rem;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+  .filter-btn:hover,.filter-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(232,255,71,.06)}
+  #count-display{font-family:var(--mono);font-size:.72rem;color:var(--text-dim);margin-left:auto}
+  .export-btn{background:var(--accent);border:none;color:#0a0d14;padding:.6rem 1.2rem;border-radius:4px;font-family:var(--mono);font-size:.72rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1px;background:var(--border)}
+  .card{background:var(--surface);padding:1.4rem 1.6rem;cursor:pointer;position:relative;overflow:hidden}
+  .card:hover{background:#161b28}
+  .card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--score-color,var(--text-dim))}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem}
+  .doc-type{font-family:var(--mono);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);background:var(--border);padding:.2rem .5rem;border-radius:2px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .score-badge{font-family:var(--mono);font-size:.8rem;font-weight:700;padding:.2rem .6rem;border-radius:2px;border:1px solid var(--score-color,var(--text-dim));color:var(--score-color,var(--text-dim))}
+  .grantor{font-size:1.05rem;font-weight:600;letter-spacing:-.02em;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .address{font-family:var(--mono);font-size:.72rem;color:var(--text-dim);margin-top:.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .card-meta{margin-top:1rem;display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1rem}
+  .meta-label{font-family:var(--mono);font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim)}
+  .meta-value{font-family:var(--mono);font-size:.72rem;color:var(--text);margin-top:.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tags{margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.35rem}
+  .tag{font-family:var(--mono);font-size:.58rem;padding:.15rem .45rem;border-radius:2px;text-transform:uppercase;letter-spacing:.06em}
+  .tag.tax{background:rgba(57,217,138,.1);color:var(--green);border:1px solid rgba(57,217,138,.25)}
+  .tag.code{background:rgba(255,123,46,.1);color:var(--orange);border:1px solid rgba(255,123,46,.25)}
+  .tag.prob{background:rgba(232,255,71,.1);color:var(--accent);border:1px solid rgba(232,255,71,.25)}
+  .tag.lien{background:rgba(255,71,87,.12);color:var(--accent2);border:1px solid rgba(255,71,87,.25)}
+  .tag.div{background:rgba(147,112,219,.12);color:#b39ddb;border:1px solid rgba(147,112,219,.25)}
+  .empty{grid-column:1/-1;text-align:center;padding:5rem 2rem;color:var(--text-dim);font-family:var(--mono);font-size:.8rem}
+  footer{padding:1.5rem 3rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:.65rem;color:var(--text-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-block">
+    <h1>SD<span> Leads</span></h1>
+    <p>San Diego County · Motivated Seller Intelligence · Recorder Distress Filings</p>
+  </div>
+  <div class="stats-row" id="header-stats"></div>
+</header>
+<div class="controls">
+  <input class="search-box" type="text" id="search" placeholder="Search name, doc #, legal…"/>
+  <button class="filter-btn" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="tax">Default/Tax</button>
+  <button class="filter-btn" data-filter="probate">Probate</button>
+  <button class="filter-btn" data-filter="lien">Lien/Lis Pendens</button>
+  <button class="filter-btn" data-filter="div">Divorce/BK</button>
+  <span id="count-display"></span>
+  <button class="export-btn" id="export-csv">Export CSV</button>
+</div>
+<div class="grid" id="grid"></div>
+<footer>
+  <span>Source: San Diego County Assessor-Recorder-County Clerk — Official Records (Public)</span>
+  <span id="footer-ts"></span>
+</footer>
+<script>
+const RAW = __LEADS_JSON__;
+const META_GENERATED = "__GENERATED__";
+function scoreColor(s){if(s>=70)return'#e8ff47';if(s>=40)return'#ff7b2e';if(s>=20)return'#ff4757';return'#5a6475';}
+function tagHtml(l){let t='';if(l.has_tax_delinquency)t+='<span class="tag tax">Default/Tax</span>';if(l.has_code_violation)t+='<span class="tag code">Code Violation</span>';if(l.has_probate)t+='<span class="tag prob">Probate</span>';if(l.has_multiple_liens)t+='<span class="tag lien">Lien</span>';if(l.has_divorce_bankruptcy)t+='<span class="tag div">Divorce/BK</span>';return t;}
+function renderCards(leads){const grid=document.getElementById('grid');document.getElementById('count-display').textContent=`${leads.length} leads`;if(!leads.length){grid.innerHTML='<div class="empty">No leads match your filter.</div>';return;}grid.innerHTML=leads.map(l=>{const c=scoreColor(l.seller_score);return`<div class="card" style="--score-color:${c}" title="${(l.score_reasons||[]).join(' | ')}"><div class="card-top"><span class="doc-type">${l.doc_type||'—'}</span><span class="score-badge">${l.seller_score}</span></div><div class="grantor">${l.grantor||l.grantee||'Property Record'}</div><div class="address">${l.legal_description||l.property_address||'No legal description'}</div><div class="card-meta"><div><div class="meta-label">Doc #</div><div class="meta-value">${l.document_number||'—'}</div></div><div><div class="meta-label">Recorded</div><div class="meta-value">${l.file_date||'—'}</div></div></div><div class="tags">${tagHtml(l)}</div></div>`;}).join('');}
+function initStats(leads){const total=leads.length;const high=leads.filter(l=>l.seller_score>=70).length;const avg=total?Math.round(leads.reduce((a,l)=>a+l.seller_score,0)/total):0;document.getElementById('header-stats').innerHTML=`<div class="stat"><div class="num">${total}</div><div class="lbl">Total Leads</div></div><div class="stat"><div class="num">${high}</div><div class="lbl">High Score ≥70</div></div><div class="stat"><div class="num">${avg}</div><div class="lbl">Avg Score</div></div>`;document.getElementById('footer-ts').textContent='Generated: '+new Date(META_GENERATED).toLocaleString();}
+let currentFilter='all',currentSearch='';
+function applyFilters(){let leads=[...RAW];if(currentFilter==='tax')leads=leads.filter(l=>l.has_tax_delinquency);if(currentFilter==='probate')leads=leads.filter(l=>l.has_probate);if(currentFilter==='lien')leads=leads.filter(l=>l.has_multiple_liens);if(currentFilter==='div')leads=leads.filter(l=>l.has_divorce_bankruptcy);if(currentSearch){const q=currentSearch.toLowerCase();leads=leads.filter(l=>(l.legal_description||'').toLowerCase().includes(q)||(l.document_number||'').toLowerCase().includes(q)||(l.grantor||'').toLowerCase().includes(q)||(l.grantee||'').toLowerCase().includes(q));}renderCards(leads);}
+document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentFilter=btn.dataset.filter;applyFilters();});});
+document.getElementById('search').addEventListener('input',e=>{currentSearch=e.target.value.trim();applyFilters();});
+document.getElementById('export-csv').addEventListener('click',()=>{const cols=['document_number','file_date','doc_type','grantor','grantee','legal_description','property_address','seller_score','has_tax_delinquency','has_code_violation','has_probate','has_multiple_liens','has_divorce_bankruptcy','score_reasons','source_url'];const esc=v=>{const s=(v===null||v===undefined)?'':Array.isArray(v)?v.join('; '):String(v);return'"'+s.replace(/"/g,'""')+'"';};const rows=[cols.join(',')];let visible=[...RAW];if(currentFilter==='tax')visible=visible.filter(l=>l.has_tax_delinquency);if(currentFilter==='probate')visible=visible.filter(l=>l.has_probate);if(currentFilter==='lien')visible=visible.filter(l=>l.has_multiple_liens);if(currentFilter==='div')visible=visible.filter(l=>l.has_divorce_bankruptcy);if(currentSearch){const q=currentSearch.toLowerCase();visible=visible.filter(l=>(l.legal_description||'').toLowerCase().includes(q)||(l.document_number||'').toLowerCase().includes(q)||(l.grantor||'').toLowerCase().includes(q)||(l.grantee||'').toLowerCase().includes(q));}visible.forEach(l=>rows.push(cols.map(c=>esc(l[c])).join(',')));const blob=new Blob([rows.join('\\n')],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='sd_leads_'+new Date().toISOString().slice(0,10)+'.csv';a.click();URL.revokeObjectURL(a.href);});
+initStats(RAW);document.querySelector('[data-filter="all"]').classList.add('active');applyFilters();
+</script>
+</body>
+</html>"""
 
 
 if __name__ == "__main__":
