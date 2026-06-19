@@ -59,14 +59,22 @@ log = logging.getLogger(__name__)
 
 # ─── Portal config ────────────────────────────────────────────────────────────
 # Default: San Diego County ARCC Official Records (AcclaimWeb).
-ACCLAIM_BASE = os.getenv("ACCLAIM_BASE", "https://arcc-acclaim.sdcounty.ca.gov/AcclaimWeb").rstrip("/")
+# NOTE: SD serves the landing page at /AcclaimWeb but the search app itself
+# lives at the domain ROOT (e.g. /search/SearchTypeDocType). Prepending
+# /AcclaimWeb to the search path 404s, so the base must be the bare origin.
+ACCLAIM_BASE = os.getenv("ACCLAIM_BASE", "https://arcc-acclaim.sdcounty.ca.gov").rstrip("/")
 SOURCE_NAME  = os.getenv("SOURCE_NAME", "San Diego County Assessor-Recorder-County Clerk")
 
 DOCTYPE_SEARCH_URL = f"{ACCLAIM_BASE}/search/SearchTypeDocType"
 DISCLAIMER_PATH    = "/Search/Disclaimer"
 
-LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "30"))
-MAX_PAGES     = int(os.getenv("MAX_PAGES", "25"))
+# 7-day rolling window. The portal returns rows OLDEST-first and paginates ~11
+# rows/page, so MAX_PAGES must be high enough to walk the entire window —
+# otherwise the cap silently drops the FRESHEST leads (the whole point of the
+# tool). A busy week is ~900 rows / ~85 real pages; 300 leaves generous slack.
+# We then sort newest-first in main(). Override either via env if needed.
+LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "7"))
+MAX_PAGES     = int(os.getenv("MAX_PAGES", "300"))
 NAV_TIMEOUT   = int(os.getenv("NAV_TIMEOUT_MS", "45000"))
 
 # Proxy (residential) — only used if PROXY_SERVER is set.
@@ -683,7 +691,14 @@ def main() -> None:
     for lead in leads:
         score_lead(lead, leads)
     leads = filter_has_distress(leads)
-    leads.sort(key=lambda l: l.seller_score, reverse=True)
+    # Highest score first, then newest recording date first (parse MM/DD/YYYY;
+    # unparseable dates sort last). Keeps the freshest, hottest leads on top.
+    def _date_key(l) -> datetime:
+        try:
+            return datetime.strptime(l.file_date, "%m/%d/%Y")
+        except (ValueError, TypeError):
+            return datetime.min
+    leads.sort(key=lambda l: (l.seller_score, _date_key(l)), reverse=True)
 
     save_json(leads)
     generate_dashboard(leads)

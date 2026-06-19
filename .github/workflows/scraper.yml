@@ -23,8 +23,13 @@
 name: Scrape SD County Leads
 
 on:
-  schedule:
-    - cron: "0 6 * * *"        # 06:00 UTC daily
+  # NOTE: the scheduled trigger is intentionally disabled. GitHub-hosted runners
+  # use datacenter IPs, which the SD County portal (Akamai) 403s — so this job
+  # can only succeed from a residential IP. Scheduling now runs via local cron
+  # on Garett's machine (scripts/run_daily.sh). Kept here for manual dispatch
+  # and documentation; re-enable the schedule only with a residential runner.
+  # schedule:
+  #   - cron: "0 6 * * *"        # 06:00 UTC daily
   workflow_dispatch:
     inputs:
       debug_mode:
@@ -35,7 +40,7 @@ on:
       lookback_days:
         description: "Recording-date window in days"
         required: false
-        default: "30"
+        default: "7"
         type: string
 
 jobs:
