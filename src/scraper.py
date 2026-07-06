@@ -93,6 +93,10 @@ REPORTALL_API_KEY = os.getenv("REPORTALL_API_KEY", "").strip()
 REPORTALL_URL     = "https://reportallusa.com/api/parcels"
 REPORTALL_REGION  = os.getenv("REPORTALL_REGION", "San Diego County, CA")
 REPORTALL_VERSION = "9"
+# Cap ReportAll lookups per run to control API cost/quota. Owners are ranked by
+# their best (highest-scoring) lead, so the budget is spent on the most valuable
+# leads first; the rest are left un-enriched. 0 = unlimited. Override via env.
+REPORTALL_MAX_LOOKUPS = int(os.getenv("REPORTALL_MAX_LOOKUPS", "300"))
 
 CHROME_UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -857,8 +861,23 @@ def enrich_addresses(leads: list[Lead]) -> None:
         return
 
     lookup = [l for l in leads if l.grantor.strip() and not _skip_enrichment(l)]
-    owners = sorted({l.grantor.strip() for l in lookup})
-    log.info("Enriching addresses via ReportAll for %d unique owners …", len(owners))
+
+    # Rank owners by their best (highest-scoring) lead so a limited API budget
+    # goes to the most valuable leads first, then apply the cap.
+    owner_best: dict[str, int] = {}
+    for l in lookup:
+        g = l.grantor.strip()
+        owner_best[g] = max(owner_best.get(g, 0), l.seller_score)
+    owners = sorted(owner_best, key=lambda g: owner_best[g], reverse=True)
+
+    total_owners = len(owners)
+    if REPORTALL_MAX_LOOKUPS > 0 and total_owners > REPORTALL_MAX_LOOKUPS:
+        owners = owners[:REPORTALL_MAX_LOOKUPS]
+        log.info("Enriching addresses via ReportAll: %d of %d owners "
+                 "(capped at %d, highest-scoring first)",
+                 len(owners), total_owners, REPORTALL_MAX_LOOKUPS)
+    else:
+        log.info("Enriching addresses via ReportAll for %d unique owners …", total_owners)
 
     session = requests.Session()
     session.headers.update({"User-Agent": "SD-County-Intel/1.0"})
