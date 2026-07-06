@@ -439,10 +439,67 @@ def _row_key(lead: Lead) -> str:
                   f"{lead.legal_description}").upper()
 
 
+# Selectors for the "next page" arrow (enabled only — the last page carries
+# t-state-disabled).
+_NEXT_ARROW_SELECTORS = (
+    "#SearchGridDiv .t-arrow-next:not(.t-state-disabled)",
+    "#SearchGridDiv a[title='Go to the next page']:not(.t-state-disabled)",
+    ".t-grid-pager .t-arrow-next:not(.t-state-disabled)",
+)
+
+# A run of this many consecutive pages that add no new rows is treated as the
+# true end of results. AcclaimWeb occasionally re-serves an already-seen page
+# MID-STREAM (not just at the end), so stopping on the FIRST duplicate page
+# silently truncated the results — hence a tolerance rather than a single page.
+_DUP_PAGE_TOLERANCE = 3
+
+
+async def _grid_first_key(page) -> str:
+    """Lightweight signature of the current grid page — the first data row's
+    text — used to detect when a 'next' click has actually loaded a new page."""
+    try:
+        return (await page.evaluate("""() => {
+            const g = document.querySelector('#SearchGridDiv');
+            if (!g) return '';
+            const r = g.querySelector('.t-grid-content tr') || g.querySelector('tbody tr');
+            return r ? r.innerText.replace(/\\s+/g, ' ').trim().slice(0, 160) : '';
+        }""")) or ""
+    except Exception:
+        return ""
+
+
+async def _advance_page(page) -> bool:
+    """Click the next-page arrow and wait until the grid's first row actually
+    CHANGES, riding out transient stalls where the pager re-serves the current
+    page. Returns False when there is no enabled next arrow, or the content will
+    not change after retries (the genuine end of results)."""
+    before = await _grid_first_key(page)
+    for _ in range(3):                     # up to 3 click attempts
+        clicked = False
+        for sel in _NEXT_ARROW_SELECTORS:
+            try:
+                btn = page.locator(sel).first
+                if await btn.is_visible(timeout=1000):
+                    await btn.click()
+                    clicked = True
+                    break
+            except Exception:
+                continue
+        if not clicked:
+            return False                   # next arrow gone/disabled → last page
+        for _ in range(25):                # poll ~5s for the page to turn over
+            await asyncio.sleep(0.2)
+            if await _grid_first_key(page) != before:
+                await _wait_for_results(page)
+                return True
+    return False                           # content never changed → end
+
+
 async def _parse_all_pages(page) -> list[Lead]:
     leads: list[Lead] = []
     seen_keys: set[str] = set()
     seen_pages = 0
+    dup_streak = 0
     while seen_pages < MAX_PAGES:
         html = await page.content()
         page_leads = _parse_grid(html)
@@ -450,42 +507,29 @@ async def _parse_all_pages(page) -> list[Lead]:
 
         new_leads = [l for l in page_leads if _row_key(l) not in seen_keys]
         seen_keys.update(_row_key(l) for l in new_leads)
+        leads.extend(new_leads)
         log.info("Page %d: %d rows (%d new, running total %d)",
-                 seen_pages, len(page_leads), len(new_leads), len(leads) + len(new_leads))
+                 seen_pages, len(page_leads), len(new_leads), len(leads))
 
-        # An empty page means we're past the last page of results — stop.
+        # A truly empty grid means there are no results at all.
         if not page_leads:
             if seen_pages == 1:
                 log.info("Result grid present but no data rows.")
             break
-        leads.extend(new_leads)
 
-        # End-of-results: AcclaimWeb's pager often leaves the next-arrow enabled
-        # past the final page and re-serves a short tail of already-seen rows.
-        # Once a non-empty page contributes nothing new we've reached the end —
-        # stop here instead of clicking through hundreds of duplicate pages.
+        # Duplicate page: could be a mid-stream re-serve (keep going) or the
+        # end-of-results tail (stop after a short run of them).
         if not new_leads:
-            log.info("Page %d added no new rows — end of results, stopping.", seen_pages)
-            break
+            dup_streak += 1
+            if dup_streak >= _DUP_PAGE_TOLERANCE:
+                log.info("%d consecutive pages with no new rows — end of results.",
+                         dup_streak)
+                break
+        else:
+            dup_streak = 0
 
-        # Advance to the next page. The next-arrow carries t-state-disabled on
-        # the last page; treat "disabled or absent" as the end.
-        moved = False
-        for nxt in (
-            "#SearchGridDiv .t-arrow-next:not(.t-state-disabled)",
-            "#SearchGridDiv a[title='Go to the next page']:not(.t-state-disabled)",
-            ".t-grid-pager .t-arrow-next:not(.t-state-disabled)",
-        ):
-            try:
-                btn = page.locator(nxt).first
-                if await btn.is_visible(timeout=1200):
-                    await btn.click()
-                    await _wait_for_results(page)
-                    moved = True
-                    break
-            except Exception:
-                continue
-        if not moved:
+        if not await _advance_page(page):
+            log.info("Next page unavailable (arrow disabled or content static) — stopping.")
             break
     return leads
 
