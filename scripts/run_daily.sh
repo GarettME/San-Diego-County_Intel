@@ -26,6 +26,13 @@ cd "$REPO" || { echo "$(date -u) ERROR: repo not found" >>"$LOG"; exit 1; }
   # Force the residential (no-proxy) path even if these are exported elsewhere.
   unset PROXY_SERVER PROXY_USERNAME PROXY_PASSWORD
 
+  # Load local secrets (REPORTALL_API_KEY for address enrichment, optional
+  # overrides). Gitignored — never committed. Enrichment is skipped if absent.
+  if [ -f "$REPO/.env" ]; then
+    set -a; . "$REPO/.env"; set +a
+    echo "Loaded .env (REPORTALL_API_KEY ${REPORTALL_API_KEY:+set})"
+  fi
+
   if /usr/bin/python3 "$REPO/src/scraper.py"; then
     git add data/output.json docs/index.html
     if git diff --cached --quiet; then
