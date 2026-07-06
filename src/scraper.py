@@ -43,6 +43,9 @@ import logging
 import os
 import re
 import sys
+import time
+
+import requests
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -81,6 +84,15 @@ NAV_TIMEOUT   = int(os.getenv("NAV_TIMEOUT_MS", "45000"))
 PROXY_SERVER   = os.getenv("PROXY_SERVER", "").strip()
 PROXY_USERNAME = os.getenv("PROXY_USERNAME", "").strip()
 PROXY_PASSWORD = os.getenv("PROXY_PASSWORD", "").strip()
+
+# ── ReportAll USA parcel API (property/mailing-address enrichment by owner) ───
+# The recorder portal carries no property address; resolve grantor name → parcel
+# via ReportAll (the dataset behind LandGlide). Set REPORTALL_API_KEY to enable;
+# unset → enrichment is skipped and address fields stay blank.
+REPORTALL_API_KEY = os.getenv("REPORTALL_API_KEY", "").strip()
+REPORTALL_URL     = "https://reportallusa.com/api/parcels"
+REPORTALL_REGION  = os.getenv("REPORTALL_REGION", "San Diego County, CA")
+REPORTALL_VERSION = "9"
 
 CHROME_UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -169,6 +181,13 @@ class Lead:
     grantee:           str = ""
     legal_description: str = ""
     property_address:  str = ""
+    property_city:     str = ""
+    property_zip:      str = ""
+    mail_address:      str = ""
+    mail_city:         str = ""
+    mail_state:        str = ""
+    mail_zip:          str = ""
+    apn:               str = ""
 
     has_tax_delinquency:    bool = False
     has_code_violation:     bool = False
@@ -743,6 +762,137 @@ def filter_has_distress(leads: list[Lead]) -> list[Lead]:
 
 
 # ════════════════════════════════════════════════════════════════════════════
+# ADDRESS ENRICHMENT — ReportAll USA parcel API (grantor name → property/mailing)
+# ════════════════════════════════════════════════════════════════════════════
+
+_NAME_STOPWORDS = {
+    "LLC", "INC", "CORP", "CO", "LP", "LLP", "TRUST", "TR", "ESTATE", "THE",
+    "AND", "ETAL", "ET", "AL", "REVOCABLE", "LIVING", "FAMILY", "A", "AN", "OF", "JR", "SR",
+}
+
+# Corporate-entity markers. On FORECLOSURE docs (NOD / trustee's sale) the
+# indexed grantor is usually the foreclosure trustee/servicer (a company), NOT
+# the distressed homeowner — so we must not look those up (it would attach the
+# trustee's parcel to the lead). Individual-named foreclosure grantors are
+# likely the actual owner and are still enriched.
+_ENTITY_MARKERS = re.compile(
+    r"\b(LLC|INC|CORP|CORPORATION|COMPANY|LP|LLP|SERVICES|SOLUTIONS|RECONVEYANCE|"
+    r"TRUSTEE|BANK|ASSOCIATION|MORTGAGE|LENDER|TITLE|N\.?A\.?)\b"
+)
+
+
+def _name_tokens(name: str) -> set[str]:
+    toks = re.findall(r"[A-Z0-9]+", (name or "").upper())
+    return {t for t in toks if t not in _NAME_STOPWORDS and len(t) > 1}
+
+
+def _skip_enrichment(lead: Lead) -> bool:
+    """True for foreclosure docs whose grantor is a corporate trustee/servicer
+    (the homeowner isn't indexed on these) — enriching would be wrong."""
+    dt = (lead.doc_type or "").upper()
+    is_foreclosure = "NOTICE OF DEFAULT" in dt or "TRUSTEE" in dt
+    return is_foreclosure and bool(_ENTITY_MARKERS.search((lead.grantor or "").upper()))
+
+
+def _compose_site_address(p: dict) -> str:
+    if p.get("address"):
+        return p["address"].strip()
+    parts = [p.get("addr_number"), p.get("addr_street_prefix"),
+             p.get("addr_street_name"), p.get("addr_street_type")]
+    return " ".join(x for x in parts if x).strip()
+
+
+def _reportall_query(session, owner: str) -> tuple[list[dict], Optional[str]]:
+    """Query ReportAll for parcels owned by `owner` within the region.
+    Returns (results, error); retries once on the 429 rate-limit response."""
+    params = {
+        "client": REPORTALL_API_KEY, "v": REPORTALL_VERSION,
+        "region": REPORTALL_REGION, "owner": owner, "rpp": "20",
+    }
+    # Exponential backoff on 429 — this account rate-limits aggressively, so give
+    # it real room (1s, 2s, 4s, 8s, 16s) before giving up on an owner.
+    backoff = 1.0
+    for attempt in range(6):
+        try:
+            r = session.get(REPORTALL_URL, params=params, timeout=25)
+        except Exception as e:
+            return [], f"request error: {e}"
+        if r.status_code == 429:
+            if attempt < 5:
+                time.sleep(backoff)
+                backoff = min(backoff * 2, 16.0)
+                continue
+            return [], "rate limited"
+        if r.status_code != 200:
+            return [], f"HTTP {r.status_code}"
+        try:
+            data = r.json()
+        except Exception as e:
+            return [], f"bad JSON: {e}"
+        if data.get("status") not in (None, "OK"):
+            return [], f"api status: {data.get('status')}"
+        return data.get("results", []) or [], None
+    return [], "rate limited"
+
+
+def _apply_parcel(lead: Lead, p: dict, multi: int) -> None:
+    lead.property_address = _compose_site_address(p)
+    lead.property_city    = (p.get("addr_city") or "").strip()
+    lead.property_zip     = (p.get("addr_zip") or "").strip()
+    lead.mail_address     = (p.get("mail_address1") or "").strip()
+    lead.mail_city        = (p.get("mail_placename") or "").strip()
+    lead.mail_state       = (p.get("mail_statename") or "").strip()
+    lead.mail_zip         = (p.get("mail_zipcode") or "").strip()
+    lead.apn              = (p.get("parcel_id") or "").strip()
+    if multi > 1:
+        lead.score_reasons.append(f"Multiple parcels ({multi}) — verify property")
+
+
+def enrich_addresses(leads: list[Lead]) -> None:
+    """Fill property/mailing address + APN via ReportAll, matching on grantor
+    name within the region. Dedups lookups by grantor; skips foreclosure-trustee
+    grantors. No-ops when REPORTALL_API_KEY is unset."""
+    if not REPORTALL_API_KEY:
+        log.info("REPORTALL_API_KEY not set — skipping address enrichment")
+        return
+
+    lookup = [l for l in leads if l.grantor.strip() and not _skip_enrichment(l)]
+    owners = sorted({l.grantor.strip() for l in lookup})
+    log.info("Enriching addresses via ReportAll for %d unique owners …", len(owners))
+
+    session = requests.Session()
+    session.headers.update({"User-Agent": "SD-County-Intel/1.0"})
+
+    resolved: dict[str, tuple[Optional[dict], int]] = {}
+    matched = 0
+    # Self-throttle between calls; this account rate-limits below the documented
+    # 20/s, so pace conservatively (overridable via REPORTALL_DELAY).
+    delay = float(os.getenv("REPORTALL_DELAY", "0.3"))
+    for owner in owners:
+        results, err = _reportall_query(session, owner)
+        if err:
+            log.warning("  ReportAll lookup failed for %r: %s", owner, err)
+            resolved[owner] = (None, 0)
+        else:
+            q = _name_tokens(owner)
+            good = [p for p in results if _name_tokens(p.get("owner", "")) & q] if q else results
+            resolved[owner] = (good[0], len(good)) if good else (None, 0)
+            if good:
+                matched += 1
+        time.sleep(delay)
+
+    for lead in leads:
+        if _skip_enrichment(lead):
+            lead.score_reasons.append("Foreclosure grantor is a trustee — owner not indexed; look up manually")
+            continue
+        parcel, n = resolved.get(lead.grantor.strip(), (None, 0))
+        if parcel:
+            _apply_parcel(lead, parcel, n)
+
+    log.info("Address enrichment: %d/%d owners matched a parcel", matched, len(owners))
+
+
+# ════════════════════════════════════════════════════════════════════════════
 # OUTPUT  (unchanged schema → docs/index.html dashboard stays compatible)
 # ════════════════════════════════════════════════════════════════════════════
 
@@ -814,6 +964,10 @@ def main() -> None:
     for lead in leads:
         score_lead(lead, leads)
     leads = filter_has_distress(leads)
+
+    # Enrich the surviving distress leads with property + mailing address (owner
+    # name → ReportAll parcel). No-op when REPORTALL_API_KEY is unset.
+    enrich_addresses(leads)
     # Highest score first, then newest recording date first (parse MM/DD/YYYY;
     # unparseable dates sort last). Keeps the freshest, hottest leads on top.
     def _date_key(l) -> datetime:
@@ -920,7 +1074,7 @@ let currentFilter='all',currentSearch='';
 function applyFilters(){let leads=[...RAW];if(currentFilter==='tax')leads=leads.filter(l=>l.has_tax_delinquency);if(currentFilter==='probate')leads=leads.filter(l=>l.has_probate);if(currentFilter==='lien')leads=leads.filter(l=>l.has_multiple_liens);if(currentFilter==='div')leads=leads.filter(l=>l.has_divorce_bankruptcy);if(currentSearch){const q=currentSearch.toLowerCase();leads=leads.filter(l=>(l.legal_description||'').toLowerCase().includes(q)||(l.document_number||'').toLowerCase().includes(q)||(l.grantor||'').toLowerCase().includes(q)||(l.grantee||'').toLowerCase().includes(q));}renderCards(leads);}
 document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentFilter=btn.dataset.filter;applyFilters();});});
 document.getElementById('search').addEventListener('input',e=>{currentSearch=e.target.value.trim();applyFilters();});
-document.getElementById('export-csv').addEventListener('click',()=>{const cols=['document_number','file_date','doc_type','grantor','grantee','legal_description','property_address','seller_score','has_tax_delinquency','has_code_violation','has_probate','has_multiple_liens','has_divorce_bankruptcy','score_reasons','source_url'];const esc=v=>{const s=(v===null||v===undefined)?'':Array.isArray(v)?v.join('; '):String(v);return'"'+s.replace(/"/g,'""')+'"';};const rows=[cols.join(',')];let visible=[...RAW];if(currentFilter==='tax')visible=visible.filter(l=>l.has_tax_delinquency);if(currentFilter==='probate')visible=visible.filter(l=>l.has_probate);if(currentFilter==='lien')visible=visible.filter(l=>l.has_multiple_liens);if(currentFilter==='div')visible=visible.filter(l=>l.has_divorce_bankruptcy);if(currentSearch){const q=currentSearch.toLowerCase();visible=visible.filter(l=>(l.legal_description||'').toLowerCase().includes(q)||(l.document_number||'').toLowerCase().includes(q)||(l.grantor||'').toLowerCase().includes(q)||(l.grantee||'').toLowerCase().includes(q));}visible.forEach(l=>rows.push(cols.map(c=>esc(l[c])).join(',')));const blob=new Blob([rows.join('\\n')],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='sd_leads_'+new Date().toISOString().slice(0,10)+'.csv';a.click();URL.revokeObjectURL(a.href);});
+document.getElementById('export-csv').addEventListener('click',()=>{const cols=['document_number','file_date','doc_type','grantor','grantee','legal_description','property_address','property_city','property_zip','mail_address','mail_city','mail_state','mail_zip','apn','seller_score','has_tax_delinquency','has_code_violation','has_probate','has_multiple_liens','has_divorce_bankruptcy','score_reasons','source_url'];const esc=v=>{const s=(v===null||v===undefined)?'':Array.isArray(v)?v.join('; '):String(v);return'"'+s.replace(/"/g,'""')+'"';};const rows=[cols.join(',')];let visible=[...RAW];if(currentFilter==='tax')visible=visible.filter(l=>l.has_tax_delinquency);if(currentFilter==='probate')visible=visible.filter(l=>l.has_probate);if(currentFilter==='lien')visible=visible.filter(l=>l.has_multiple_liens);if(currentFilter==='div')visible=visible.filter(l=>l.has_divorce_bankruptcy);if(currentSearch){const q=currentSearch.toLowerCase();visible=visible.filter(l=>(l.legal_description||'').toLowerCase().includes(q)||(l.document_number||'').toLowerCase().includes(q)||(l.grantor||'').toLowerCase().includes(q)||(l.grantee||'').toLowerCase().includes(q));}visible.forEach(l=>rows.push(cols.map(c=>esc(l[c])).join(',')));const blob=new Blob([rows.join('\\n')],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='sd_leads_'+new Date().toISOString().slice(0,10)+'.csv';a.click();URL.revokeObjectURL(a.href);});
 initStats(RAW);document.querySelector('[data-filter="all"]').classList.add('active');applyFilters();
 </script>
 </body>
